@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Background"
+    tools:context=".men3">
+
+    <ScrollView
+        android:id="@+id/list_scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="551dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!--product image-->
+            <ImageView
+                android:id="@+id/productImageMen3"
+                android:layout_width="419dp"
+                android:layout_height="395dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:src="@drawable/men3"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+            <!--name-->
+            <TextView
+                android:id="@+id/product_nameMen3"
+                android:layout_width="272dp"
+                android:layout_height="37dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="Hasel Pants"
+                android:textColor="#4A1868"
+                android:textSize="26sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/productImageMen3"
+                app:layout_constraintVertical_bias="0.0" />
+            <!--price-->
+            <TextView
+                android:id="@+id/product_priceMen3"
+                android:layout_width="272dp"
+                android:layout_height="37dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="RM80"
+                android:textColor="#4A1868"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/product_nameMen3"
+                app:layout_constraintVertical_bias="0.0" />
+            <!--Size-->
+            <Spinner
+                android:id="@+id/sizeSpinnerMen3"
+                android:layout_width="97dp"
+                android:layout_height="51dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/productImageMen3"
+                app:layout_constraintVertical_bias="0.0" />
+            <!--Description Title-->
+            <TextView
+                android:id="@+id/product_textMen3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:textColor="#6A4D7C"
+                android:text="Description"
+                android:textSize="30sp"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/product_priceMen3" />
+            <!--Description-->
+            <TextView
+                android:id="@+id/product_descMen3"
+                android:layout_width="414dp"
+                android:layout_height="204dp"
+                android:layout_margin="10dp"
+                android:text="100% New and High Quality\nColour:as the pics show\nweight size\n50kg-55kg S\n55kg-60kg M\n60kg-65kg L\n65kg-70kg XL\n70kg-75kg XXL"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.558"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/product_textMen3"
+                app:layout_constraintVertical_bias="1.0" />
+            <!--other image-->
+            <TextView
+                android:id="@+id/product_other_imageMen3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="Product Image"
+                android:textColor="#6A4D7C"
+                android:textSize="30sp"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/product_descMen3" />
+            <!--Images-->
+            <ImageView
+                android:id="@+id/productImage2Men3"
+                android:layout_width="403dp"
+                android:layout_height="408dp"
+                android:layout_margin="8dp"
+                android:src="@drawable/men3_1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/product_other_imageMen3" />
+
+
+            <ImageView
+                android:id="@+id/productImage3Men3"
+                android:layout_width="407dp"
+                android:layout_height="399dp"
+                android:layout_margin="8dp"
+                android:src="@drawable/men3_2"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/productImage2Men3" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/list_scrollView"
+        android:background="@color/colorPrimary">
+
+        <Button
+            android:id="@+id/add_wish_list"
+            android:layout_width="205dp"
+            android:layout_height="50dp"
+            android:textColor="@color/colorPrimary"
+            android:text="Add to Wish List" />
+
+        <Button
+            android:id="@+id/add_cart"
+            android:layout_width="205dp"
+            android:layout_height="50dp"
+            android:layout_toEndOf="@id/add_wish_list"
+            android:textColor="@color/colorPrimary"
+            android:text="Add to Cart" />
+    </RelativeLayout>
+</RelativeLayout>

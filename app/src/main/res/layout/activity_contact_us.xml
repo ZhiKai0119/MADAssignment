@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/style"
+    tools:context=".ContactUs">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/article_heading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding"
+                android:text="@string/contact_us_heading"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/contact_us_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:src="@drawable/contact_us"
+                android:layout_below="@id/article_heading"/>
+
+            <TextView
+                android:id="@+id/article"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/contact_us_image"
+                android:layout_marginTop="0dp"
+                android:lineSpacingExtra="5sp"
+                android:padding="@dimen/padding"
+                android:text="@string/contact_1" />
+<!-- Email           -->
+            <TextView
+                android:id="@+id/Lacc_email_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/contact_2"
+                android:layout_below="@id/article"
+                android:layout_margin="8dp" />
+
+            <TextView
+                android:id="@+id/Lacc_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/contact_3"
+                android:layout_below="@id/article"
+                android:textColor="#0026FF"
+                android:layout_toEndOf="@id/Lacc_email_text"
+                android:textColorHighlight="#27795F88"
+                android:layout_margin="8dp" />
+<!--phone-->
+            <TextView
+                android:id="@+id/Lacc_phone_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/contact_4"
+                android:layout_below="@id/Lacc_email_text"
+                android:layout_margin="8dp" />
+
+            <TextView
+                android:id="@+id/Lacc_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#0026FF"
+                android:text="@string/contact_5"
+                android:layout_toEndOf="@id/Lacc_phone_text"
+                android:layout_below="@id/Lacc_email"
+                android:layout_margin="8dp" />
+<!--facebook-->
+            <TextView
+                android:id="@+id/facebook_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Lacc_phone"
+                android:layout_margin="8dp"
+                android:text="@string/contact_6" />
+
+            <TextView
+                android:id="@+id/facebook_jdsports"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#0026FF"
+                android:text="@string/contact_7"
+                android:layout_toEndOf="@id/facebook_text"
+                android:layout_below="@id/Lacc_phone"
+                android:layout_margin="8dp" />
+<!--Instagram-->
+            <TextView
+                android:id="@+id/Lacc_instagram"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/facebook_jdsports"
+                android:layout_margin="8dp"
+                android:text="@string/contact_8" />
+
+            <TextView
+                android:id="@+id/instagram"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/contact_9"
+                android:textColor="#0026FF"
+                android:layout_toEndOf="@id/Lacc_instagram"
+                android:layout_below="@id/facebook_text"
+                android:layout_margin="8dp" />
+<!--webpage-->
+            <TextView
+                android:id="@+id/Lacc_webpage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Lacc_instagram"
+                android:layout_margin="8dp"
+                android:text="@string/contact_10" />
+
+            <TextView
+                android:id="@+id/webpage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/contact_11"
+                android:textColor="#0026FF"
+                android:layout_toEndOf="@id/Lacc_webpage"
+                android:layout_below="@id/Lacc_instagram"
+                android:layout_margin="8dp" />
+
+            <TextView
+                android:id="@+id/contact_us_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/paragraph_contact"
+                android:layout_margin="8dp"
+                android:layout_below="@id/webpage" />
+
+            <ImageView
+                android:id="@+id/adidas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/contact_us_text"
+                android:src="@drawable/adidas" />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

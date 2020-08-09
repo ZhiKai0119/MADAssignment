@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:theme="@style/style"
+    tools:context=".AboutUs">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/article_heading"
+        android:padding="@dimen/padding"
+        android:textSize="34sp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textStyle="bold"
+        android:textColor="#474343"
+        android:text="@string/about_us_string"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/article_heading">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+<!--            <VideoView-->
+<!--                android:id="@+id/videoView"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_alignParentTop="true"-->
+<!--                android:layout_centerHorizontal="true" />-->
+
+            <ImageView
+                android:id="@+id/image_shop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/shop" />
+
+            <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/paragraph"
+            android:id="@+id/article"
+            android:layout_below="@id/image_shop"
+            android:lineSpacingExtra="5sp"
+            android:textColor="#2D2159"
+            android:padding="@dimen/padding"/>
+
+            <ImageView
+                android:id="@+id/image_shop2"
+                android:layout_width="match_parent"
+                android:layout_height="321dp"
+                android:layout_below="@id/article"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/shop2" />
+
+            <TextView
+                android:id="@+id/article2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/image_shop2"
+                android:layout_marginTop="-74dp"
+                android:lineSpacingExtra="5sp"
+                android:padding="@dimen/padding"
+                android:text="@string/paragraph2"
+                android:textColor="#2D2159" />
+
+<!--            <com.google.android.gms.ads.AdView-->
+<!--                android:id="@+id/adView"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_alignParentStart="true"-->
+<!--                android:layout_alignParentLeft="true"-->
+<!--                android:layout_alignParentBottom="true"-->
+<!--                android:layout_below="@+id/article2"-->
+<!--                ads:adSize="BANNER"-->
+<!--                ads:adUnitId="@string/admob_id" />-->
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

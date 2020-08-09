@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/Background"
+    android:orientation="vertical">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="105dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:id="@+id/lacclogo2"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginStart="136dp"
+                android:layout_marginLeft="136dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/lacclogo" />
+
+            <ImageView
+                android:id="@+id/kidpic1"
+                android:layout_width="150dp"
+                android:layout_height="210dp"
+                android:layout_marginStart="36dp"
+                android:layout_marginLeft="36dp"
+                android:layout_marginTop="180dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/kidproduct1" />
+
+            <TextView
+                android:id="@+id/kidname1"
+                android:layout_width="149dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="36dp"
+                android:text="Natural History Shirt"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/kidpic1" />
+
+            <TextView
+                android:id="@+id/kidprice1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:layout_marginLeft="36dp"
+                android:text="RM55"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/kidname1" />
+
+            <ImageView
+                android:id="@+id/kidpic2"
+                android:layout_width="150dp"
+                android:layout_height="210dp"
+                android:layout_marginTop="180dp"
+                android:layout_marginEnd="36dp"
+                android:layout_marginRight="36dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/kidproduct2" />
+
+            <TextView
+                android:id="@+id/kidname2"
+                android:layout_width="145dp"
+                android:layout_height="51dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="36dp"
+                android:text="Lego Short Sleeve"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/kidpic2" />
+
+
+            <TextView
+                android:id="@+id/kidprice2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="124dp"
+                android:text="RM75"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/kidname2" />
+
+            <ImageView
+                android:id="@+id/kidpic3"
+                android:layout_width="150dp"
+                android:layout_height="210dp"
+                android:layout_marginStart="36dp"
+                android:layout_marginLeft="36dp"
+                android:layout_marginTop="28dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/kidprice1"
+                app:srcCompat="@drawable/kidproduct3" />
+
+            <TextView
+                android:id="@+id/kidprice3"
+                android:layout_width="76dp"
+                android:layout_height="64dp"
+                android:layout_marginStart="36dp"
+                android:text="RM69"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/kidname3" />
+
+            <TextView
+                android:id="@+id/kidname3"
+                android:layout_width="152dp"
+                android:layout_height="22dp"
+                android:layout_marginStart="36dp"
+                android:layout_marginLeft="36dp"
+                android:text="Satin Bomber Jacket"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/kidpic3" />
+
+            <ImageView
+                android:id="@+id/kidpic4"
+                android:layout_width="150dp"
+                android:layout_height="210dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="36dp"
+                android:layout_marginRight="36dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/kidprice2"
+                app:srcCompat="@drawable/kidproduct4" />
+
+
+            <TextView
+                android:id="@+id/kidname4"
+                android:layout_width="163dp"
+                android:layout_height="54dp"
+                android:layout_marginEnd="16dp"
+                android:text="Flock-print Hoodie"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/kidpic4" />
+
+            <TextView
+                android:id="@+id/kidprice4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="124dp"
+                android:text="RM69"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/kidname4" />
+
+            <ImageView
+                android:id="@+id/kidpic5"
+                android:layout_width="150dp"
+                android:layout_height="210dp"
+                android:layout_marginStart="36dp"
+                android:layout_marginLeft="36dp"
+                android:layout_marginTop="28dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/kidprice3"
+                app:srcCompat="@drawable/kidproduct5" />
+
+            <TextView
+                android:id="@+id/kidname5"
+                android:layout_width="143dp"
+                android:layout_height="57dp"
+                android:layout_marginStart="36dp"
+                android:text="Urban Walls T-Shirt"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/kidpic5" />
+
+            <TextView
+                android:id="@+id/kidprice5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:layout_marginLeft="36dp"
+                android:text="RM65"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/kidname5" />
+
+            <ImageView
+                android:id="@+id/kidpic6"
+                android:layout_width="150dp"
+                android:layout_height="210dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="36dp"
+                android:layout_marginRight="36dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/kidprice4"
+                app:srcCompat="@drawable/kidproduct6" />
+
+
+            <TextView
+                android:id="@+id/kidname6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="72dp"
+                android:text="Henley Shirt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/kidpic6" />
+
+            <TextView
+                android:id="@+id/kidprice6"
+                android:layout_width="70dp"
+                android:layout_height="54dp"
+                android:layout_marginEnd="116dp"
+                android:text="RM65"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/kidname6" />
+
+            <ImageView
+                android:id="@+id/kidpic7"
+                android:layout_width="150dp"
+                android:layout_height="210dp"
+                android:layout_marginStart="36dp"
+                android:layout_marginLeft="36dp"
+                android:layout_marginTop="28dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/kidprice5"
+                app:srcCompat="@drawable/kidproduct7" />
+
+            <TextView
+                android:id="@+id/kidname7"
+                android:layout_width="143dp"
+                android:layout_height="51dp"
+                android:layout_marginStart="36dp"
+                android:text="Puff-sleeved Top"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/kidpic7" />
+
+            <TextView
+                android:id="@+id/kidprice7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:layout_marginLeft="36dp"
+                android:text="RM78"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/kidname7" />
+
+            <ImageView
+                android:id="@+id/kidpic8"
+                android:layout_width="150dp"
+                android:layout_height="210dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="36dp"
+                android:layout_marginRight="36dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/kidprice6"
+                app:srcCompat="@drawable/kidproduct8" />
+
+            <TextView
+                android:id="@+id/kidname8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="76dp"
+                android:text="Twill Jacket"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/kidpic8" />
+
+            <TextView
+                android:id="@+id/kidprice8"
+                android:layout_width="55dp"
+                android:layout_height="58dp"
+                android:layout_marginEnd="132dp"
+                android:text="RM67"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/kidname8" />
+
+            <ImageView
+                android:id="@+id/kidpic9"
+                android:layout_width="150dp"
+                android:layout_height="210dp"
+                android:layout_marginStart="36dp"
+                android:layout_marginLeft="36dp"
+                android:layout_marginTop="28dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/kidprice7"
+                app:srcCompat="@drawable/kidproduct9" />
+
+            <TextView
+                android:id="@+id/kidname9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:layout_marginLeft="36dp"
+                android:text="Classic Blazer"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/kidpic9" />
+
+            <TextView
+                android:id="@+id/kidprice9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:layout_marginLeft="36dp"
+                android:text="RM60"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/kidname9" />
+
+            <ImageView
+                android:id="@+id/kidpic10"
+                android:layout_width="150dp"
+                android:layout_height="210dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="36dp"
+                android:layout_marginRight="36dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/kidprice8"
+                app:srcCompat="@drawable/kidproduct10" />
+
+            <TextView
+                android:id="@+id/kidname10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="36dp"
+                android:text="Patterned Dress"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/kidpic10" />
+
+            <TextView
+                android:id="@+id/kidprice10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="124dp"
+                android:text="RM60"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/kidname10" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

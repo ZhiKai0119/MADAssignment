@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/Background"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-194dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/lacclogo3"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginStart="136dp"
+                android:layout_marginLeft="136dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/lacclogo" />
+
+            <ImageView
+                android:id="@+id/menpic1"
+                android:layout_width="150dp"
+                android:layout_height="210dp"
+                android:layout_marginStart="36dp"
+                android:layout_marginLeft="36dp"
+                android:layout_marginTop="180dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/menproduct1" />
+
+            <TextView
+                android:id="@+id/menname1"
+                android:layout_width="152dp"
+                android:layout_height="54dp"
+                android:layout_marginStart="36dp"
+                android:text="Cargo Harem Pants"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/menpic1" />
+
+            <TextView
+                android:id="@+id/menprice1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:layout_marginLeft="36dp"
+                android:text="RM179"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/menname1" />
+
+
+            <ImageView
+                android:id="@+id/menpic2"
+                android:layout_width="150dp"
+                android:layout_height="210dp"
+                android:layout_marginTop="180dp"
+                android:layout_marginEnd="36dp"
+                android:layout_marginRight="36dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/menproduct2" />
+
+            <TextView
+                android:id="@+id/menname2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="76dp"
+                android:text="Black Pants"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/menpic2" />
+
+            <TextView
+                android:id="@+id/menprice2"
+                android:layout_width="79dp"
+                android:layout_height="54dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="104dp"
+                android:text="RM100"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/menname2" />
+
+            <ImageView
+                android:id="@+id/menpic3"
+                android:layout_width="150dp"
+                android:layout_height="210dp"
+                android:layout_marginStart="36dp"
+                android:layout_marginLeft="36dp"
+                android:layout_marginTop="24dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/menprice1"
+                app:srcCompat="@drawable/menproduct3" />
+
+            <TextView
+                android:id="@+id/menname3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:layout_marginLeft="36dp"
+                android:text="Hasel Pants"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/menpic3" />
+
+
+            <TextView
+                android:id="@+id/menprice3"
+                android:layout_width="58dp"
+                android:layout_height="54dp"
+                android:layout_marginStart="36dp"
+                android:text="RM80"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/menname3"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <ImageView
+                android:id="@+id/menpic4"
+                android:layout_width="150dp"
+                android:layout_height="210dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginRight="32dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/menprice2"
+                app:srcCompat="@drawable/menproduct4" />
+
+
+            <TextView
+                android:id="@+id/menname4"
+                android:layout_width="149dp"
+                android:layout_height="46dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="32dp"
+                android:text="Pants Korean Style"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/menpic4" />
+
+            <TextView
+                android:id="@+id/menprice4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="116dp"
+                android:text="RM114"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/menname4" />
+
+            <ImageView
+                android:id="@+id/menpic5"
+                android:layout_width="150dp"
+                android:layout_height="210dp"
+                android:layout_marginLeft="36dp"
+                android:layout_marginTop="24dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/menprice3"
+                app:srcCompat="@drawable/menproduct5" />
+
+            <TextView
+                android:id="@+id/menname5"
+                android:layout_width="150dp"
+                android:layout_height="47dp"
+                android:layout_marginLeft="36dp"
+                android:text="Men Pockets Pants"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/menpic5" />
+
+            <TextView
+                android:id="@+id/menprice5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:layout_marginLeft="36dp"
+                android:text="RM158"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/menname5" />
+
+            <ImageView
+                android:id="@+id/menpic6"
+                android:layout_width="150dp"
+                android:layout_height="210dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginRight="32dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/menprice4"
+                app:srcCompat="@drawable/menproduct6" />
+
+
+            <TextView
+                android:id="@+id/menname6"
+                android:layout_width="147dp"
+                android:layout_height="47dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="36dp"
+                android:text="Crtstal Men's Fashion"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/menpic6" />
+
+            <TextView
+                android:id="@+id/menprice6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="128dp"
+                android:text="Rm34"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/menname6" />
+
+            <ImageView
+                android:id="@+id/menpic7"
+                android:layout_width="150dp"
+                android:layout_height="210dp"
+                android:layout_marginLeft="36dp"
+                android:layout_marginTop="24dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/menprice5"
+                app:srcCompat="@drawable/menproduct7" />
+
+            <TextView
+                android:id="@+id/menname7"
+                android:layout_width="149dp"
+                android:layout_height="51dp"
+                android:layout_marginLeft="36dp"
+                android:text="Yfashion 3D Expression"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/menpic7" />
+
+            <TextView
+                android:id="@+id/menprice7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:layout_marginLeft="36dp"
+                android:text="Rm30"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/menname7" />
+
+            <ImageView
+                android:id="@+id/menpic8"
+                android:layout_width="150dp"
+                android:layout_height="210dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginRight="32dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/menprice6"
+                app:srcCompat="@drawable/menproduct8" />
+
+
+            <TextView
+                android:id="@+id/menname8"
+                android:layout_width="160dp"
+                android:layout_height="46dp"
+                android:layout_marginEnd="24dp"
+                android:text="Stussy Sweatshirts"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/menpic8" />
+
+            <TextView
+                android:id="@+id/menprice8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="128dp"
+                android:text="RM75"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/menname8" />
+
+            <ImageView
+                android:id="@+id/menpic9"
+                android:layout_width="150dp"
+                android:layout_height="210dp"
+                android:layout_marginLeft="36dp"
+                android:layout_marginTop="24dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/menprice7"
+                app:srcCompat="@drawable/menproduct9" />
+
+            <TextView
+                android:id="@+id/menname9"
+                android:layout_width="152dp"
+                android:layout_height="53dp"
+                android:layout_marginLeft="36dp"
+                android:text="Cozy Japanese Men"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/menpic9" />
+
+            <TextView
+                android:id="@+id/menprice9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:layout_marginLeft="36dp"
+                android:text="RM97"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/menname9" />
+
+            <ImageView
+                android:id="@+id/menpic10"
+                android:layout_width="150dp"
+                android:layout_height="210dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginRight="32dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/menprice8"
+                app:srcCompat="@drawable/menproduct10" />
+
+            <TextView
+                android:id="@+id/menname10"
+                android:layout_width="126dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="52dp"
+                android:text="OFF WHITE Hoodies"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/menpic10" />
+
+            <TextView
+                android:id="@+id/menprice10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="112dp"
+                android:text="RM102"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/menname10" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Background"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/lacclogo"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_marginStart="136dp"
+                            android:layout_marginLeft="136dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/lacclogo" />
+
+                        <ImageView
+                            android:id="@+id/womenpic1"
+                            android:layout_width="150dp"
+                            android:layout_height="210dp"
+                            android:layout_marginStart="36dp"
+                            android:layout_marginLeft="36dp"
+                            android:layout_marginTop="180dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/womenproduct1" />
+
+                        <TextView
+                            android:id="@+id/womenname1"
+                            android:layout_width="154dp"
+                            android:layout_height="53dp"
+                            android:layout_marginStart="36dp"
+                            android:text="Adidas Cropped Hoodie"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/womenpic1" />
+
+                        <TextView
+                            android:id="@+id/womenprice1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="36dp"
+                            android:layout_marginLeft="36dp"
+                            android:text="RM100"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/womenname1" />
+
+
+                        <ImageView
+                            android:id="@+id/womenpic2"
+                            android:layout_width="150dp"
+                            android:layout_height="210dp"
+                            android:layout_marginTop="180dp"
+                            android:layout_marginEnd="36dp"
+                            android:layout_marginRight="36dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/womenproduct2" />
+
+                        <TextView
+                            android:id="@+id/womenname2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginEnd="80dp"
+                            android:text="Nike Shield"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/womenpic2" />
+
+                        <TextView
+                            android:id="@+id/womenprice2"
+                            android:layout_width="70dp"
+                            android:layout_height="48dp"
+                            android:layout_marginEnd="112dp"
+                            android:text="Rm220"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/womenname2" />
+
+                        <ImageView
+                            android:id="@+id/womenpic3"
+                            android:layout_width="150dp"
+                            android:layout_height="210dp"
+                            android:layout_marginStart="36dp"
+                            android:layout_marginLeft="36dp"
+                            android:layout_marginTop="24dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/womenprice1"
+                            app:srcCompat="@drawable/womenproduct3" />
+
+                        <TextView
+                            android:id="@+id/womenname3"
+                            android:layout_width="152dp"
+                            android:layout_height="50dp"
+                            android:layout_marginStart="36dp"
+                            android:text="Nerdunit Anatomy"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/womenpic3" />
+
+
+                        <TextView
+                            android:id="@+id/womenprice3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="36dp"
+                            android:layout_marginLeft="36dp"
+                            android:text="RM40"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/womenname3"
+                            app:layout_constraintVertical_bias="0.0" />
+
+                        <ImageView
+                            android:id="@+id/womenpic4"
+                            android:layout_width="150dp"
+                            android:layout_height="210dp"
+                            android:layout_marginTop="24dp"
+                            android:layout_marginEnd="32dp"
+                            android:layout_marginRight="32dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/womenprice2"
+                            app:srcCompat="@drawable/womenproduct4" />
+
+
+                        <TextView
+                            android:id="@+id/womenname4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="76dp"
+                            android:text="Puma Evide"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/womenpic4" />
+
+                        <TextView
+                            android:id="@+id/womenprice4"
+                            android:layout_width="73dp"
+                            android:layout_height="44dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="108dp"
+                            android:text="Rm110"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/womenname4" />
+
+                        <ImageView
+                            android:id="@+id/womenpic5"
+                            android:layout_width="150dp"
+                            android:layout_height="210dp"
+                            android:layout_marginLeft="36dp"
+                            android:layout_marginTop="24dp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/womenprice3"
+                            app:srcCompat="@drawable/womenproduct5" />
+
+                        <TextView
+                            android:id="@+id/womenname5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="36dp"
+                            android:layout_marginLeft="36dp"
+                            android:text="Nike A.A.E"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/womenpic5" />
+
+                        <TextView
+                            android:id="@+id/womenprice5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="36dp"
+                            android:layout_marginLeft="36dp"
+                            android:text="RM180"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/womenname5" />
+
+                        <ImageView
+                            android:id="@+id/womenpic6"
+                            android:layout_width="150dp"
+                            android:layout_height="210dp"
+                            android:layout_marginTop="24dp"
+                            android:layout_marginEnd="32dp"
+                            android:layout_marginRight="32dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/womenprice4"
+                            app:srcCompat="@drawable/womenproduct6" />
+
+
+                        <TextView
+                            android:id="@+id/womenname6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="52dp"
+                            android:text="Nerdunit Dash"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/womenpic6" />
+
+                        <TextView
+                            android:id="@+id/womenprice6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="128dp"
+                            android:text="RM70"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/womenname6" />
+
+                        <ImageView
+                            android:id="@+id/womenpic7"
+                            android:layout_width="150dp"
+                            android:layout_height="210dp"
+                            android:layout_marginLeft="36dp"
+                            android:layout_marginTop="24dp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/womenprice5"
+                            app:srcCompat="@drawable/womenproduct7" />
+
+                        <TextView
+                            android:id="@+id/womenname7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="36dp"
+                            android:layout_marginLeft="36dp"
+                            android:text="Rexagon Jacket"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/womenpic7" />
+
+                        <TextView
+                            android:id="@+id/womenprice7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="36dp"
+                            android:layout_marginLeft="36dp"
+                            android:text="RM150"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/womenname7" />
+
+                        <ImageView
+                            android:id="@+id/womenpic8"
+                            android:layout_width="150dp"
+                            android:layout_height="210dp"
+                            android:layout_marginTop="24dp"
+                            android:layout_marginEnd="32dp"
+                            android:layout_marginRight="32dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/womenprice6"
+                            app:srcCompat="@drawable/womenproduct8" />
+
+
+                        <TextView
+                            android:id="@+id/womenname8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="64dp"
+                            android:text="Adidas Track"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/womenpic8" />
+
+                        <TextView
+                            android:id="@+id/womenprice8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="128dp"
+                            android:text="RM80"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/womenname8" />
+
+                        <ImageView
+                            android:id="@+id/womenpic9"
+                            android:layout_width="150dp"
+                            android:layout_height="210dp"
+                            android:layout_marginLeft="36dp"
+                            android:layout_marginTop="24dp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/womenprice7"
+                            app:srcCompat="@drawable/womenproduct9" />
+
+                        <TextView
+                            android:id="@+id/womenname9"
+                            android:layout_width="152dp"
+                            android:layout_height="51dp"
+                            android:layout_marginLeft="36dp"
+                            android:text="Rexagon Spectra Pants"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/womenpic9" />
+
+                        <TextView
+                            android:id="@+id/womenprice9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="36dp"
+                            android:layout_marginLeft="36dp"
+                            android:text="RM150"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/womenname9" />
+
+                        <ImageView
+                            android:id="@+id/womenpic10"
+                            android:layout_width="150dp"
+                            android:layout_height="210dp"
+                            android:layout_marginTop="24dp"
+                            android:layout_marginEnd="32dp"
+                            android:layout_marginRight="32dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/womenprice8"
+                            app:srcCompat="@drawable/womenproduct10" />
+
+                        <TextView
+                            android:id="@+id/womenname10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="28dp"
+                            android:text="Nike Tech Fleece"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/womenpic10" />
+
+                        <TextView
+                            android:id="@+id/womenprice10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginEnd="120dp"
+                            android:text="RM180"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/womenname10" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
