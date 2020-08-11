@@ -128,7 +128,7 @@
                 app:layout_constraintTop_toBottomOf="@id/product_desckid2" />
             <!--Images-->
             <ImageView
-                android:id="@+id/productImagekid2.1"
+                android:id="@+id/productImagekid2_1"
                 android:layout_width="397dp"
                 android:layout_height="398dp"
                 android:layout_margin="8dp"
@@ -138,14 +138,14 @@
                 app:layout_constraintTop_toBottomOf="@id/product_other_imagekid2" />
 
             <ImageView
-                android:id="@+id/productImagekid2.2"
+                android:id="@+id/productImagekid2_2"
                 android:layout_width="405dp"
                 android:layout_height="392dp"
                 android:layout_margin="8dp"
                 android:src="@drawable/kids2_2"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/productImagekid2.1" />
+                app:layout_constraintTop_toBottomOf="@+id/productImagekid2_1" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

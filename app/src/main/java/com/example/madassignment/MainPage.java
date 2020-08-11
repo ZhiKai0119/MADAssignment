@@ -1,8 +1,10 @@
 package com.example.madassignment;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -32,6 +34,12 @@ public class MainPage extends AppCompatActivity implements View.OnClickListener 
     private Button btnWomen2;
     private Button btnKids1;
     private Button btnKids2;
+
+    private ImageView spokesperson;
+    private ImageView spokesperson2;
+    private ImageView spokesperson3;
+    private ImageView spokesperson4;
+    private ImageView spokesperson5;
 
 
     @Override
@@ -83,6 +91,17 @@ public class MainPage extends AppCompatActivity implements View.OnClickListener 
 
         btnKids2 = (Button) findViewById(R.id.kids_2_btn);
         btnKids2.setOnClickListener(this);
+
+        spokesperson = (ImageView) findViewById(R.id.spokesperson);
+        spokesperson.setOnClickListener(this);
+        spokesperson2 = (ImageView) findViewById(R.id.spokesperson_2);
+        spokesperson2.setOnClickListener(this);
+        spokesperson3 = (ImageView) findViewById(R.id.spokesperson_3);
+        spokesperson3.setOnClickListener(this);
+        spokesperson4 = (ImageView) findViewById(R.id.spokesperson_4);
+        spokesperson4.setOnClickListener(this);
+        spokesperson5 = (ImageView) findViewById(R.id.spokesperson_5);
+        spokesperson5.setOnClickListener(this);
     }
 
 
@@ -145,7 +164,7 @@ public class MainPage extends AppCompatActivity implements View.OnClickListener 
                 startActivity(new Intent(MainPage.this, Offer_45.class));
                 break;
             case R.id.shopping_cart:
-                Toast.makeText(getApplicationContext(), "Button Clicked", Toast.LENGTH_LONG).show();
+                startActivity(new Intent(MainPage.this, ShippingOption.class));
                 break;
             case R.id.men:
             case R.id.women:
@@ -165,10 +184,48 @@ public class MainPage extends AppCompatActivity implements View.OnClickListener 
                 startActivity(new Intent(MainPage.this, women2.class));
                 break;
             case R.id.kids_1_btn:
-                startActivity(new Intent(MainPage.this, kids1.class));
+                startActivity(new Intent(MainPage.this, kids3.class));
                 break;
             case R.id.kids_2_btn:
                 startActivity(new Intent(MainPage.this, kids4.class));
+                break;
+            case R.id.spokesperson:
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                builder.setTitle("Spokesperson Information");
+                builder.setMessage("Name:Yoona\nDate of birth  :30/5/1990\nAge   :30\nGender:Female\nOccupation:actress ,singer\nCitizenship:Korea\nGroup Name: Girl generation\nFavourite fashion style: Chic\nFavourite Sport: basketball");
+                builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                    }
+                });
+                builder.create().show();
+                break;
+            case R.id.spokesperson_2:
+            case R.id.spokesperson_3:
+                AlertDialog.Builder builder2 = new AlertDialog.Builder(this);
+                builder2.setTitle("Spokesperson Information");
+                builder2.setMessage("Name:Taeyeon\nDate of birth  :9/3/1989\nAge   :31\nGender:Female\nOccupation:Singer\nCitizenship:korea\nGroup Name: Girl generation\nFavourite fashion style:Streetwear\nFavourite Sport: swimming");
+                builder2.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                    }
+                });
+                builder2.create().show();
+                break;
+            case R.id.spokesperson_4:
+            case R.id.spokesperson_5:
+                AlertDialog.Builder builder3 = new AlertDialog.Builder(this);
+                builder3.setTitle("Spokesperson Information");
+                builder3.setMessage("Name:Suzy Bae\nDate of birth  : 10/10/1994\nAge   :25\nGender:Female\nOccupation: Acterss,singer ,dancer\nCitizenship:Korean\nGroup Name:Miss A\nFavourite fashion style:casual\nFavourite Sport:Badminton");
+                builder3.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                    }
+                });
+                builder3.create().show();
                 break;
             default:
                 //Nothings

@@ -7,7 +7,7 @@
     android:background="@color/Background"
     tools:context=".kids3">
 
-<ScrollView
+    <ScrollView
         android:id="@+id/list_scrollView"
         android:layout_width="match_parent"
         android:layout_height="682dp">
@@ -128,7 +128,7 @@
                 app:layout_constraintTop_toBottomOf="@id/product_desckid3" />
             <!--Images-->
             <ImageView
-                android:id="@+id/productImagekid3.1"
+                android:id="@+id/productImagekid3_1"
                 android:layout_width="397dp"
                 android:layout_height="512dp"
                 android:layout_margin="8dp"
@@ -138,14 +138,14 @@
                 app:layout_constraintTop_toBottomOf="@id/product_other_imagekid3" />
 
             <ImageView
-                android:id="@+id/productImagekid3.2"
-                android:layout_width="431dp"
-                android:layout_height="509dp"
+                android:id="@+id/productImagekid3_2"
+                android:layout_width="394dp"
+                android:layout_height="434dp"
                 android:layout_margin="8dp"
                 android:src="@drawable/kids3_2"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/productImagekid3.1" />
+                app:layout_constraintTop_toBottomOf="@+id/productImagekid3_1" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
@@ -161,14 +161,14 @@
             android:id="@+id/add_wish_list"
             android:layout_width="205dp"
             android:layout_height="50dp"
-            android:textColor="@color/colorPrimary"
-            android:text="Add to Wish List" />
+            android:text="Add to Wish List"
+            android:textColor="@color/colorPrimary" />
 
         <Button
             android:id="@+id/add_cart"
             android:layout_width="205dp"
             android:layout_height="50dp"
-            android:textColor="@color/colorPrimary"
-            android:text="Add to Cart" />
+            android:text="Add to Cart"
+            android:textColor="@color/colorPrimary" />
     </LinearLayout>
 </RelativeLayout>

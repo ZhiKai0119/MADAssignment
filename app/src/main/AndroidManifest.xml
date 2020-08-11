@@ -14,48 +14,49 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Faq_voucher"
+        <activity android:name=".ShippingOption"></activity>
+        <activity
+            android:name=".Faq_voucher"
             android:parentActivityName=".FAQ">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".FAQ" />
         </activity>
-
-        <activity android:name=".Faq_return"
+        <activity
+            android:name=".Faq_return"
             android:parentActivityName=".FAQ">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".FAQ" />
         </activity>
-
-        <activity android:name=".Faq_PaymentInquiries"
+        <activity
+            android:name=".Faq_PaymentInquiries"
             android:parentActivityName=".FAQ">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".FAQ" />
         </activity>
-
-        <activity android:name=".Faq_OrderingInquiries"
+        <activity
+            android:name=".Faq_OrderingInquiries"
             android:parentActivityName=".FAQ">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".FAQ" />
         </activity>
-
-        <activity android:name=".Faq_delivery"
+        <activity
+            android:name=".Faq_delivery"
             android:parentActivityName=".FAQ">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".FAQ" />
         </activity>
-
-        <activity android:name=".FAQ"
+        <activity
+            android:name=".FAQ"
             android:parentActivityName=".MainPage">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainPage" />
         </activity>
-
         <activity android:name=".kids4" />
         <activity android:name=".kids3" />
         <activity android:name=".kids2" />
@@ -68,14 +69,13 @@
         <activity android:name=".men3" />
         <activity android:name=".men2" />
         <activity android:name=".men1" />
-
-        <activity android:name=".ProductList"
+        <activity
+            android:name=".ProductList"
             android:parentActivityName=".MainPage">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainPage" />
         </activity>
-
         <activity android:name=".PaymentDetail" />
         <activity
             android:name=".ContactUs"

@@ -12,6 +12,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
+import com.example.madassignment.ProductList;
 import com.example.madassignment.R;
 
 public class PlaceholderFragment extends Fragment {

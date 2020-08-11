@@ -136,8 +136,8 @@
 
             <TextView
                 android:id="@+id/kidname4"
-                android:layout_width="163dp"
-                android:layout_height="54dp"
+                android:layout_width="165dp"
+                android:layout_height="52dp"
                 android:layout_marginEnd="16dp"
                 android:text="Flock-print Hoodie"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -186,9 +186,8 @@
                 android:id="@+id/kidpic6"
                 android:layout_width="150dp"
                 android:layout_height="210dp"
-                android:layout_marginTop="28dp"
+                android:layout_marginTop="32dp"
                 android:layout_marginEnd="36dp"
-                android:layout_marginRight="36dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/kidprice4"
                 app:srcCompat="@drawable/kidproduct6" />
@@ -265,8 +264,8 @@
 
             <TextView
                 android:id="@+id/kidprice8"
-                android:layout_width="55dp"
-                android:layout_height="58dp"
+                android:layout_width="51dp"
+                android:layout_height="53dp"
                 android:layout_marginEnd="132dp"
                 android:text="RM67"
                 app:layout_constraintEnd_toEndOf="parent"
