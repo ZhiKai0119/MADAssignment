@@ -94,8 +94,9 @@
 
             <ImageView
                 android:id="@+id/men"
-                android:layout_width="405dp"
+                android:layout_width="390dp"
                 android:layout_height="242dp"
+
                 android:src="@drawable/sportswear_men"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
@@ -105,6 +106,7 @@
                 android:id="@+id/go_men_fragment"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="10dp"
                 android:background="#CA00FF"
                 android:drawableStart="@drawable/ic_up"
                 android:drawableEnd="@drawable/ic_up"
@@ -116,8 +118,10 @@
             <!--men product 1-->
             <ImageView
                 android:id="@+id/men_1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="200dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
                 android:padding="@dimen/padding"
                 android:src="@drawable/men_1"
                 app:layout_constraintLeft_toLeftOf="parent"
@@ -130,15 +134,17 @@
                 android:layout_height="wrap_content"
                 android:paddingStart="8dp"
                 android:text="@string/men_1_text"
+                android:textSize="16sp"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toLeftOf="@id/men_2_text"
                 app:layout_constraintTop_toBottomOf="@id/men_1" />
 
             <Button
                 android:id="@+id/men_1_btn"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
+                android:layout_width="180dp"
+                android:layout_height="45dp"
+
+
                 android:text="@string/shop_now"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toLeftOf="@id/men_2_btn"
@@ -146,8 +152,10 @@
             <!--men product 2-->
             <ImageView
                 android:id="@+id/men_2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="200dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
                 android:padding="@dimen/padding"
                 app:layout_constraintLeft_toRightOf="@id/men_1"
                 app:layout_constraintRight_toRightOf="parent"
@@ -159,6 +167,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingStart="8dp"
+                android:textSize="16sp"
                 android:text="@string/men_2_text"
                 app:layout_constraintLeft_toRightOf="@id/men_1_text"
                 app:layout_constraintRight_toRightOf="parent"
@@ -166,9 +175,9 @@
 
             <Button
                 android:id="@+id/men_2_btn"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
+                android:layout_width="180dp"
+                android:layout_height="50dp"
+
                 android:text="@string/shop_now"
                 app:layout_constraintLeft_toRightOf="@id/men_1_btn"
                 app:layout_constraintRight_toRightOf="parent"
@@ -211,19 +220,22 @@
             <!--women product 1-->
             <ImageView
                 android:id="@+id/women_1"
-                android:layout_width="239dp"
-                android:layout_height="224dp"
-                android:padding="@dimen/padding"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:padding="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
                 android:src="@drawable/women7_0"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toLeftOf="@id/women_2"
-                app:layout_constraintTop_toBottomOf="@id/go_women_fragment" />
+                app:layout_constraintEnd_toStartOf="@+id/women_2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/go_women_fragment" />
 
             <TextView
                 android:id="@+id/women_1_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingStart="8dp"
+
                 android:text="Rexagon Jacket\nRM150.00"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toLeftOf="@id/men_2_text"
@@ -231,9 +243,9 @@
 
             <Button
                 android:id="@+id/women_1_btn"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
+                android:layout_width="180dp"
+                android:layout_height="45dp"
+
                 android:text="@string/shop_now"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toLeftOf="@id/women_2_btn"
@@ -241,9 +253,11 @@
             <!--women product 2-->
             <ImageView
                 android:id="@+id/women_2"
-                android:layout_width="251dp"
-                android:layout_height="223dp"
-                android:padding="@dimen/padding"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:padding="10dp"
                 app:layout_constraintLeft_toRightOf="@id/women_1"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/go_women_fragment"
@@ -253,8 +267,10 @@
                 android:id="@+id/women_2_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+
                 android:paddingStart="8dp"
                 android:text="Nike Shield\nRM220.00"
+                app:layout_constraintHorizontal_bias="0.212"
                 app:layout_constraintLeft_toRightOf="@id/women_1_text"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/women_1"
@@ -262,9 +278,9 @@
 
             <Button
                 android:id="@+id/women_2_btn"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
+                android:layout_width="180dp"
+                android:layout_height="45dp"
+
                 android:text="@string/shop_now"
                 app:layout_constraintLeft_toRightOf="@id/women_1_btn"
                 app:layout_constraintRight_toRightOf="parent"
@@ -278,6 +294,7 @@
                 android:textAlignment="center"
                 android:textColor="#847A95"
                 android:textSize="30sp"
+                android:layout_marginTop="10dp"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/women_2_btn" />
@@ -307,8 +324,9 @@
 
             <ImageView
                 android:id="@+id/kids_1"
-                android:layout_width="167dp"
-                android:layout_height="199dp"
+                android:layout_width="200dp"
+                android:layout_height="250dp"
+                android:layout_marginTop="20dp"
                 android:src="@drawable/kids3"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toLeftOf="@id/kids_2"
@@ -316,10 +334,11 @@
 
             <TextView
                 android:id="@+id/kids_1_text"
-                android:layout_width="192dp"
-                android:layout_height="54dp"
-                android:paddingStart="8dp"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+
                 android:text="Satin Bomber\nRM69.00"
+                android:textSize="18sp"
                 app:layout_constraintHorizontal_bias="0.97"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toLeftOf="@id/kids_2_text"
@@ -327,9 +346,9 @@
 
             <Button
                 android:id="@+id/kids_1_btn"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
+                android:layout_width="180dp"
+                android:layout_height="45dp"
+
                 android:text="@string/shop_now"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toLeftOf="@id/kids_2_btn"
@@ -338,9 +357,10 @@
 
             <ImageView
                 android:id="@+id/kids_2"
-                android:layout_width="184dp"
-                android:layout_height="201dp"
-                android:padding="@dimen/padding"
+                android:layout_width="200dp"
+                android:layout_height="250dp"
+                android:layout_marginTop="20dp"
+
                 app:layout_constraintLeft_toRightOf="@id/kids_1"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/go_kids_fragment"
@@ -350,16 +370,18 @@
                 android:id="@+id/kids_2_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
                 android:text="Flock-print Hoodies\nRM69.00"
+                android:textSize="18sp"
                 app:layout_constraintLeft_toRightOf="@id/kids_1_text"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/kids_1" />
 
             <Button
                 android:id="@+id/kids_2_btn"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
+                android:layout_width="180dp"
+                android:layout_height="45dp"
+
                 android:text="@string/shop_now"
                 app:layout_constraintLeft_toRightOf="@id/kids_1_btn"
                 app:layout_constraintRight_toRightOf="parent"
@@ -379,7 +401,7 @@
                 android:id="@+id/nike_adidas_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="8dp"
+
                 android:text="@string/shop_now"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
@@ -389,6 +411,7 @@
                 android:id="@+id/promotion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
                 android:fontFamily="serif"
