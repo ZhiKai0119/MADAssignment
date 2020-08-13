@@ -36,5 +36,10 @@
         app:showAsAction="ifRoom"
         android:orderInCategory="40" />
 
+    <item android:id="@+id/signOut"
+        android:title="Sign Out"
+        app:showAsAction="never"
+        android:orderInCategory="50" />
+
 
 </menu>

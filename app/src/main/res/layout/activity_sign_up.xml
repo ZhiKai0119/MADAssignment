@@ -126,11 +126,11 @@
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/btnSignUp"
         android:layout_alignEnd="@+id/btnSignUp"
-        android:layout_alignParentBottom="true"
+        android:layout_alignBottom="@+id/btnSignUp"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="21dp"
-        android:layout_marginEnd="19dp"
-        android:layout_marginBottom="152dp"
-        tools:visibility="invisible" />
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="175dp"
+        android:visibility="gone" />
 
 </RelativeLayout>

@@ -16,6 +16,8 @@ import android.widget.Toast;
 import android.widget.ViewFlipper;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class MainPage extends AppCompatActivity implements View.OnClickListener {
     //Add view flipper
@@ -41,6 +43,9 @@ public class MainPage extends AppCompatActivity implements View.OnClickListener 
     private ImageView spokesperson4;
     private ImageView spokesperson5;
 
+    private FirebaseAuth mAuth;
+//    private FirebaseAuth.AuthStateListener mAuthListener;
+//    private FirebaseUser mUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +60,8 @@ public class MainPage extends AppCompatActivity implements View.OnClickListener 
         for (int image: images) {
             flipperImages(image);
         }
+
+        mAuth = FirebaseAuth.getInstance();
 
         learnMore = (Button) findViewById(R.id.learn_more);
         learnMore.setOnClickListener(this);
@@ -144,6 +151,12 @@ public class MainPage extends AppCompatActivity implements View.OnClickListener 
                 return true;
             case R.id.FAQ:
                 startActivity(new Intent(MainPage.this, FAQ.class));
+                return true;
+            case R.id.signOut:
+                mAuth.signOut();
+                Toast.makeText(MainPage.this, "You Signed Out!", Toast.LENGTH_LONG).show();
+                startActivity(new Intent(MainPage.this, Login.class));
+                return true;
             default:
                 //Do nothing
         }

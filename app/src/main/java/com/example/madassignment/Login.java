@@ -3,6 +3,7 @@ package com.example.madassignment;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -78,6 +79,15 @@ public class Login extends AppCompatActivity {
                 final String emailString = email.getText().toString();
                 String pwd = password.getText().toString();
 
+                progressBar.setVisibility(View.VISIBLE);
+                if (TextUtils.isEmpty(emailString)) {
+                    email.setError("Email is Required.");
+                    return;
+                }
+                if (TextUtils.isEmpty(pwd)) {
+                    password.setError("Password is Required.");
+                    return;
+                }
                 if (!emailString.equals("") && !pwd.equals("")) {
                     mAuth.signInWithEmailAndPassword(emailString, pwd).addOnCompleteListener(Login.this,
                             new OnCompleteListener<AuthResult>() {
