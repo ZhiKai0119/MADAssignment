@@ -88,6 +88,7 @@ public class Login extends AppCompatActivity {
                                     } else {
                                         Toast.makeText(Login.this, "Signed in!!", Toast.LENGTH_LONG).show();
                                         startActivity(new Intent(Login.this, MainPage.class));
+                                        finish();
                                     }
                                 }
                             });
