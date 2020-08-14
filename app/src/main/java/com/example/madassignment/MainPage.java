@@ -3,6 +3,8 @@ package com.example.madassignment;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -180,9 +182,31 @@ public class MainPage extends AppCompatActivity implements View.OnClickListener 
                 startActivity(new Intent(MainPage.this, ShippingOption.class));
                 break;
             case R.id.men:
+                FragmentManager manager = getSupportFragmentManager();
+                FragmentTransaction transaction = manager.beginTransaction();
+                transaction.setCustomAnimations(R.anim.fragment_open_enter, R.anim.fragment_close_exit, R.anim.fragment_fade_enter, R.anim.fragment_fade_exit);
+                Fragment1 Fragment_1 = new Fragment1();
+                transaction.addToBackStack(null);
+                transaction.add(R.id.Move_product_list, Fragment_1);
+                transaction.commit();
+                break;
             case R.id.women:
+                FragmentManager manager2 = getSupportFragmentManager();
+                FragmentTransaction transaction2 = manager2.beginTransaction();
+                transaction2.setCustomAnimations(R.anim.fragment_open_enter, R.anim.fragment_close_exit, R.anim.fragment_fade_enter, R.anim.fragment_fade_exit);
+                Fragment2 Fragment_2 = new Fragment2();
+                transaction2.addToBackStack(null);
+                transaction2.add(R.id.Move_product_list, Fragment_2);
+                transaction2.commit();
+                break;
             case R.id.kids:
-                startActivity(new Intent(MainPage.this, ProductList.class));
+                FragmentManager manager3 = getSupportFragmentManager();
+                FragmentTransaction transaction3 = manager3.beginTransaction();
+                transaction3.setCustomAnimations(R.anim.fragment_open_enter, R.anim.fragment_close_exit, R.anim.fragment_fade_enter, R.anim.fragment_fade_exit);
+                Fragment3 Fragment_3 = new Fragment3();
+                transaction3.addToBackStack(null);
+                transaction3.add(R.id.Move_product_list, Fragment_3);
+                transaction3.commit();
                 break;
             case R.id.men_1_btn:
                 //startActivity(new Intent(MainPage.this, men1.class));
