@@ -14,12 +14,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <meta-data
             android:name="com.google.android.gms.ads.AD_MANAGER_APP"
-            android:value="true"/>
+            android:value="true" />
 
-        <activity android:name=".ShippingOption"></activity>
+        <service android:name=".services.MyFirebaseInstanceService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
 
+        <activity android:name=".ShippingOption" />
         <activity
             android:name=".Faq_voucher"
             android:parentActivityName=".FAQ">
@@ -62,30 +68,42 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainPage" />
         </activity>
-        <activity android:name=".kids4"
-            android:parentActivityName=".ProductList"/>
-        <activity android:name=".kids3"
-            android:parentActivityName=".ProductList"/>
-        <activity android:name=".kids2"
-            android:parentActivityName=".ProductList"/>
-        <activity android:name=".kids1"
-            android:parentActivityName=".ProductList"/>
-        <activity android:name=".women4"
-            android:parentActivityName=".ProductList"/>
-        <activity android:name=".women3"
-            android:parentActivityName=".ProductList"/>
-        <activity android:name=".women2"
-            android:parentActivityName=".ProductList"/>
-        <activity android:name=".women1"
-            android:parentActivityName=".ProductList"/>
-        <activity android:name=".men4"
-            android:parentActivityName=".ProductList"/>
-        <activity android:name=".men3"
-            android:parentActivityName=".ProductList"/>
-        <activity android:name=".men2"
-            android:parentActivityName=".ProductList"/>
-        <activity android:name=".men1"
-            android:parentActivityName=".ProductList"/>
+        <activity
+            android:name=".kids4"
+            android:parentActivityName=".ProductList" />
+        <activity
+            android:name=".kids3"
+            android:parentActivityName=".ProductList" />
+        <activity
+            android:name=".kids2"
+            android:parentActivityName=".ProductList" />
+        <activity
+            android:name=".kids1"
+            android:parentActivityName=".ProductList" />
+        <activity
+            android:name=".women4"
+            android:parentActivityName=".ProductList" />
+        <activity
+            android:name=".women3"
+            android:parentActivityName=".ProductList" />
+        <activity
+            android:name=".women2"
+            android:parentActivityName=".ProductList" />
+        <activity
+            android:name=".women1"
+            android:parentActivityName=".ProductList" />
+        <activity
+            android:name=".men4"
+            android:parentActivityName=".ProductList" />
+        <activity
+            android:name=".men3"
+            android:parentActivityName=".ProductList" />
+        <activity
+            android:name=".men2"
+            android:parentActivityName=".ProductList" />
+        <activity
+            android:name=".men1"
+            android:parentActivityName=".ProductList" />
         <activity
             android:name=".ProductList"
             android:parentActivityName=".MainPage">
