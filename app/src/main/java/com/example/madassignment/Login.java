@@ -51,6 +51,7 @@ public class Login extends AppCompatActivity {
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                progressBar.setVisibility(View.VISIBLE);
                 startActivity(new Intent(Login.this, signUp.class));
             }
         });
@@ -93,12 +94,18 @@ public class Login extends AppCompatActivity {
                             new OnCompleteListener<AuthResult>() {
                                 @Override
                                 public void onComplete(@NonNull Task<AuthResult> task) {
-                                    if (!task.isSuccessful()) {
-                                        Toast.makeText(Login.this, "Failed sign in", Toast.LENGTH_LONG).show();
+                                    if (task.isSuccessful()) {
+                                        if(mAuth.getCurrentUser().isEmailVerified()) {
+                                            Toast.makeText(Login.this, "Signed in!!", Toast.LENGTH_LONG).show();
+                                            startActivity(new Intent(Login.this, MainPage.class));
+                                            finish();
+                                        }else {
+                                            progressBar.setVisibility(View.GONE);
+                                            Toast.makeText(Login.this, "Please verify your email id.", Toast.LENGTH_LONG).show();
+                                        }
                                     } else {
-                                        Toast.makeText(Login.this, "Signed in!!", Toast.LENGTH_LONG).show();
-                                        startActivity(new Intent(Login.this, MainPage.class));
-                                        finish();
+                                        Toast.makeText(Login.this, "Failed sign in", Toast.LENGTH_LONG).show();
+                                        progressBar.setVisibility(View.GONE);
                                     }
                                 }
                             });

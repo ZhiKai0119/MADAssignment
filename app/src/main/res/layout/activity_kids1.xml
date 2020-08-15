@@ -10,7 +10,7 @@
     <ScrollView
         android:id="@+id/list_scrollView"
         android:layout_width="match_parent"
-        android:layout_height="659dp">
+        android:layout_height="match_parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -152,26 +152,13 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_kids1_shopping_cart"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/list_scrollView"
-        android:background="@color/colorPrimary"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/add_wish_list"
-            android:layout_width="205dp"
-            android:layout_height="50dp"
-            android:textColor="@color/colorPrimary"
-            android:text="Add to Wish List" />
-
-        <Button
-            android:id="@+id/add_cart"
-            android:layout_width="205dp"
-            android:layout_height="50dp"
-            android:textColor="@color/colorPrimary"
-            android:text="Add to Cart" />
-    </LinearLayout>
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_add_cart" />
 
 </RelativeLayout>

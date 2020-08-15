@@ -176,7 +176,7 @@
             <Button
                 android:id="@+id/men_2_btn"
                 android:layout_width="180dp"
-                android:layout_height="50dp"
+                android:layout_height="45dp"
 
                 android:text="@string/shop_now"
                 app:layout_constraintLeft_toRightOf="@id/men_1_btn"
@@ -200,6 +200,8 @@
                 android:id="@+id/women"
                 android:layout_width="408dp"
                 android:layout_height="416dp"
+
+                android:padding="15dp"
                 android:src="@drawable/sportwear_women"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
@@ -210,6 +212,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#CA00FF"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
                 android:drawableStart="@drawable/ic_up"
                 android:drawableEnd="@drawable/ic_up"
                 android:text="TRY TO CLICK THE IMAGE!!!"
@@ -222,7 +226,7 @@
                 android:id="@+id/women_1"
                 android:layout_width="200dp"
                 android:layout_height="200dp"
-                android:padding="10dp"
+                android:padding="15dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="20dp"
                 android:src="@drawable/women7_0"
@@ -257,7 +261,7 @@
                 android:layout_height="200dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="20dp"
-                android:padding="10dp"
+                android:padding="15dp"
                 app:layout_constraintLeft_toRightOf="@id/women_1"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/go_women_fragment"
@@ -303,6 +307,8 @@
                 android:id="@+id/kids"
                 android:layout_width="414dp"
                 android:layout_height="172dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
                 android:src="@drawable/sportwear_kids"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
@@ -312,6 +318,8 @@
                 android:id="@+id/go_kids_fragment"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
                 android:background="#CA00FF"
                 android:drawableStart="@drawable/ic_up"
                 android:drawableEnd="@drawable/ic_up"
@@ -327,6 +335,7 @@
                 android:layout_width="200dp"
                 android:layout_height="250dp"
                 android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
                 android:src="@drawable/kids3"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toLeftOf="@id/kids_2"
@@ -360,7 +369,7 @@
                 android:layout_width="200dp"
                 android:layout_height="250dp"
                 android:layout_marginTop="20dp"
-
+                android:layout_marginRight="10dp"
                 app:layout_constraintLeft_toRightOf="@id/kids_1"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/go_kids_fragment"
@@ -391,7 +400,7 @@
                 android:id="@+id/nike_adidas"
                 android:layout_width="407dp"
                 android:layout_height="205dp"
-                android:layout_margin="8dp"
+                android:padding="10dp"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/kids_2_btn"
@@ -401,7 +410,7 @@
                 android:id="@+id/nike_adidas_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
+                android:layout_margin="15dp"
                 android:text="@string/shop_now"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
@@ -432,6 +441,7 @@
                 android:layout_height="400dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
+             android:padding="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/promotion"
@@ -447,7 +457,7 @@
                 android:layout_marginTop="224dp"
                 android:gravity="center"
                 android:textColor="#FFFFFF"
-                android:textSize="40sp"
+                android:textSize="38sp"
                 app:layout_constraintStart_toStartOf="@+id/basketball_star"
                 app:layout_constraintTop_toTopOf="@+id/basketball_star"
                 tools:text="@string/ball_is_back" />
@@ -460,6 +470,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="12dp"
                 android:layout_marginTop="8dp"
+                android:textSize="38sp"
                 android:text="@string/extra_45_off_basketball_styles"
                 android:textColor="#FFFFFF"
                 app:layout_constraintStart_toStartOf="@+id/basketball_star"
@@ -479,7 +490,7 @@
                 android:shadowRadius="5"
                 android:text="@string/learn_more"
                 android:textColor="@color/design_default_color_on_secondary"
-                android:textSize="18sp"
+
                 android:textStyle="italic"
                 app:layout_constraintStart_toStartOf="@+id/basketball_star"
                 app:layout_constraintTop_toBottomOf="@+id/promotion_45" />
@@ -491,6 +502,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
+
                 android:fontFamily="serif"
                 android:shadowColor="#282330"
                 android:shadowDx="7"
@@ -552,5 +564,10 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/Move_product_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
 </RelativeLayout>

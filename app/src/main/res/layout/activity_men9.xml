@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Background"
+    tools:context=".men9">
+
+    <ScrollView
+        android:id="@+id/list_scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!--product image-->
+            <ImageView
+                android:id="@+id/productImageMen9"
+                android:layout_width="555dp"
+                android:layout_height="411dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:src="@drawable/men9"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+            <!--name-->
+            <TextView
+                android:id="@+id/product_nameMen9"
+                android:text="Cozy Japanese Men"
+                android:layout_width="272dp"
+                android:layout_height="37dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:textColor="#4A1868"
+                android:textSize="26sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/productImageMen9"
+                app:layout_constraintVertical_bias="0.0" />
+            <!--price-->
+            <TextView
+                android:id="@+id/product_priceMen9"
+                android:text="RM97"
+                android:layout_width="272dp"
+                android:layout_height="37dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:textColor="#4A1868"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/product_nameMen9"
+                app:layout_constraintVertical_bias="0.0" />
+            <!--Size-->
+            <Spinner
+                android:id="@+id/sizeSpinnerMen9"
+                android:layout_width="97dp"
+                android:layout_height="51dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/productImageMen9"
+                app:layout_constraintVertical_bias="0.0" />
+            <!--Description Title-->
+            <TextView
+                android:id="@+id/product_textMen9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="Description"
+                android:textColor="#6A4D7C"
+                android:textSize="30sp"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/product_priceMen9" />
+            <!--Description-->
+            <TextView
+                android:id="@+id/product_descMen9"
+                android:layout_width="385dp"
+                android:layout_height="341dp"
+                android:layout_margin="10dp"
+                android:text="Item Type:Outerwear Coats\nOuterwear Type:Jacket\nType:REGULAR\nSleeve Style:REGULAR\nColour Shown: White\nM Clothes Length 71CM Bust 112CM Shoulder 49CM Sleeve 63CM\nL Clothes Length 73CM Bust 116CM Shoulder 51CM Sleeve 65CM\nXL Clothes Length 75CM Bust 120CM Shoulder 53CM Sleeve 67CM\n2XL Clothes Length 77CM Bust 124CM Shoulder 55CM Sleeve 69CM"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.558"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/product_textMen9"
+                app:layout_constraintVertical_bias="1.0" />
+            <!--other image-->
+            <TextView
+                android:id="@+id/product_other_imageMen9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="Product Image"
+                android:textColor="#6A4D7C"
+                android:textSize="30sp"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/product_descMen9" />
+            <!--Images-->
+            <ImageView
+                android:id="@+id/productImage2Men9"
+                android:layout_width="700dp"
+                android:layout_height="384dp"
+                android:layout_margin="8dp"
+                android:src="@drawable/men9_1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/product_other_imageMen9" />
+
+
+            <ImageView
+                android:id="@+id/productImage3Men9"
+                android:layout_width="890dp"
+                android:layout_height="447dp"
+                android:layout_margin="8dp"
+                android:src="@drawable/men9_2"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/productImage2Men9" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_men4_shopping_cart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_add_cart" />
+</RelativeLayout>

@@ -3,10 +3,13 @@ package com.example.madassignment;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -15,9 +18,13 @@ import android.widget.ImageView;
 import android.widget.Toast;
 import android.widget.ViewFlipper;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.iid.FirebaseInstanceId;
+import com.google.firebase.iid.InstanceIdResult;
 
 public class MainPage extends AppCompatActivity implements View.OnClickListener {
     //Add view flipper
@@ -42,6 +49,8 @@ public class MainPage extends AppCompatActivity implements View.OnClickListener 
     private ImageView spokesperson3;
     private ImageView spokesperson4;
     private ImageView spokesperson5;
+
+    private static final String TAG = "MainPage";
 
     private FirebaseAuth mAuth;
 //    private FirebaseAuth.AuthStateListener mAuthListener;
@@ -180,9 +189,31 @@ public class MainPage extends AppCompatActivity implements View.OnClickListener 
                 startActivity(new Intent(MainPage.this, ShippingOption.class));
                 break;
             case R.id.men:
+                FragmentManager manager = getSupportFragmentManager();
+                FragmentTransaction transaction = manager.beginTransaction();
+                transaction.setCustomAnimations(R.anim.fragment_open_enter, R.anim.fragment_close_exit, R.anim.fragment_fade_enter, R.anim.fragment_fade_exit);
+                Fragment1 Fragment_1 = new Fragment1();
+                transaction.addToBackStack(null);
+                transaction.add(R.id.Move_product_list, Fragment_1);
+                transaction.commit();
+                break;
             case R.id.women:
+                FragmentManager manager2 = getSupportFragmentManager();
+                FragmentTransaction transaction2 = manager2.beginTransaction();
+                transaction2.setCustomAnimations(R.anim.fragment_open_enter, R.anim.fragment_close_exit, R.anim.fragment_fade_enter, R.anim.fragment_fade_exit);
+                Fragment2 Fragment_2 = new Fragment2();
+                transaction2.addToBackStack(null);
+                transaction2.add(R.id.Move_product_list, Fragment_2);
+                transaction2.commit();
+                break;
             case R.id.kids:
-                startActivity(new Intent(MainPage.this, ProductList.class));
+                FragmentManager manager3 = getSupportFragmentManager();
+                FragmentTransaction transaction3 = manager3.beginTransaction();
+                transaction3.setCustomAnimations(R.anim.fragment_open_enter, R.anim.fragment_close_exit, R.anim.fragment_fade_enter, R.anim.fragment_fade_exit);
+                Fragment3 Fragment_3 = new Fragment3();
+                transaction3.addToBackStack(null);
+                transaction3.add(R.id.Move_product_list, Fragment_3);
+                transaction3.commit();
                 break;
             case R.id.men_1_btn:
                 //startActivity(new Intent(MainPage.this, men1.class));

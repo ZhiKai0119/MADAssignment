@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/setting"
+        android:icon="@drawable/ic_setting"
+        android:orderInCategory="50"
+        android:title="Setting"
+        android:visible="true"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/search"
+        android:icon="@drawable/ic_search"
+        android:title="Search"
+        app:showAsAction="always" />
+
+    <item android:id="@+id/wish_list"
+        android:icon="@drawable/ic_wish_lish"
+        android:title="Wish List"
+        app:showAsAction="always" />
+
+    <item android:id="@+id/shopping_cart"
+        android:icon="@drawable/ic_shopping_cart"
+        android:title="Shopping Cart"
+        app:showAsAction="always" />
+
+    <item android:id="@+id/homepage"
+        android:icon="@drawable/ic_home"
+        android:title="Home"
+        app:showAsAction="ifRoom" />
+
+
+    <item android:id="@+id/aboutUs"
+        android:icon="@drawable/ic_about_us"
+        android:title="About Us"
+        app:showAsAction="ifRoom"
+        android:orderInCategory="20" />
+
+    <item android:id="@+id/contactUs"
+        android:icon="@drawable/ic_contact_us"
+        android:title="Contact Us"
+        app:showAsAction="ifRoom"
+        android:orderInCategory="30" />
+
+    <item android:id="@+id/FAQ"
+        android:icon="@drawable/ic_faq"
+        android:title="FAQ"
+        app:showAsAction="ifRoom"
+        android:orderInCategory="40" />
+</menu>

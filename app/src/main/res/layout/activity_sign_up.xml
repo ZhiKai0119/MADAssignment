@@ -111,13 +111,17 @@
         android:id="@+id/Go_Login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Already Have Account!"
         android:layout_below="@id/btnSignUp"
         android:layout_centerHorizontal="true"
-        android:textSize="15sp"
+        android:layout_marginTop="8sp"
         android:clickable="true"
         android:focusable="true"
-        android:layout_marginTop="8sp" />
+        android:shadowColor="#000000"
+        android:shadowDx="10"
+        android:shadowDy="10"
+        android:shadowRadius="8"
+        android:text="Already Have Account!"
+        android:textSize="15sp" />
 
     <ProgressBar
         android:id="@+id/progressBar"
