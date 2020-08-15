@@ -1,42 +1,66 @@
 {
   "project_info": {
-    "project_number": "764781997414",
-    "firebase_url": "https://mad-assignment-9ba01.firebaseio.com",
-    "project_id": "mad-assignment-9ba01",
-    "storage_bucket": "mad-assignment-9ba01.appspot.com"
+    "project_number": "280386964904",
+    "firebase_url": "https://madassignment-5f9d7.firebaseio.com",
+    "project_id": "madassignment-5f9d7",
+    "storage_bucket": "madassignment-5f9d7.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:764781997414:android:efdc7ac47fb1fae482aca7",
+        "mobilesdk_app_id": "1:280386964904:android:16ec00ab106369e349e19d",
         "android_client_info": {
           "package_name": "com.example.madassignment"
         }
       },
       "oauth_client": [
         {
-          "client_id": "764781997414-rrhgb4n8tle0mgnbj3s03hdv6os6u6rf.apps.googleusercontent.com",
+          "client_id": "280386964904-qvron58rfnts9ohjmr2v886ft3akts2f.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.madassignment",
-            "certificate_hash": "98ddf7a18aafd6398c994a21ff9e700fc1d803b9"
+            "certificate_hash": "d6a4e2dfa723a681a7ff4c4d844c2e6fb1d326e1"
           }
         },
         {
-          "client_id": "764781997414-d9rcvg64b4o0hjrdf6amrugm2jlabgg1.apps.googleusercontent.com",
+          "client_id": "280386964904-sn9g411gvg95e1142i90id4t89a1bos7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.madassignment",
+            "certificate_hash": "16c9ef1ed4abe81389d1a82fd48194ad2c42ba15"
+          }
+        },
+        {
+          "client_id": "280386964904-cg2r8v60qtq3ocpikqkbbe8p89h1lhcs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.madassignment",
+            "certificate_hash": "e5ea18e536e457e671d9a149a96e977abb52572a"
+          }
+        },
+        {
+          "client_id": "280386964904-d8pachjk4c86cnq50ifcgv5o5o3un59k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.madassignment",
+            "certificate_hash": "054252b70b71d855aba4653be889f20b73002fc0"
+          }
+        },
+        {
+          "client_id": "280386964904-ie36bdqbdflvsp03bkdf1dntdpe6fp06.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCZUcqY7nxaGuV-CzFvbd5UVBMg-WBMGyM"
+          "current_key": "AIzaSyBV3k37hyNM5GOpdXOubz3jizVlM_bQZts"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "764781997414-d9rcvg64b4o0hjrdf6amrugm2jlabgg1.apps.googleusercontent.com",
+              "client_id": "280386964904-ie36bdqbdflvsp03bkdf1dntdpe6fp06.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
