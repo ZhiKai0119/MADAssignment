@@ -14,7 +14,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".women10"></activity>
+        <activity android:name=".men10"></activity>
+        <activity android:name=".men9" />
+        <activity android:name=".men8" />
+        <activity android:name=".men7" />
+        <activity android:name=".men6" />
+        <activity android:name=".men5" />
+        <activity android:name=".women10" />
         <activity android:name=".women9" />
         <activity android:name=".women8" />
         <activity android:name=".women7" />
