@@ -15,8 +15,18 @@
     <item android:id="@+id/search"
         android:icon="@drawable/ic_search"
         android:title="Search"
-        app:showAsAction="ifRoom"
-        android:orderInCategory="10" />
+        app:showAsAction="always" />
+
+    <item android:id="@+id/wish_list"
+        android:icon="@drawable/ic_wish_lish"
+        android:title="Wish List"
+        app:showAsAction="always" />
+
+    <item android:id="@+id/shopping_cart"
+        android:icon="@drawable/ic_shopping_cart"
+        android:title="Shopping Cart"
+        app:showAsAction="always" />
+
 
     <item android:id="@+id/aboutUs"
         android:icon="@drawable/ic_about_us"

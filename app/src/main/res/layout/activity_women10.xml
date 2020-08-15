@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/Background"
-    tools:context=".men2">
+    tools:context=".women10">
 
     <ScrollView
         android:id="@+id/list_scrollView"
@@ -16,23 +16,28 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <!--product image-->
+
+
             <ImageView
-                android:id="@+id/productImageMen2"
-                android:layout_width="399dp"
-                android:layout_height="395dp"
+                android:id="@+id/productImageWomen10"
+                android:layout_width="400dp"
+                android:layout_height="400dp"
                 android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
                 android:layout_marginBottom="8dp"
-                android:src="@drawable/men2"
+                android:src="@drawable/women10_0"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.0" />
             <!--name-->
             <TextView
-                android:id="@+id/product_nameMen2"
+                android:id="@+id/product_nameWomen10"
                 android:layout_width="272dp"
                 android:layout_height="37dp"
                 android:layout_marginStart="16dp"
@@ -41,18 +46,19 @@
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
                 android:layout_marginBottom="8dp"
-                android:text="Black Pants"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="Nike Tech Fleece"
                 android:textColor="#4A1868"
-                android:textSize="26sp"
+                android:textSize="34sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/productImageMen2"
+                app:layout_constraintTop_toBottomOf="@+id/productImageWomen10"
                 app:layout_constraintVertical_bias="0.0" />
             <!--price-->
             <TextView
-                android:id="@+id/product_priceMen2"
+                android:id="@+id/product_priceWomen10"
                 android:layout_width="272dp"
                 android:layout_height="37dp"
                 android:layout_marginStart="16dp"
@@ -61,18 +67,19 @@
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
                 android:layout_marginBottom="8dp"
-                android:text="RM100"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="RM180"
                 android:textColor="#4A1868"
-                android:textSize="24sp"
+                android:textSize="28sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/product_nameMen2"
+                app:layout_constraintTop_toBottomOf="@+id/product_nameWomen10"
                 app:layout_constraintVertical_bias="0.0" />
             <!--Size-->
             <Spinner
-                android:id="@+id/sizeSpinnerMen2"
+                android:id="@+id/sizeSpinnerWomen10"
                 android:layout_width="97dp"
                 android:layout_height="51dp"
                 android:layout_marginTop="16dp"
@@ -82,40 +89,39 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/productImageMen2"
+                app:layout_constraintTop_toBottomOf="@+id/productImageWomen10"
                 app:layout_constraintVertical_bias="0.0" />
             <!--Description Title-->
-            <!--Description-->
             <TextView
-                android:id="@+id/product_textMen2"
+                android:id="@+id/product_textWomen10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:fontFamily="sans-serif-condensed-medium"
                 android:text="Description"
                 android:textColor="#6A4D7C"
-                android:textSize="30sp"
-                app:layout_constraintHorizontal_bias="0.029"
+                android:textSize="26sp"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/product_priceMen2" />
-
+                app:layout_constraintTop_toBottomOf="@id/product_priceWomen10" />
+            <!--Description-->
             <TextView
-                android:id="@+id/product_descMen2"
-                android:layout_width="386dp"
-                android:layout_height="196dp"
+                android:id="@+id/product_descWomen10"
+                android:layout_width="377dp"
+                android:layout_height="143dp"
                 android:layout_margin="10dp"
-                android:text="100% New and High Quality\nColour:as the pics show\nweight size\n50kg-55kg S\n55kg-60kg M\n60kg-65kg\n65kg-70kg XL\n70kg-75kg XXL"
+                android:text="@string/women10description"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.558"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/product_textMen2"
+                app:layout_constraintTop_toBottomOf="@id/product_textWomen10"
                 app:layout_constraintVertical_bias="1.0" />
             <!--other image-->
             <TextView
-                android:id="@+id/product_other_imageMen2"
+                android:id="@+id/product_other_imageWomen10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
@@ -126,33 +132,43 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/product_descMen2" />
+                app:layout_constraintTop_toBottomOf="@id/product_descWomen10" />
             <!--Images-->
             <ImageView
-                android:id="@+id/productImage2Men2"
-                android:layout_width="407dp"
-                android:layout_height="398dp"
+                android:id="@+id/productImage2Women10"
+                android:layout_width="400dp"
+                android:layout_height="400dp"
                 android:layout_margin="8dp"
-                android:src="@drawable/men2_2"
+                android:src="@drawable/women10_1"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/product_other_imageMen2" />
+                app:layout_constraintTop_toBottomOf="@id/product_other_imageWomen10" />
 
             <ImageView
-                android:id="@+id/productImage3Men2"
-                android:layout_width="418dp"
-                android:layout_height="406dp"
+                android:id="@+id/productImage3Women10"
+                android:layout_width="400dp"
+                android:layout_height="400dp"
                 android:layout_margin="8dp"
-                android:src="@drawable/men2_3"
+                android:src="@drawable/women10_2"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/productImage2Men2" />
+                app:layout_constraintTop_toBottomOf="@+id/productImage2Women10" />
+
+            <ImageView
+                android:id="@+id/productImage4Women10"
+                android:layout_width="400dp"
+                android:layout_height="400dp"
+                android:layout_margin="8dp"
+                android:src="@drawable/women10_0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/productImage3Women10" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/add_men2_shopping_cart"
+        android:id="@+id/add_women10_shopping_cart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
