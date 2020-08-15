@@ -3,9 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:background="@color/Background"
-    tools:context=".men1">
+    tools:context=".men6">
 
     <ScrollView
         android:id="@+id/list_scrollView"
@@ -17,14 +17,14 @@
             android:layout_height="wrap_content">
             <!--product image-->
             <ImageView
-                android:id="@+id/productImageMen1"
-                android:layout_width="402dp"
-                android:layout_height="406dp"
+                android:id="@+id/productImageMen6"
+                android:layout_width="757dp"
+                android:layout_height="425dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
-                android:src="@drawable/men1"
+                android:src="@drawable/men6"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -32,7 +32,8 @@
                 app:layout_constraintVertical_bias="0.0" />
             <!--name-->
             <TextView
-                android:id="@+id/product_nameMen1"
+                android:id="@+id/product_nameMen6"
+                android:text="Crtstal Men's Fashion"
                 android:layout_width="272dp"
                 android:layout_height="37dp"
                 android:layout_marginStart="16dp"
@@ -41,18 +42,18 @@
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
                 android:layout_marginBottom="8dp"
-                android:text="Cargo Harem Pants"
                 android:textColor="#4A1868"
                 android:textSize="26sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/productImageMen1"
+                app:layout_constraintTop_toBottomOf="@+id/productImageMen6"
                 app:layout_constraintVertical_bias="0.0" />
             <!--price-->
             <TextView
-                android:id="@+id/product_priceMen1"
+                android:id="@+id/product_priceMen6"
+                android:text="RM34"
                 android:layout_width="272dp"
                 android:layout_height="37dp"
                 android:layout_marginStart="16dp"
@@ -61,18 +62,17 @@
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
                 android:layout_marginBottom="8dp"
-                android:text="RM179"
                 android:textColor="#4A1868"
                 android:textSize="24sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/product_nameMen1"
+                app:layout_constraintTop_toBottomOf="@+id/product_nameMen6"
                 app:layout_constraintVertical_bias="0.0" />
             <!--Size-->
             <Spinner
-                android:id="@+id/sizeSpinnerMen1"
+                android:id="@+id/sizeSpinnerMen6"
                 android:layout_width="97dp"
                 android:layout_height="51dp"
                 android:layout_marginTop="16dp"
@@ -82,11 +82,11 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/productImageMen1"
+                app:layout_constraintTop_toBottomOf="@+id/productImageMen6"
                 app:layout_constraintVertical_bias="0.0" />
             <!--Description Title-->
             <TextView
-                android:id="@+id/product_textMen1"
+                android:id="@+id/product_textMen6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
@@ -97,24 +97,25 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/product_priceMen1" />
+                app:layout_constraintTop_toBottomOf="@id/product_priceMen6" />
             <!--Description-->
             <TextView
-                android:id="@+id/product_descMen1"
-                android:layout_width="392dp"
-                android:layout_height="224dp"
+                android:id="@+id/product_descMen6"
+                android:layout_width="399dp"
+                android:layout_height="191dp"
                 android:layout_margin="10dp"
-                android:text="Gender : Men\nFit Type : REGULAR\nMaterial : COTTON,Polyester\nweight size\n50kg-55kg S\n55kg-60kg M\n60kg-65kg L\n65kg-70kg XL\n70kg-75kg XXL"
+                android:text="Condition: 100% brand new\nMaterial: Cotton\nS Length 67cm Bust 49cm\nM Length 70cm Bust 52cm\nL Length 73cm Bust 55cm\nXL Length 76cm Bust 58cm\nXXL Length 79cm Bust 61cm"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.558"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/product_textMen1"
+                app:layout_constraintTop_toBottomOf="@id/product_textMen6"
                 app:layout_constraintVertical_bias="1.0" />
+
             <!--other image-->
             <TextView
-                android:id="@+id/product_other_image"
+                android:id="@+id/product_other_imageMen6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
@@ -125,33 +126,35 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/product_descMen1" />
+                app:layout_constraintTop_toBottomOf="@id/product_descMen6" />
+
             <!--Images-->
             <ImageView
-                android:id="@+id/productImage2Men1"
-                android:layout_width="400dp"
-                android:layout_height="400dp"
+                android:id="@+id/productImage2Men6"
+                android:layout_width="604dp"
+                android:layout_height="457dp"
                 android:layout_margin="8dp"
-                android:src="@drawable/men1_1"
+                android:src="@drawable/men6_1"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/product_other_image" />
+                app:layout_constraintTop_toBottomOf="@id/product_other_imageMen6" />
+
 
             <ImageView
-                android:id="@+id/productImage3"
-                android:layout_width="398dp"
-                android:layout_height="400dp"
+                android:id="@+id/productImage3Men6"
+                android:layout_width="1012dp"
+                android:layout_height="447dp"
                 android:layout_margin="8dp"
-                android:src="@drawable/men1_2"
+                android:src="@drawable/men6_2"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/productImage2Men1" />
+                app:layout_constraintTop_toBottomOf="@+id/productImage2Men6" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/add_men2_shopping_cart"
+        android:id="@+id/add_men4_shopping_cart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
