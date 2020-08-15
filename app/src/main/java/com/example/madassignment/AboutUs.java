@@ -21,39 +21,39 @@ import com.google.android.gms.ads.initialization.OnInitializationCompleteListene
 public class AboutUs extends AppCompatActivity {
 
 //    private VideoView videoView;
-    private AdView adView1, adView2;
-    private InterstitialAd interstitialAd;
+//    private AdView adView1, adView2;
+//    private InterstitialAd interstitialAd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about_us);
 
-        MobileAds.initialize(AboutUs.this, new OnInitializationCompleteListener() {
-            @Override
-            public void onInitializationComplete(InitializationStatus initializationStatus) {
-
-            }
-        });
-
-        adView1 = (AdView) findViewById(R.id.ad_view1);
-        adView2 = (AdView) findViewById(R.id.ad_view2);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        adView1.setAdListener(new AdListener(){
-            @Override
-            public void onAdLoaded() {
-                super.onAdLoaded();
-
-            }
-        });
+//        MobileAds.initialize(AboutUs.this, new OnInitializationCompleteListener() {
+//            @Override
+//            public void onInitializationComplete(InitializationStatus initializationStatus) {
+//
+//            }
+//        });
+//
+//        adView1 = (AdView) findViewById(R.id.ad_view1);
+//        adView2 = (AdView) findViewById(R.id.ad_view2);
+//        AdRequest adRequest = new AdRequest.Builder().build();
+//        adView1.setAdListener(new AdListener(){
+//            @Override
+//            public void onAdLoaded() {
+//                super.onAdLoaded();
+//
+//            }
+//        });
 //        adView1.loadAd(adRequest);
 //        adView2.loadAd(adRequest);
 
-        interstitialAd = new InterstitialAd(this);
-        interstitialAd.setAdUnitId("ca-app-pub-1129430547781038/3428746645");
-        interstitialAd.loadAd(new AdRequest.Builder().build());
-
-        interstitialAd.show();
+//        interstitialAd = new InterstitialAd(this);
+//        interstitialAd.setAdUnitId("ca-app-pub-1129430547781038/3428746645");
+//        interstitialAd.loadAd(new AdRequest.Builder().build());
+//
+//        interstitialAd.show();
 
 //        AdView adView = (AdView) findViewById(R.id.adView);
 //
