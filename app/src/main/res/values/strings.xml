@@ -274,4 +274,12 @@ Once the return has been approved, it takes 1-2 days for the refund to be made b
         shipping costs can be refunded, like if you are returning your whole order or adidas deliver wrong
         item or item damage due to production process. We wont be able to refund your shipping costs if you are only returning part of your order.\n</string>
 
+<!--    product-->
+    <string-array name="choice_items">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
 </resources>
