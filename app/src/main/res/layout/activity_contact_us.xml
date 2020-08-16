@@ -138,16 +138,72 @@
                 android:id="@+id/contact_us_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/paragraph_contact"
-                android:layout_margin="8dp"
-                android:layout_below="@id/webpage" />
+                android:layout_below="@id/webpage"
+                android:layout_marginTop="-29dp"
+                android:layout_marginBottom="8dp"
+                android:text="@string/paragraph_contact" />
 
             <ImageView
                 android:id="@+id/adidas"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/contact_us_text"
+                android:layout_marginTop="55dp"
                 android:src="@drawable/adidas" />
+
+            <TextView
+                android:id="@+id/user_insert"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/input_the_following_prompt"
+                android:layout_margin="8dp"
+                android:layout_below="@id/adidas"/>
+
+            <TextView
+                android:id="@+id/user_insert_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/name_txt"
+                android:layout_margin="8dp"
+                android:layout_below="@id/user_insert"/>
+
+            <EditText
+                android:id="@+id/name_ali"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:hint="@string/name_ali"
+                android:layout_below="@id/user_insert_name"/>
+
+            <TextView
+                android:id="@+id/user_insert_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/email_txt"
+                android:layout_below="@id/name_ali"/>
+
+            <EditText
+                android:id="@+id/email_ali"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:hint="@string/email_ali_gmail_com"
+                android:layout_below="@id/user_insert_email"/>
+
+            <TextView
+                android:id="@+id/user_insert_tel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tel_txt"
+                android:layout_below="@id/email_ali"/>
+
+            <EditText
+                android:id="@+id/tel_ali"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:hint="@string/tel_01023456789"
+                android:layout_below="@id/user_insert_tel"/>
         </RelativeLayout>
     </ScrollView>
 
