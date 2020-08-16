@@ -139,7 +139,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/webpage"
-                android:layout_marginTop="-29dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
                 android:text="@string/paragraph_contact" />
 
@@ -148,7 +150,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/contact_us_text"
-                android:layout_marginTop="55dp"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="8dp"
                 android:src="@drawable/adidas" />
 
             <TextView
@@ -171,9 +174,9 @@
                 android:id="@+id/name_ali"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text=""
+                android:layout_below="@id/user_insert_name"
                 android:hint="@string/name_ali"
-                android:layout_below="@id/user_insert_name"/>
+                android:text="" />
 
             <TextView
                 android:id="@+id/user_insert_email"
