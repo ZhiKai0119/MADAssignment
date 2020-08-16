@@ -173,7 +173,6 @@
                 android:layout_height="wrap_content"
                 android:text=""
                 android:hint="@string/name_ali"
-                android:layout_margin="8dp"
                 android:layout_below="@id/user_insert_name"/>
 
             <TextView
@@ -181,7 +180,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/email_txt"
-                android:layout_margin="8dp"
                 android:layout_below="@id/name_ali"/>
 
             <EditText
@@ -190,7 +188,6 @@
                 android:layout_height="wrap_content"
                 android:text=""
                 android:hint="@string/email_ali_gmail_com"
-                android:layout_margin="8dp"
                 android:layout_below="@id/user_insert_email"/>
 
             <TextView
@@ -198,7 +195,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/tel_txt"
-                android:layout_margin="8dp"
                 android:layout_below="@id/email_ali"/>
 
             <EditText
@@ -207,7 +203,6 @@
                 android:layout_height="wrap_content"
                 android:text=""
                 android:hint="@string/tel_01023456789"
-                android:layout_margin="8dp"
                 android:layout_below="@id/user_insert_tel"/>
         </RelativeLayout>
     </ScrollView>
