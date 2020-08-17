@@ -98,6 +98,7 @@
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/product_priceMen1" />
             <!--Description-->
+            <!--other image-->
             <TextView
                 android:id="@+id/product_descMen1"
                 android:layout_width="392dp"
@@ -107,11 +108,11 @@
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.558"
+                app:layout_constraintHorizontal_bias="0.789"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/product_textMen1"
-                app:layout_constraintVertical_bias="1.0" />
-            <!--other image-->
+                app:layout_constraintVertical_bias="0.0" />
+
             <TextView
                 android:id="@+id/product_other_image"
                 android:layout_width="wrap_content"
@@ -153,8 +154,8 @@
         android:id="@+id/add_men1_shopping_cart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="16dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_margin="16dp"
         android:src="@drawable/ic_add_cart" />
 </RelativeLayout>

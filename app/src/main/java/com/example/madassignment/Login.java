@@ -65,11 +65,12 @@ public class Login extends AppCompatActivity {
 
                 if (user != null) {
                     //user is signed in
-                    Log.d(TAG, "user signed in");
-                    Log.d(TAG, "UserName: " + user.getEmail());
+                    Toast.makeText(Login.this, "Signed in!!", Toast.LENGTH_LONG).show();
+                    startActivity(new Intent(Login.this, MainPage.class));
+                    finish();
                 } else {
                     //user is signed out
-                    Log.d(TAG, "user signed out");
+                    Toast.makeText(Login.this, "Not Signed In", Toast.LENGTH_LONG).show();
                 }
             }
         };
