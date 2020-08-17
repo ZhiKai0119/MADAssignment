@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    tools:context=".SearchView">
+    tools:context=".SearchViewFromList">
 
     <SearchView
         android:id="@+id/searching"
@@ -19,6 +19,4 @@
         android:id="@+id/search_list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
-
-
 </LinearLayout>

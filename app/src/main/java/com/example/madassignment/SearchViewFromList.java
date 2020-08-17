@@ -3,12 +3,11 @@ package com.example.madassignment;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Adapter;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.SearchView;
 
-public class SearchView extends AppCompatActivity {
+public class SearchViewFromList extends AppCompatActivity {
 
     ListView listView;
     SearchView searchView;
@@ -20,6 +19,6 @@ public class SearchView extends AppCompatActivity {
         setContentView(R.layout.activity_search_view);
 
         listView = (ListView) findViewById(R.id.search_list);
-//        searchView = findViewById(R.id.searching);
+        searchView =(SearchView) findViewById(R.id.searching);
     }
 }

@@ -7,6 +7,7 @@ import android.os.Bundle;
 
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.MobileAds;
@@ -36,16 +37,17 @@ public class AboutUs extends AppCompatActivity {
         });
 
         adView1 = (AdView) findViewById(R.id.ad_view1);
-        adView2 = (AdView) findViewById(R.id.ad_view2);
+//        adView2 = (AdView) findViewById(R.id.ad_view2);
+
         AdRequest adRequest = new AdRequest.Builder().build();
         adView1.loadAd(adRequest);
-        adView2.loadAd(adRequest);
+//        adView2.loadAd(adRequest);
 
-//        interstitialAd = new InterstitialAd(this);
-//        interstitialAd.setAdUnitId("ca-app-pub-1129430547781038/3428746645");
-//        interstitialAd.loadAd(new AdRequest.Builder().build());
-//
-//        interstitialAd.show();
+        interstitialAd = new InterstitialAd(this);
+        interstitialAd.setAdUnitId("ca-app-pub-3940256099942544/6300978111");
+        interstitialAd.loadAd(new AdRequest.Builder().build());
+
+        interstitialAd.show();
 
 //        AdView adView = (AdView) findViewById(R.id.adView);
 //
