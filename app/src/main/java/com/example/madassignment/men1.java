@@ -9,6 +9,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
@@ -34,34 +35,36 @@ public class men1 extends AppCompatActivity {
         String[] sizes={"XS", "S", "M", "L", "XL", "XXL"};
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, sizes);
         spinner.setAdapter(adapter);
+//        spinner.setOnItemClickListener((AdapterView.OnItemClickListener) this);
 
-        addCart = (FloatingActionButton) findViewById(R.id.add_men1_shopping_cart);
-        addCart.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(men1.this);
-                final String[] list = getResources().getStringArray(R.array.choice_items);
-                builder.setTitle("Quantity")
-                        .setSingleChoiceItems(list, position, new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialogInterface, int i) {
-                                position = i;
-                            }
-                        })
-                        .setPositiveButton("ADD", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialogInterface, int i) {
-                                mListener.onPositiveButtonClicked(list,position);
-                            }
-                        })
-                        .setNegativeButton("CANCEL", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialogInterface, int i) {
-                                mListener.onNegativeButtonClicked();
-                            }
-                        });
-                builder.show();
-            }
-        });
+//        addCart = (FloatingActionButton) findViewById(R.id.add_men1_shopping_cart);
+//        addCart.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                AlertDialog.Builder builder = new AlertDialog.Builder(men1.this);
+//                final String[] list = getResources().getStringArray(R.array.choice_items);
+//                builder.setTitle("Quantity")
+//                        .setSingleChoiceItems(list, position, new DialogInterface.OnClickListener() {
+//                            @Override
+//                            public void onClick(DialogInterface dialogInterface, int i) {
+//                                position = i;
+//                            }
+//                        })
+//                        .setPositiveButton("ADD", new DialogInterface.OnClickListener() {
+//                            @Override
+//                            public void onClick(DialogInterface dialogInterface, int i) {
+//                                mListener.onPositiveButtonClicked(list,position);
+//                            }
+//                        })
+//                        .setNegativeButton("CANCEL", new DialogInterface.OnClickListener() {
+//                            @Override
+//                            public void onClick(DialogInterface dialogInterface, int i) {
+//                                mListener.onNegativeButtonClicked();
+//                            }
+//                        });
+//                builder.show();
+//            }
+//        });
     }
+
 }
