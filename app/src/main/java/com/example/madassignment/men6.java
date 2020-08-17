@@ -13,7 +13,7 @@ public class men6 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_men6);
 
-        spinner = (Spinner) findViewById(R.id.sizeSpinnerMen1);
+        spinner = (Spinner) findViewById(R.id.sizeSpinnerMen6);
         String[] sizes={"XS", "S", "M", "L", "XL", "XXL"};
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, sizes);
         spinner.setAdapter(adapter);
