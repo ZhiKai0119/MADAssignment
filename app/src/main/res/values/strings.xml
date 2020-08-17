@@ -121,6 +121,19 @@ LACC looks forward to a progressive development in Asia in the days to come.</st
         Color Shown: Light pink\nCountry/Region of Origin: China</string>
     <string name="product_desckid4">Lightweight, boxy sweatshirt with a printed flock design at front. Hood, dropped shoulders, and long sleeves with ribbed cuffs.\n
         Color shown: Apricot/zebra\nCountry/Region of Origin: Turkey</string>
+    <string name="product_desckid5">URBAN WALLS celebrates innovative artists famous for using the streets as their canvas.\n
+        Color shown: Black\nCountry/Region of Origin: China</string>
+    <string name="product_desckid6">Shirt in airy, woven cotton fabric with a band collar, button placket, and yoke at back. Chest pocket, long sleeves with buttons at cuffs,
+        and rounded hem with small fabric appliqué at one side.\n
+        Color shown: White\nCountry/Region of Origin: China</string>
+    <string name="product_desckid7">Top in crinkled jersey with a square neckline. Short, puff sleeves with elastic over shoulders and elasticized cuffs with overlocked ruffle trim.\n
+        Color shown: Pink/Black\nCountry/Region of Origin: China</string>
+    <string name="product_desckid8">Jacket in cotton-blend stretch twill.Long sleeves with snap fastener at cuffs.\n
+        Color shown: White\nCountry/Region of Origin: Bangladesh</string>
+    <string name="product_desckid9">Blazer in woven fabric with notched lapels, buttons at front, and decorative buttons at cuffs. Chest pocket and welt front pockets with flap. Vent at back.\n
+        Color shown: Light blue\nCountry/Region of Origin: China</string>
+    <string name="product_desckid10">Patterned dress in an airy, woven viscose and cotton blend. Small V-neck opening at front with buttons, long sleeves, and narrow cuffs with button.\n
+        Color Shown: Light beige\nCountry/Region of Origin: China</string>
 
     <!--    faq-->
     //delivery
@@ -275,7 +288,7 @@ Once the return has been approved, it takes 1-2 days for the refund to be made b
         item or item damage due to production process. We wont be able to refund your shipping costs if you are only returning part of your order.\n</string>
     <string name="submit_btn">Submit</string>
 
-<!--    product-->
+    <!--    product-->
     <string-array name="choice_items">
         <item>1</item>
         <item>2</item>

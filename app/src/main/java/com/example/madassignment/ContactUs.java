@@ -4,17 +4,24 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
 import android.Manifest;
-import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class ContactUs extends AppCompatActivity {
-
+EditText name_ali, email_ali_gmail_com, tel_ali;
+Button button_submit;
+DatabaseReference reff;
+Member member;
     Intent intent = null, chooser=null;
     private TextView email;
     private TextView phone;
@@ -80,6 +87,23 @@ public class ContactUs extends AppCompatActivity {
             public void onClick(View view) {
                 Intent webpageIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.jdsports.my/"));
                 startActivity(webpageIntent);
+            }
+        });
+
+        name_ali=(EditText)findViewById(R.id.name_ali);
+        email_ali_gmail_com=(EditText)findViewById(R.id.email_ali);
+        tel_ali=(EditText)findViewById(R.id.tel_ali);
+        button_submit=(Button)findViewById(R.id.button_submit);
+        member=new Member();
+        reff= FirebaseDatabase.getInstance().getReference().child("Member");
+        button_submit.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Long tel= Long.parseLong(tel_ali.getText().toString().trim());
+                member.setTel(tel);
+                member.setName(name_ali.getText().toString().trim());
+                member.setEmail(email_ali_gmail_com.getText().toString().trim());
+                reff.child("member1").setValue(member);
+                Toast.makeText(ContactUs.this, "data inserted successfully", Toast.LENGTH_LONG).show();
             }
         });
     }

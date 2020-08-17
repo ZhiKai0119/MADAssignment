@@ -274,9 +274,9 @@
 
             <TextView
                 android:id="@+id/kidprice8"
-                android:layout_width="51dp"
-                android:layout_height="53dp"
-                android:layout_marginEnd="132dp"
+                android:layout_width="64dp"
+                android:layout_height="51dp"
+                android:layout_marginEnd="120dp"
                 android:text="RM67"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/kidname8" />
