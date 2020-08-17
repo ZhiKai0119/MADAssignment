@@ -14,7 +14,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".kids10"></activity>
+        <activity android:name=".shopping_cart"></activity>
+        <activity android:name=".kids10" />
         <activity android:name=".kids9" />
         <activity android:name=".kids8" />
         <activity android:name=".kids7" />
