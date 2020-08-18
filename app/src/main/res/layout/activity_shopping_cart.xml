@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".shopping_cart">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/shopcart_linear"
+        android:layout_width="match_parent"
+        android:layout_height="659dp" />
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/shopcart_linear">
+
+        <TextView
+            android:id="@+id/totaltext"
+            android:layout_width="74dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginBottom="16dp"
+            android:text="Total:"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/cartprice"
+            android:layout_width="118dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginBottom="16dp"
+            android:layout_toEndOf="@+id/totaltext"
+            android:layout_toRightOf="@+id/totaltext"
+            android:text=""
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/checkout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="70dp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="1dp"
+            android:layout_toEndOf="@+id/cartprice"
+            android:layout_toRightOf="@+id/cartprice"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="Check Out"
+            android:textColor="#FFFFFF">
+
+        </Button>
+
+    </RelativeLayout>
+
+</RelativeLayout>

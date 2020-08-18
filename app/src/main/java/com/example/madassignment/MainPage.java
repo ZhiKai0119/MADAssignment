@@ -13,8 +13,11 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ViewFlipper;
 
@@ -27,6 +30,8 @@ import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.iid.InstanceIdResult;
 
 public class MainPage extends AppCompatActivity implements View.OnClickListener {
+
+    private TextView shipping, header;
     //Add view flipper
     private ViewFlipper viewFlipper;
 
@@ -60,6 +65,14 @@ public class MainPage extends AppCompatActivity implements View.OnClickListener 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_page);
+
+        header = (TextView) findViewById(R.id.header);
+        Animation animation1 = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.blink);
+        header.startAnimation(animation1);
+
+        shipping = (TextView) findViewById(R.id.free_shipping);
+        Animation animation = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.move_left);
+        shipping.startAnimation(animation);
 
         //array
         int[] images ={R.drawable.photo1, R.drawable.photo2, R.drawable.photo3, R.drawable.photo4};
@@ -216,13 +229,13 @@ public class MainPage extends AppCompatActivity implements View.OnClickListener 
                 transaction3.commit();
                 break;
             case R.id.men_1_btn:
-                //startActivity(new Intent(MainPage.this, men1.class));
+//                startActivity(new Intent(MainPage.this, men1.class));
                 break;
             case R.id.men_2_btn:
-                //startActivity(new Intent(MainPage.this, men8.class));
+                startActivity(new Intent(MainPage.this, men8.class));
                 break;
             case R.id.women_1_btn:
-                //startActivity(new Intent(MainPage.this, women7.class));
+                startActivity(new Intent(MainPage.this, women7.class));
                 break;
             case R.id.women_2_btn:
                 startActivity(new Intent(MainPage.this, women2.class));
@@ -232,6 +245,9 @@ public class MainPage extends AppCompatActivity implements View.OnClickListener 
                 break;
             case R.id.kids_2_btn:
                 startActivity(new Intent(MainPage.this, kids4.class));
+                break;
+            case R.id.nike_adidas_btn:
+                startActivity(new Intent(MainPage.this, ProductList.class));
                 break;
             case R.id.spokesperson:
                 AlertDialog.Builder builder = new AlertDialog.Builder(this);

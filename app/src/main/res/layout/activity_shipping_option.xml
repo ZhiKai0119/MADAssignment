@@ -35,10 +35,10 @@
                 android:textSize="26sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.538"
+                app:layout_constraintHorizontal_bias="0.346"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/postcode"
-                app:layout_constraintVertical_bias="0.316" />
+                app:layout_constraintVertical_bias="0.52" />
 
             <ImageView
                 android:id="@+id/shippingImage"
@@ -152,7 +152,7 @@
                 app:layout_constraintVertical_bias="0.053" />
 
             <EditText
-                android:id="@+id/name_text"
+                android:id="@+id/Name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -203,7 +203,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/address_label" />
 
             <EditText
-                android:id="@+id/phone_text"
+                android:id="@+id/phone_label"
                 android:layout_width="223dp"
                 android:layout_height="41dp"
                 android:ems="10"
@@ -228,7 +228,7 @@
                 tools:layout_editor_absoluteX="12dp" />
 
             <EditText
-                android:id="@+id/email_text"
+                android:id="@+id/Email"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="40dp"

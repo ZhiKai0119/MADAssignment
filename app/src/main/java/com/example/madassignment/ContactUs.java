@@ -1,27 +1,46 @@
 package com.example.madassignment;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
 import android.Manifest;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.HashMap;
+import java.util.Map;
 
 public class ContactUs extends AppCompatActivity {
-EditText name_ali, email_ali_gmail_com, tel_ali;
-Button button_submit;
-DatabaseReference reff;
-Member member;
+    private EditText name_ali, email_ali_gmail_com, tel_ali;
+    private Button button_submit;
+    private DatabaseReference reff;
+    private FirebaseUser mUser;
+    private FirebaseAuth mAuth;
+    private ProgressBar mProgress;
+    private Member member;
+    private long maxId = 0;
+
     Intent intent = null, chooser=null;
     private TextView email;
     private TextView phone;
@@ -90,20 +109,61 @@ Member member;
             }
         });
 
+        mProgress = new ProgressBar(this);
+        //Database (Firebase)
+        mAuth = FirebaseAuth.getInstance();
+        mUser = mAuth.getCurrentUser();
+        reff= FirebaseDatabase.getInstance().getReference().child("Member");
+        reff.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if(snapshot.exists())
+                    maxId = (snapshot.getChildrenCount());
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
         name_ali=(EditText)findViewById(R.id.name_ali);
         email_ali_gmail_com=(EditText)findViewById(R.id.email_ali);
         tel_ali=(EditText)findViewById(R.id.tel_ali);
         button_submit=(Button)findViewById(R.id.button_submit);
-        member=new Member();
-        reff= FirebaseDatabase.getInstance().getReference().child("Member");
+        member = new Member();
+
         button_submit.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Long tel= Long.parseLong(tel_ali.getText().toString().trim());
-                member.setTel(tel);
-                member.setName(name_ali.getText().toString().trim());
-                member.setEmail(email_ali_gmail_com.getText().toString().trim());
-                reff.child("member1").setValue(member);
-                Toast.makeText(ContactUs.this, "data inserted successfully", Toast.LENGTH_LONG).show();
+                mProgress.setVisibility(View.VISIBLE);
+
+                final String name = name_ali.getText().toString().trim();
+                final String email = email_ali_gmail_com.getText().toString().trim();
+                final Long tel= Long.parseLong(tel_ali.getText().toString().trim());
+                String saveCurrentTime, saveCurrentDate;
+
+                Calendar calendar = Calendar.getInstance();
+                SimpleDateFormat currentDate = new SimpleDateFormat("MMM dd, yyyy");
+                saveCurrentDate = currentDate.format(calendar.getTime());
+
+                SimpleDateFormat currentTime = new SimpleDateFormat("HH:mm:ss a");
+                saveCurrentTime = currentTime.format(calendar.getTime());
+
+                if (!TextUtils.isEmpty(name) && !TextUtils.isEmpty(email) && tel != null){
+                    member.setTel(tel);
+                    member.setName(name);
+                    member.setEmail(email);
+                    member.setTime(saveCurrentTime);
+                    member.setDate(saveCurrentDate);
+
+                    reff.child("Member" + String.valueOf(maxId+1)).setValue(member);
+
+                    Toast.makeText(ContactUs.this, "Data Inserted Successfully", Toast.LENGTH_LONG).show();
+                }
+                //Clear The Edit Text
+                name_ali.setText("");
+                email_ali_gmail_com.setText("");
+                tel_ali.setText("");
             }
         });
     }

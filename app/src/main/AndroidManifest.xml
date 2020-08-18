@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.madassignment">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -14,12 +13,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".kids10"></activity>
-        <activity android:name=".kids9" />
-        <activity android:name=".kids8" />
-        <activity android:name=".kids7" />
-        <activity android:name=".kids6" />
-        <activity android:name=".kids5" />
+        <activity android:name=".shoppingcart_layout"></activity>
+        <activity
+            android:name=".SplashScreen"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".shopping_cart" />
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
@@ -73,7 +77,25 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainPage" />
-        </activity>
+        </activity> <!-- KIDS -->
+        <activity
+            android:name=".kids10"
+            android:parentActivityName=".ProductList" />
+        <activity
+            android:name=".kids9"
+            android:parentActivityName=".ProductList" />
+        <activity
+            android:name=".kids8"
+            android:parentActivityName=".ProductList" />
+        <activity
+            android:name=".kids7"
+            android:parentActivityName=".ProductList" />
+        <activity
+            android:name=".kids6"
+            android:parentActivityName=".ProductList" />
+        <activity
+            android:name=".kids5"
+            android:parentActivityName=".ProductList" />
         <activity
             android:name=".kids4"
             android:parentActivityName=".ProductList" />
@@ -85,6 +107,24 @@
             android:parentActivityName=".ProductList" />
         <activity
             android:name=".kids1"
+            android:parentActivityName=".ProductList" /> <!-- WOMEN -->
+        <activity
+            android:name=".women10"
+            android:parentActivityName=".ProductList" />
+        <activity
+            android:name=".women9"
+            android:parentActivityName=".ProductList" />
+        <activity
+            android:name=".women8"
+            android:parentActivityName=".ProductList" />
+        <activity
+            android:name=".women7"
+            android:parentActivityName=".ProductList" />
+        <activity
+            android:name=".women6"
+            android:parentActivityName=".ProductList" />
+        <activity
+            android:name=".women5"
             android:parentActivityName=".ProductList" />
         <activity
             android:name=".women4"
@@ -97,6 +137,24 @@
             android:parentActivityName=".ProductList" />
         <activity
             android:name=".women1"
+            android:parentActivityName=".ProductList" /> <!-- MEN -->
+        <activity
+            android:name=".men10"
+            android:parentActivityName=".ProductList" />
+        <activity
+            android:name=".men9"
+            android:parentActivityName=".ProductList" />
+        <activity
+            android:name=".men8"
+            android:parentActivityName=".ProductList" />
+        <activity
+            android:name=".men7"
+            android:parentActivityName=".ProductList" />
+        <activity
+            android:name=".men6"
+            android:parentActivityName=".ProductList" />
+        <activity
+            android:name=".men5"
             android:parentActivityName=".ProductList" />
         <activity
             android:name=".men4"
@@ -152,7 +210,7 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
     </application>
