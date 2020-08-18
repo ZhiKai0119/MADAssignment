@@ -216,13 +216,13 @@ public class MainPage extends AppCompatActivity implements View.OnClickListener 
                 transaction3.commit();
                 break;
             case R.id.men_1_btn:
-                //startActivity(new Intent(MainPage.this, men1.class));
+//                startActivity(new Intent(MainPage.this, men1.class));
                 break;
             case R.id.men_2_btn:
-                //startActivity(new Intent(MainPage.this, men8.class));
+                startActivity(new Intent(MainPage.this, men8.class));
                 break;
             case R.id.women_1_btn:
-                //startActivity(new Intent(MainPage.this, women7.class));
+                startActivity(new Intent(MainPage.this, women7.class));
                 break;
             case R.id.women_2_btn:
                 startActivity(new Intent(MainPage.this, women2.class));
@@ -232,6 +232,9 @@ public class MainPage extends AppCompatActivity implements View.OnClickListener 
                 break;
             case R.id.kids_2_btn:
                 startActivity(new Intent(MainPage.this, kids4.class));
+                break;
+            case R.id.nike_adidas_btn:
+                startActivity(new Intent(MainPage.this, ProductList.class));
                 break;
             case R.id.spokesperson:
                 AlertDialog.Builder builder = new AlertDialog.Builder(this);

@@ -135,7 +135,8 @@
             android:parentActivityName=".ProductList" />
         <activity
             android:name=".women1"
-            android:parentActivityName=".ProductList" /> <!-- MEN -->
+            android:parentActivityName=".ProductList" />
+        <!-- MEN -->
         <activity
             android:name=".men10"
             android:parentActivityName=".ProductList" />
