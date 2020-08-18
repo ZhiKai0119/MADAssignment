@@ -4,7 +4,7 @@ public class User {
     private String Delivery;
     private String Name;
     private String Address;
-    private Integer PhoneNo;
+    private String PhoneNo;
     private String Email;
     private String City;
     private String State;
@@ -38,15 +38,15 @@ public class User {
         Address = address;
     }
 
-    public Integer getPhoneNo() {
+    public String getPhoneNo(int phoneNo) {
         return PhoneNo;
     }
 
-    public void setPhoneNo(Integer phoneNo) {
+    public void setPhoneNo(String phoneNo) {
         PhoneNo = phoneNo;
     }
 
-    public String getEmail() {
+    public String getEmail(String email) {
         return Email;
     }
 
@@ -54,7 +54,7 @@ public class User {
         Email = email;
     }
 
-    public String getCity() {
+    public String getCity(String city) {
         return City;
     }
 
@@ -62,7 +62,7 @@ public class User {
         City = city;
     }
 
-    public String getState() {
+    public String getState(String state) {
         return State;
     }
 
@@ -70,7 +70,7 @@ public class User {
         State = state;
     }
 
-    public Integer getPostcode() {
+    public Integer getPostcode(int postcode) {
         return Postcode;
     }
 

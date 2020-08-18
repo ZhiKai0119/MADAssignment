@@ -1,13 +1,11 @@
 package com.example.madassignment;
 
-import java.util.Date;
-
 public class Member1 {
     private String Name;
     private String BankName;
     private Integer Number;
-    private Integer Date;
-    private Integer cvvNum;
+    private String Date;
+    private Integer ccvNum;
 
     public Member1(){
 
@@ -37,19 +35,19 @@ public class Member1 {
         Number = number;
     }
 
-    public java.util.Date getDate() {
-        return Date;
+    public String getDate() {
+        return String.valueOf(Date);
     }
 
-    public void setDate(java.util.Date date) {
+    public void setDate(String date) {
         Date = date;
     }
 
-    public Integer getCvvNum() {
-        return cvvNum;
+    public Integer getCcvNum() {
+        return ccvNum;
     }
 
-    public void setCvvNum(Integer cvvNum) {
-        this.cvvNum = cvvNum;
+    public void setCcvNum(Integer ccvNum) {
+        this.ccvNum = ccvNum;
     }
 }

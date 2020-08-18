@@ -44,7 +44,7 @@ public class women5 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_women5);
 
-        Spinner spinner = (Spinner) findViewById(R.id.sizeSpinnerWomen5);
+        spinner = (Spinner) findViewById(R.id.sizeSpinnerWomen5);
         String[] sizes={"XS", "S", "M", "L", "XL", "XXL"};
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, sizes);
         spinner.setAdapter(adapter);
@@ -107,5 +107,4 @@ public class women5 extends AppCompatActivity {
 
         Toast.makeText(women5.this, "Product Already Added Into Shopping Cart", Toast.LENGTH_LONG).show();
     }
-
 }
