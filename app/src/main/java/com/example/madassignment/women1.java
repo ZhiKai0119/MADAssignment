@@ -111,14 +111,6 @@ public class women1 extends AppCompatActivity {
         SimpleDateFormat currentTime = new SimpleDateFormat("HH:mm:ss a");
         saveCurrentTime = currentTime.format(calendar.getTime());
 
-//        StorageReference filepath = storageReference.child("Product_Images/");
-//        filepath.putFile(filePathUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-//            @Override
-//            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-//                Toast.makeText(women1.this, "Product Already Added Into Shopping Cart", Toast.LENGTH_LONG).show();
-//            }
-//        });
-
         final HashMap<String,Object> cartMap=new HashMap<>();
         cartMap.put("Image", imageWomen1.toString());
         cartMap.put("Name",productName.getText().toString());
@@ -135,14 +127,4 @@ public class women1 extends AppCompatActivity {
 
         Toast.makeText(women1.this, "Product Already Added Into Shopping Cart", Toast.LENGTH_LONG).show();
     }
-
-//    @Override
-//    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-//        super.onActivityResult(requestCode, resultCode, data);
-//
-//        if(requestCode == Image_Request_Code && resultCode == RESULT_OK) {
-//            filePathUri = data.getData();
-//            imageWomen1.setImageURI(filePathUri);
-//        }
-//    }
 }

@@ -561,13 +561,16 @@
                         android:src="@drawable/spokesperson_5" />
                 </LinearLayout>
             </HorizontalScrollView>
+
+            <FrameLayout
+                android:id="@+id/Move_product_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="-69dp" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>
-
-    <FrameLayout
-        android:id="@+id/Move_product_list"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
 
 </RelativeLayout>
