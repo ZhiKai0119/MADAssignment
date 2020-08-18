@@ -26,6 +26,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -138,15 +140,25 @@ public class ContactUs extends AppCompatActivity {
                 final String name = name_ali.getText().toString().trim();
                 final String email = email_ali_gmail_com.getText().toString().trim();
                 final Long tel= Long.parseLong(tel_ali.getText().toString().trim());
+                String saveCurrentTime, saveCurrentDate;
+
+                Calendar calendar = Calendar.getInstance();
+                SimpleDateFormat currentDate = new SimpleDateFormat("MMM dd, yyyy");
+                saveCurrentDate = currentDate.format(calendar.getTime());
+
+                SimpleDateFormat currentTime = new SimpleDateFormat("HH:mm:ss a");
+                saveCurrentTime = currentTime.format(calendar.getTime());
 
                 if (!TextUtils.isEmpty(name) && !TextUtils.isEmpty(email) && tel != null){
                     member.setTel(tel);
                     member.setName(name);
                     member.setEmail(email);
+                    member.setTime(saveCurrentTime);
+                    member.setDate(saveCurrentDate);
 
                     reff.child("Member" + String.valueOf(maxId+1)).setValue(member);
 
-                    Toast.makeText(ContactUs.this, "data inserted successfully", Toast.LENGTH_LONG).show();
+                    Toast.makeText(ContactUs.this, "Data Inserted Successfully", Toast.LENGTH_LONG).show();
                 }
                 //Clear The Edit Text
                 name_ali.setText("");
