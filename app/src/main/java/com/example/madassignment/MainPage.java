@@ -66,13 +66,13 @@ public class MainPage extends AppCompatActivity implements View.OnClickListener 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_page);
 
-        header = (TextView) findViewById(R.id.header);
-        Animation animation1 = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.blink);
-        header.startAnimation(animation1);
-
-        shipping = (TextView) findViewById(R.id.free_shipping);
-        Animation animation = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.move_left);
-        shipping.startAnimation(animation);
+//        header = (TextView) findViewById(R.id.header);
+//        Animation animation1 = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.blink);
+//        header.startAnimation(animation1);
+//
+//        shipping = (TextView) findViewById(R.id.free_shipping);
+//        Animation animation = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.move_left);
+//        shipping.startAnimation(animation);
 
         //array
         int[] images ={R.drawable.photo1, R.drawable.photo2, R.drawable.photo3, R.drawable.photo4};

@@ -18,8 +18,9 @@
         android:textSize="26sp"/>
 
     <ScrollView
+        android:layout_below="@id/shipping_option"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -30,20 +31,22 @@
                 android:id="@+id/btnContinue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
                 android:text="Continue to checkout"
                 android:textColor="#2D2159"
                 android:textSize="26sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.346"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/postcode"
-                app:layout_constraintVertical_bias="0.52" />
+                app:layout_constraintTop_toBottomOf="@+id/postcode" />
 
             <ImageView
                 android:id="@+id/shippingImage"
-                android:layout_width="417dp"
-                android:layout_height="280dp"
+                android:layout_width="407dp"
+                android:layout_height="204dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
@@ -79,7 +82,7 @@
                 app:layout_constraintVertical_bias="0.021" />
 
             <RadioGroup
-                android:id="@+id/radioGroup2"
+                android:id="@+id/shipping_agent"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -90,7 +93,6 @@
                     android:id="@+id/poslaju"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="onRadioButtonClicked"
                     android:text="Pos Laju delivery"
                     android:textColor="#7A7A7A"
                     android:textSize="20sp" />
@@ -99,7 +101,6 @@
                     android:id="@+id/jtdelivery"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="onRadioButtonClicked"
                     android:text="JT delivery"
                     android:textColor="#7A7A7A"
                     android:textSize="20sp" />
@@ -108,7 +109,6 @@
                     android:id="@+id/dhldelivery"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="onRadioButtonClicked"
                     android:text="DHL delivery"
                     android:textColor="#7A7A7A"
                     android:textSize="20sp" />
@@ -130,7 +130,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/radioGroup2"
+                app:layout_constraintTop_toBottomOf="@id/shipping_agent"
                 app:layout_constraintVertical_bias="0.047" />
 
             <TextView
