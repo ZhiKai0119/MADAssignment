@@ -13,7 +13,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".shopping_cart"></activity>
+        <activity android:name=".SplashScreen"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".shopping_cart" />
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
@@ -67,9 +75,7 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainPage" />
-        </activity>
-
-<!--        KIDS-->
+        </activity> <!-- KIDS -->
         <activity
             android:name=".kids10"
             android:parentActivityName=".ProductList" />
@@ -99,9 +105,7 @@
             android:parentActivityName=".ProductList" />
         <activity
             android:name=".kids1"
-            android:parentActivityName=".ProductList" />
-
-<!--        WOMEN-->
+            android:parentActivityName=".ProductList" /> <!-- WOMEN -->
         <activity
             android:name=".women10"
             android:parentActivityName=".ProductList" />
@@ -131,9 +135,7 @@
             android:parentActivityName=".ProductList" />
         <activity
             android:name=".women1"
-            android:parentActivityName=".ProductList" />
-
-<!--        MEN-->
+            android:parentActivityName=".ProductList" /> <!-- MEN -->
         <activity
             android:name=".men10"
             android:parentActivityName=".ProductList" />
@@ -164,8 +166,6 @@
         <activity
             android:name=".men1"
             android:parentActivityName=".ProductList" />
-
-
         <activity
             android:name=".ProductList"
             android:parentActivityName=".MainPage">
@@ -208,7 +208,7 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
     </application>
