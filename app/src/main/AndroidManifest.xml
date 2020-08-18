@@ -13,7 +13,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SplashScreen"
+        <activity android:name=".shoppingcart_layout"></activity>
+        <activity
+            android:name=".SplashScreen"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -135,8 +137,7 @@
             android:parentActivityName=".ProductList" />
         <activity
             android:name=".women1"
-            android:parentActivityName=".ProductList" />
-        <!-- MEN -->
+            android:parentActivityName=".ProductList" /> <!-- MEN -->
         <activity
             android:name=".men10"
             android:parentActivityName=".ProductList" />
