@@ -83,7 +83,7 @@ public class Login extends AppCompatActivity {
 
                 if (user != null) {
                     //user is signed in
-                    Toast.makeText(Login.this, "Signed in!!", Toast.LENGTH_LONG).show();
+                    Toast.makeText(Login.this, "Signed in!!" + mAuth.getCurrentUser().getUid(), Toast.LENGTH_LONG).show();
                     startActivity(new Intent(Login.this, MainPage.class));
                     finish();
                 } else {
@@ -169,20 +169,20 @@ public class Login extends AppCompatActivity {
             }
         });
 
-        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestIdToken(getString(R.string.default_web_client_id))
-                .requestEmail()
-                .build();
-
-        mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
-
-        btnGoogle.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                progressBar.setVisibility(View.VISIBLE);
-                signIn();
-            }
-        });
+//        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+//                .requestIdToken(getString(R.string.default_web_client_id))
+//                .requestEmail()
+//                .build();
+//
+//        mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
+//
+//        btnGoogle.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                progressBar.setVisibility(View.VISIBLE);
+//                signIn();
+//            }
+//        });
     }
 
     private void signIn() {
