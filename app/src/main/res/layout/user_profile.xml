@@ -47,7 +47,7 @@
         tools:layout_editor_absoluteY="362dp" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/change_profile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Change Profile"
@@ -57,7 +57,7 @@
         tools:layout_editor_absoluteX="111dp" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/reset_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Reset Password"
@@ -65,7 +65,7 @@
         tools:layout_editor_absoluteY="490dp" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/logout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Logout"
@@ -73,7 +73,7 @@
         tools:layout_editor_absoluteY="539dp" />
 
     <TextView
-        android:id="@+id/FullName"
+        android:id="@+id/full_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="4dp"
@@ -83,7 +83,7 @@
         tools:layout_editor_absoluteX="26dp" />
 
     <TextView
-        android:id="@+id/Email"
+        android:id="@+id/email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:drawableStart="@drawable/Email_icon"
@@ -92,7 +92,7 @@
         tools:layout_editor_absoluteX="26dp" />
 
     <TextView
-        android:id="@+id/Phone"
+        android:id="@+id/phone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:drawableStart="@drawable/Phone_icon"
