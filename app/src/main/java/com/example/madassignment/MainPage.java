@@ -47,7 +47,7 @@ public class MainPage extends AppCompatActivity implements View.OnClickListener 
     private Button btnWomen1;
     private Button btnWomen2;
     private Button btnKids1;
-    private Button btnKids2;
+    private Button btnKids2, btnShoes;
 
     private ImageView spokesperson;
     private ImageView spokesperson2;
@@ -120,6 +120,9 @@ public class MainPage extends AppCompatActivity implements View.OnClickListener 
 
         btnKids2 = (Button) findViewById(R.id.kids_2_btn);
         btnKids2.setOnClickListener(this);
+
+        btnShoes = (Button) findViewById(R.id.nike_adidas_btn);
+        btnShoes.setOnClickListener(this);
 
         spokesperson = (ImageView) findViewById(R.id.spokesperson);
         spokesperson.setOnClickListener(this);
@@ -235,7 +238,7 @@ public class MainPage extends AppCompatActivity implements View.OnClickListener 
                 transaction3.commit();
                 break;
             case R.id.men_1_btn:
-//                startActivity(new Intent(MainPage.this, men1.class));
+                startActivity(new Intent(MainPage.this, shoe1.class));
                 break;
             case R.id.men_2_btn:
                 startActivity(new Intent(MainPage.this, men8.class));

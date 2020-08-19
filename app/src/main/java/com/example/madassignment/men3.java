@@ -63,10 +63,10 @@ public class men3 extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         mUser = mAuth.getCurrentUser();
         mReference = FirebaseDatabase.getInstance().getReference().child("Shopping Cart");
-        storageReference = FirebaseStorage.getInstance().getReference().child("ProductImages/men3.jpg");
+        storageReference = FirebaseStorage.getInstance().getReference().child("ProductImages/men3.PNG");
 
         try {
-            final File localFile = File.createTempFile("men3", "jpg");
+            final File localFile = File.createTempFile("men3", "PNG");
             storageReference.getFile(localFile)
                     .addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
                         @Override

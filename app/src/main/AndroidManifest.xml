@@ -169,6 +169,36 @@
             android:name=".men1"
             android:parentActivityName=".ProductList" />
         <activity
+            android:name=".shoe1"
+            android:parentActivityName=".MainPage" />
+        <activity
+            android:name=".shoe2"
+            android:parentActivityName=".MainPage" />
+        <activity
+            android:name=".shoe3"
+            android:parentActivityName=".MainPage" />
+        <activity
+            android:name=".shoe4"
+            android:parentActivityName=".MainPage" />
+        <activity
+            android:name=".shoe5"
+            android:parentActivityName=".MainPage" />
+        <activity
+            android:name=".shoe6"
+            android:parentActivityName=".MainPage" />
+        <activity
+            android:name=".shoe7"
+            android:parentActivityName=".MainPage" />
+        <activity
+            android:name=".shoe8"
+            android:parentActivityName=".MainPage" />
+        <activity
+            android:name=".shoe9"
+            android:parentActivityName=".MainPage" />
+        <activity
+            android:name=".shoe10"
+            android:parentActivityName=".MainPage" />
+        <activity
             android:name=".ProductList"
             android:parentActivityName=".MainPage">
             <meta-data

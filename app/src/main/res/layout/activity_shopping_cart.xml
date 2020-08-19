@@ -9,7 +9,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/shopcart_linear"
         android:layout_width="match_parent"
-        android:layout_height="659dp" />
+        android:layout_height="545dp" />
 
     <RelativeLayout
         android:orientation="vertical"
