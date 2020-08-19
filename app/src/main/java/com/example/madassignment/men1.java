@@ -24,6 +24,8 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -43,13 +45,13 @@ public class men1 extends AppCompatActivity {
     private int position = 0;
 
 
-    public interface SingleChoiceListener{
-        void onPositiveButtonClicked(String[] list, int position);
-        void onNegativeButtonClicked();
-    }
-    private SingleChoiceListener mListener;
-    private Spinner spinner;
-    private FloatingActionButton addCart;
+//    public interface SingleChoiceListener{
+//        void onPositiveButtonClicked(String[] list, int position);
+//        void onNegativeButtonClicked();
+//    }
+//    private SingleChoiceListener mListener;
+//    private Spinner spinner;
+//    private FloatingActionButton addCart;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
