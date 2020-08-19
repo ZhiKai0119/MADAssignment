@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Background"
+    tools:context=".shoe1">
+
+    <ScrollView
+        android:id="@+id/list_scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!--product image-->
+
+
+            <ImageView
+                android:id="@+id/productImageShoe1"
+                android:layout_width="400dp"
+                android:layout_height="400dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:src="@drawable/shoe1_0"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+            <!--name-->
+            <TextView
+                android:id="@+id/product_nameShoe1"
+                android:layout_width="272dp"
+                android:layout_height="37dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="Air Jordan Mid"
+                android:textColor="#4A1868"
+                android:textSize="28sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/productImageShoe1"
+                app:layout_constraintVertical_bias="0.0" />
+            <!--price-->
+
+            <TextView
+                android:id="@+id/product_priceShoe1"
+                android:layout_width="272dp"
+                android:layout_height="37dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="RM495"
+                android:textColor="#4A1868"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/product_nameShoe1"
+                app:layout_constraintVertical_bias="0.0" />
+            <!--Size-->
+            <Spinner
+                android:id="@+id/sizeSpinnerShoe1"
+                android:layout_width="97dp"
+                android:layout_height="51dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/productImageShoe1"
+                app:layout_constraintVertical_bias="0.0" />
+            <!--Description Title-->
+
+            <TextView
+                android:id="@+id/product_textShoe1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="Description"
+                android:textColor="#6A4D7C"
+                android:textSize="24sp"
+                app:layout_constraintHorizontal_bias="0.019"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/product_priceShoe1" />
+            <!--Description-->
+            <TextView
+                android:id="@+id/product_descShoe1"
+                android:layout_width="401dp"
+                android:layout_height="170dp"
+                android:layout_margin="10dp"
+                android:text="@string/shoe1description"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.558"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/product_textShoe1"
+                app:layout_constraintVertical_bias="1.0" />
+            <!--other image-->
+            <TextView
+                android:id="@+id/product_other_imageShoe1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="Product Image"
+                android:textColor="#6A4D7C"
+                android:textSize="30sp"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/product_descShoe1" />
+            <!--Images-->
+            <ImageView
+                android:id="@+id/productImage2Shoe1"
+                android:layout_width="400dp"
+                android:layout_height="400dp"
+                android:layout_margin="8dp"
+                android:src="@drawable/shoe1_2"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/product_other_imageShoe1" />
+
+            <ImageView
+                android:id="@+id/productImage3Shoe1"
+                android:layout_width="400dp"
+                android:layout_height="400dp"
+                android:layout_margin="8dp"
+                android:src="@drawable/shoe1_1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/productImage2Shoe1" />
+
+            <ImageView
+                android:id="@+id/productImage4Shoe1"
+                android:layout_width="400dp"
+                android:layout_height="400dp"
+                android:layout_margin="8dp"
+                android:src="@drawable/shoe1_0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/productImage3Shoe1" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_shoe1_shopping_cart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_add_cart" />
+</RelativeLayout>
