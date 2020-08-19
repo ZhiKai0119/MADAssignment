@@ -149,6 +149,30 @@ LACC looks forward to a progressive development in Asia in the days to come.</st
     <string name="product_desckid10">Patterned dress in an airy, woven viscose and cotton blend. Small V-neck opening at front with buttons, long sleeves, and narrow cuffs with button.\n
         Color Shown: Light beige\nCountry/Region of Origin: China</string>
 
+    <!--shoe-->
+    <string name="shoe1description">The Air Jordan 1 Mid SE maintains the timeless appeal of the OG AJI revamped with fresh colours and premium materials.Built with a lightweight Air-Sale unit and classic design lines.\n
+       </string>
+    <string name="shoe2description">Inspired by runners but taking it up a level, these RYZ 365 trainers from Nike are sure to turn heads. In a White Phantom colourway, they are built with a sporty nylon upper with premium suede overlays.   \n
+       </string>
+    <string name="shoe3description">The Nike Air Force 1 Shadow pays homage to the women who are setting an example for the next generation by being forces of change in their community. This sneaker reflects this ethos in its design with double the Swoosh, double the height and double the force.  \n
+       </string>
+    <string name="shoe4description">Lace up in a 70s classic with these Classic Cortez Leather trainers from Nike. In a fresh white colourway, these retro sneaks have a smooth leather and synthetic upper for premium support. They feature a tonal lace up fastening, serrated trims and a padded ankle collar for added comfort  \n
+       </string>
+    <string name="shoe5description"> The Jordan Jumpman 2020 PF delivers lightweight support for dynamic play on the court. A textile upper and secure midfoot webbing keep you moving freely during possessions.\n
+       </string>
+    <string name="shoe6description"> Kyrie ability to make quick, sharp cuts while handling the ball gives his game an unrivalled edge. Loaded with responsive cushioning, the Kyrie Low 2 features a curved outsole and traction that wraps up the sides, ideal for quick players who continually work the angles to break down the defence \n
+       </string>
+    <string name="shoe7description">The Nike React Element 55 SE borrows design lines from heritage runners like the Nike Internationalist, adds reflective graphics, then places it all on Nike React technology.
+       </string>
+    <string name="shoe8description">Inspired by the chopping, cutting and rebuilding of custom cars and bikes, the Nike Signal D/MS/X overturns the idea of sportswear with style and attitude. With layered materials and intricate detailing, it uses innovations in an irreverent way thats more aesthetic than athletic.  \n
+       </string>
+    <string name="shoe9description">The Nike Air Max 97 keeps a sneaker icon going strong with the same design details that made its reputation from the beginning: water-ripple lines, reflective piping and full-length Max Air cushioning.  \n
+       </string>
+    <string name="shoe10description">The Nike Air Max 98 shoe delivers retro Air Max style with modern comfort innovation. Leather and mesh upper provide durable breathability, while full-length visible Max Air unit provides responsive shock absorption.  \n
+       </string>
+
+
+
     <!--    faq-->
     //delivery
     <string name="Delivery">Delivery</string>

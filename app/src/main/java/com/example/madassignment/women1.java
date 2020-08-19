@@ -39,7 +39,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.HashMap;
 
-
+/////1:13pm 看到请回复
 public class women1 extends AppCompatActivity {
 
     //add to card
@@ -47,14 +47,14 @@ public class women1 extends AppCompatActivity {
     private TextView productpriceWomen1, productName, productDesc;
     private ImageView imageWomen1;
     private Spinner spinner;
-    private Uri filePathUri;
-    private StorageReference storageReference;
     private FirebaseAuth mAuth;
     private FirebaseUser mUser;
     private DatabaseReference mReference;
-    private int Image_Request_Code = 7;
     public long maxId = 0;
     public long quantity = 0;
+
+    private Uri filePathUri;
+    private StorageReference storageReference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -121,7 +121,7 @@ public class women1 extends AppCompatActivity {
         cartMap.put("Time", saveCurrentTime);
         cartMap.put("quantity", String.valueOf(quantity+1));
 
-        mReference.child(mAuth.getCurrentUser().getDisplayName()).child("Women1").setValue(cartMap);
+        mReference.child(mAuth.getCurrentUser().getUid()).child("Women1").setValue(cartMap);
 
 //        mReference.child(mAuth.getCurrentUser().getDisplayName()).child("Product" + String.valueOf(maxId+1)).setValue(cartMap);
 
