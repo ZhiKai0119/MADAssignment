@@ -38,7 +38,7 @@ public class User {
         Address = address;
     }
 
-    public String getPhoneNo(int phoneNo) {
+    public String getPhoneNo() {
         return PhoneNo;
     }
 
@@ -46,7 +46,7 @@ public class User {
         PhoneNo = phoneNo;
     }
 
-    public String getEmail(String email) {
+    public String getEmail() {
         return Email;
     }
 
@@ -54,7 +54,7 @@ public class User {
         Email = email;
     }
 
-    public String getCity(String city) {
+    public String getCity() {
         return City;
     }
 
@@ -62,7 +62,7 @@ public class User {
         City = city;
     }
 
-    public String getState(String state) {
+    public String getState() {
         return State;
     }
 
@@ -70,7 +70,7 @@ public class User {
         State = state;
     }
 
-    public Integer getPostcode(int postcode) {
+    public Integer getPostcode() {
         return Postcode;
     }
 

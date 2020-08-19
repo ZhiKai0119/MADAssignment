@@ -11,7 +11,8 @@
         android:layout_height="wrap_content"
         app:cardCornerRadius="12dp"
         app:contentPadding="6dp"
-        android:layout_margin="15dp">
+        android:layout_margin="15dp"
+        app:cardBackgroundColor="@color/Background">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -55,17 +56,22 @@
             <ImageButton
                 android:id="@+id/btnAdd"
                 android:layout_marginStart="50dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="33dp"
+                android:layout_height="50dp"
                 android:src="@drawable/ic_add"
+                android:background="@color/colorPrimaryDark"
                 android:layout_toEndOf="@id/item_price"
                 android:layout_below="@id/item_name"/>
 
             <TextView
                 android:id="@+id/quantity"
                 android:text="0"
-                android:textSize="33sp"
+                android:textSize="25sp"
                 android:textColor="#000000"
+                android:background="#77499E"
+                android:padding="8dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_toEndOf="@+id/btnAdd"
@@ -73,9 +79,10 @@
 
             <ImageButton
                 android:id="@+id/btnRemove"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="33dp"
+                android:layout_height="50dp"
                 android:src="@drawable/ic_remove"
+                android:background="@color/colorPrimaryDark"
                 android:layout_toEndOf="@id/quantity"
                 android:layout_below="@id/item_name" />
 

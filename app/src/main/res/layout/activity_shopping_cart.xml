@@ -8,14 +8,17 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/shopcart_linear"
-        android:layout_width="match_parent"
-        android:layout_height="545dp" />
-
-    <RelativeLayout
-        android:orientation="vertical"
+        android:background="@color/Background2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/shopcart_linear">
+        android:layout_above="@+id/checkout"/>
+
+<!--    <RelativeLayout-->
+<!--        android:orientation="vertical"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/shopcart_linear"-->
+<!--        android:layout_alignParentBottom="true">-->
 
         <TextView
             android:id="@+id/totaltext"
@@ -65,6 +68,6 @@
 
         </Button>
 
-    </RelativeLayout>
+<!--    </RelativeLayout>-->
 
 </RelativeLayout>

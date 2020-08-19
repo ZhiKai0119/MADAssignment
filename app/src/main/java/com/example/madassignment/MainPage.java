@@ -208,7 +208,7 @@ public class MainPage extends AppCompatActivity implements View.OnClickListener 
                 startActivity(new Intent(MainPage.this, Offer_45.class));
                 break;
             case R.id.shopping_cart:
-                startActivity(new Intent(MainPage.this, ShippingOption.class));
+                startActivity(new Intent(MainPage.this, shopping_cart.class));
                 break;
             case R.id.men:
                 FragmentManager manager = getSupportFragmentManager();
