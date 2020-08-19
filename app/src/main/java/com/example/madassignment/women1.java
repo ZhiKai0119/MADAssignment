@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
@@ -30,16 +31,17 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.FileDownloadTask;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
+import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.HashMap;
 
-/////1:13pm 看到请回复
 public class women1 extends AppCompatActivity {
 
     //add to card
@@ -74,7 +76,28 @@ public class women1 extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         mUser = mAuth.getCurrentUser();
         mReference = FirebaseDatabase.getInstance().getReference().child("Shopping Cart");
-        storageReference = FirebaseStorage.getInstance().getReference();
+        storageReference = FirebaseStorage.getInstance().getReference().child("ProductImages/women1_0.jpg");
+
+        try {
+            final File localFile = File.createTempFile("women1_0", "jpg");
+            storageReference.getFile(localFile)
+                    .addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
+                        @Override
+                        public void onSuccess(FileDownloadTask.TaskSnapshot taskSnapshot) {
+                            Toast.makeText(women1.this, "Picture Retrieved", Toast.LENGTH_LONG).show();
+                            Bitmap bitmap = BitmapFactory.decodeFile(localFile.getAbsolutePath());
+                            ((ImageView) findViewById(R.id.productImageWomen1)).setImageBitmap(bitmap);
+                        }
+                    }).addOnFailureListener(new OnFailureListener() {
+                @Override
+                public void onFailure(@NonNull Exception e) {
+                    Toast.makeText(women1.this, "Error Occurred", Toast.LENGTH_LONG).show();
+                }
+            });
+            
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
         //add to cart
         addtocartbutton=(FloatingActionButton) findViewById(R.id.add_women1_shopping_cart);
@@ -112,7 +135,7 @@ public class women1 extends AppCompatActivity {
         saveCurrentTime = currentTime.format(calendar.getTime());
 
         final HashMap<String,Object> cartMap=new HashMap<>();
-        cartMap.put("Image", imageWomen1.toString());
+        cartMap.put("Image", storageReference.toString());
         cartMap.put("Name",productName.getText().toString());
         cartMap.put("Price", productpriceWomen1.getText().toString());
         cartMap.put("Desc", productDesc.getText().toString());
