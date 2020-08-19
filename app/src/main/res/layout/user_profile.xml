@@ -86,7 +86,7 @@
         android:id="@+id/email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:drawableStart="@drawable/Email_icon"
+        android:drawableStart="@drawable/ic_email"
         android:text="@string/email_address"
         app:layout_constraintBottom_toTopOf="@+id/hint_email"
         tools:layout_editor_absoluteX="26dp" />
@@ -95,7 +95,7 @@
         android:id="@+id/phone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:drawableStart="@drawable/Phone_icon"
+        android:drawableStart="@drawable/ic_phone"
         android:text="@string/phone_number"
         app:layout_constraintBottom_toTopOf="@+id/hint_phone"
         tools:layout_editor_absoluteX="30dp" />
