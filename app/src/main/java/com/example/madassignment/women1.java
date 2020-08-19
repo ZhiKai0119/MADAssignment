@@ -47,14 +47,14 @@ public class women1 extends AppCompatActivity {
     private TextView productpriceWomen1, productName, productDesc;
     private ImageView imageWomen1;
     private Spinner spinner;
-    private Uri filePathUri;
-    private StorageReference storageReference;
     private FirebaseAuth mAuth;
     private FirebaseUser mUser;
     private DatabaseReference mReference;
-    private int Image_Request_Code = 7;
     public long maxId = 0;
     public long quantity = 0;
+
+    private Uri filePathUri;
+    private StorageReference storageReference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
