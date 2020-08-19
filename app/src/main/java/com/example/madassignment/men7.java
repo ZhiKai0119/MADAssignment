@@ -100,7 +100,7 @@ public class men7 extends AppCompatActivity {
         cartMap.put("Time", saveCurrentTime);
         cartMap.put("quantity", String.valueOf(quantity+1));
 
-        mReference.child(mAuth.getCurrentUser().getDisplayName()).child("Men7").setValue(cartMap);
+        mReference.child(mAuth.getCurrentUser().getUid()).child("Men7").setValue(cartMap);
 
         Toast.makeText(men7.this, "Product Already Added Into Shopping Cart", Toast.LENGTH_LONG).show();
     }

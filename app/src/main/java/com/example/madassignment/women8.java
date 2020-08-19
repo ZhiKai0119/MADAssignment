@@ -42,7 +42,7 @@ public class women8 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_women8);
 
-        Spinner spinner = (Spinner) findViewById(R.id.sizeSpinnerWomen8);
+        spinner = (Spinner) findViewById(R.id.sizeSpinnerWomen8);
         String[] sizes={"XS", "S", "M", "L", "XL", "XXL"};
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, sizes);
         spinner.setAdapter(adapter);
@@ -101,7 +101,7 @@ public class women8 extends AppCompatActivity {
         cartMap.put("Time", saveCurrentTime);
         cartMap.put("quantity", String.valueOf(quantity+1));
 
-        mReference.child(mAuth.getCurrentUser().getDisplayName()).child("Women8").setValue(cartMap);
+        mReference.child(mAuth.getCurrentUser().getUid()).child("Women8").setValue(cartMap);
 
         Toast.makeText(women8.this, "Product Already Added Into Shopping Cart", Toast.LENGTH_LONG).show();
     }

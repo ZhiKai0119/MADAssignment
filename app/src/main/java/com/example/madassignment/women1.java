@@ -121,7 +121,7 @@ public class women1 extends AppCompatActivity {
         cartMap.put("Time", saveCurrentTime);
         cartMap.put("quantity", String.valueOf(quantity+1));
 
-        mReference.child(mAuth.getCurrentUser().getDisplayName()).child("Women1").setValue(cartMap);
+        mReference.child(mAuth.getCurrentUser().getUid()).child("Women1").setValue(cartMap);
 
 //        mReference.child(mAuth.getCurrentUser().getDisplayName()).child("Product" + String.valueOf(maxId+1)).setValue(cartMap);
 

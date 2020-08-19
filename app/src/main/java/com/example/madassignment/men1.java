@@ -42,16 +42,6 @@ public class men1 extends AppCompatActivity {
     private StorageReference storageReference;
     public long maxId = 0;
     public long quantity = 0;
-    private int position = 0;
-
-
-//    public interface SingleChoiceListener{
-//        void onPositiveButtonClicked(String[] list, int position);
-//        void onNegativeButtonClicked();
-//    }
-//    private SingleChoiceListener mListener;
-//    private Spinner spinner;
-//    private FloatingActionButton addCart;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -95,36 +85,7 @@ public class men1 extends AppCompatActivity {
 
             }
         });
-//        spinner.setOnItemClickListener((AdapterView.OnItemClickListener) this);
-
-//        addCart = (FloatingActionButton) findViewById(R.id.add_men1_shopping_cart);
-//        addCart.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                AlertDialog.Builder builder = new AlertDialog.Builder(men1.this);
-//                final String[] list = getResources().getStringArray(R.array.choice_items);
-//                builder.setTitle("Quantity")
-//                        .setSingleChoiceItems(list, position, new DialogInterface.OnClickListener() {
-//                            @Override
-//                            public void onClick(DialogInterface dialogInterface, int i) {
-//                                position = i;
-//                            }
-//                        })
-//                        .setPositiveButton("ADD", new DialogInterface.OnClickListener() {
-//                            @Override
-//                            public void onClick(DialogInterface dialogInterface, int i) {
-//                                mListener.onPositiveButtonClicked(list,position);
-//                            }
-//                        })
-//                        .setNegativeButton("CANCEL", new DialogInterface.OnClickListener() {
-//                            @Override
-//                            public void onClick(DialogInterface dialogInterface, int i) {
-//                                mListener.onNegativeButtonClicked();
-//                            }
-//                        });
-//                builder.show();
-//            }
-//        });
+//
     }
 
     private void addingToCartList() {
@@ -147,7 +108,7 @@ public class men1 extends AppCompatActivity {
         cartMap.put("Time", saveCurrentTime);
         cartMap.put("quantity", String.valueOf(quantity+1));
 
-        mReference.child(mAuth.getCurrentUser().getDisplayName()).child("men1").setValue(cartMap);
+        mReference.child(mAuth.getCurrentUser().getUid()).child("Men1").setValue(cartMap);
 
         Toast.makeText(men1.this, "Product Already Added Into Shopping Cart", Toast.LENGTH_LONG).show();
     }
