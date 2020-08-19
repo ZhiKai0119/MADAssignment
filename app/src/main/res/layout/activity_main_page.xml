@@ -536,6 +536,12 @@
                         android:src="@drawable/basketball" />
 
                     <ImageView
+                        android:id="@+id/spokesperson_6"
+                        android:layout_width="375dp"
+                        android:layout_height="464dp"
+                        android:src="@drawable/spokesperson_6" />
+
+                    <ImageView
                         android:id="@+id/spokesperson_2"
                         android:layout_width="335dp"
                         android:layout_height="464dp"
@@ -557,8 +563,20 @@
                         android:id="@+id/spokesperson_5"
                         android:layout_width="340dp"
                         android:layout_height="464dp"
-                        android:layout_marginEnd="8dp"
                         android:src="@drawable/spokesperson_5" />
+
+                    <ImageView
+                        android:id="@+id/spokesperson_7"
+                        android:layout_width="310dp"
+                        android:layout_height="464dp"
+                        android:src="@drawable/spokesperson_7" />
+
+                    <ImageView
+                        android:id="@+id/spokesperson_8"
+                        android:layout_width="372dp"
+                        android:layout_height="464dp"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/spokesperson_8" />
                 </LinearLayout>
             </HorizontalScrollView>
         </androidx.constraintlayout.widget.ConstraintLayout>

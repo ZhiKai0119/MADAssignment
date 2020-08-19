@@ -53,7 +53,7 @@ public class MainPage extends AppCompatActivity implements View.OnClickListener 
     private ImageView spokesperson2;
     private ImageView spokesperson3;
     private ImageView spokesperson4;
-    private ImageView spokesperson5;
+    private ImageView spokesperson5, spokesperson6, spokesperson7, spokesperson8;
 
     private static final String TAG = "MainPage";
 
@@ -66,13 +66,13 @@ public class MainPage extends AppCompatActivity implements View.OnClickListener 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_page);
 
-//        header = (TextView) findViewById(R.id.header);
-//        Animation animation1 = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.blink);
-//        header.startAnimation(animation1);
-//
-//        shipping = (TextView) findViewById(R.id.free_shipping);
-//        Animation animation = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.move_left);
-//        shipping.startAnimation(animation);
+        header = (TextView) findViewById(R.id.header);
+        Animation animation1 = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.blink);
+        header.startAnimation(animation1);
+
+        shipping = (TextView) findViewById(R.id.free_shipping);
+        Animation animation = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.move_left);
+        shipping.startAnimation(animation);
 
         //array
         int[] images ={R.drawable.photo1, R.drawable.photo2, R.drawable.photo3, R.drawable.photo4};
@@ -131,6 +131,12 @@ public class MainPage extends AppCompatActivity implements View.OnClickListener 
         spokesperson4.setOnClickListener(this);
         spokesperson5 = (ImageView) findViewById(R.id.spokesperson_5);
         spokesperson5.setOnClickListener(this);
+        spokesperson6 = (ImageView) findViewById(R.id.spokesperson_6);
+        spokesperson6.setOnClickListener(this);
+        spokesperson7 = (ImageView) findViewById(R.id.spokesperson_7);
+        spokesperson7.setOnClickListener(this);
+        spokesperson8 = (ImageView) findViewById(R.id.spokesperson_8);
+        spokesperson8.setOnClickListener(this);
     }
 
 
@@ -247,9 +253,16 @@ public class MainPage extends AppCompatActivity implements View.OnClickListener 
                 startActivity(new Intent(MainPage.this, kids4.class));
                 break;
             case R.id.nike_adidas_btn:
-                startActivity(new Intent(MainPage.this, ProductList.class));
+                FragmentManager manager4 = getSupportFragmentManager();
+                FragmentTransaction transaction4 = manager4.beginTransaction();
+                transaction4.setCustomAnimations(R.anim.fragment_open_enter, R.anim.fragment_close_exit, R.anim.fragment_fade_enter, R.anim.fragment_fade_exit);
+                Fragment4 Fragment_4 = new Fragment4();
+                transaction4.addToBackStack(null);
+                transaction4.add(R.id.Move_product_list, Fragment_4);
+                transaction4.commit();
                 break;
             case R.id.spokesperson:
+            case R.id.spokesperson_6:
                 AlertDialog.Builder builder = new AlertDialog.Builder(this);
                 builder.setTitle("Spokesperson Information");
                 builder.setMessage("Name:Yoona\nDate of birth  :30/5/1990\nAge   :30\nGender:Female\nOccupation:actress ,singer\nCitizenship:Korea\nGroup Name: Girl generation\nFavourite fashion style: Chic\nFavourite Sport: basketball");
@@ -287,6 +300,30 @@ public class MainPage extends AppCompatActivity implements View.OnClickListener 
                 });
                 builder3.create().show();
                 break;
+            case R.id.spokesperson_7:
+                AlertDialog.Builder builder4 = new AlertDialog.Builder(this);
+                builder4.setTitle("Spokesperson Information");
+                builder4.setMessage("Name: IU\nBirthday :16/5/1995\nGender:female\nOccupation: kpop singer\nCitizens : Tailand\nGroup name: iu team\nFavorite fashion style: korea style\nFavorite sport : badminton");
+                builder4.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                    }
+                });
+                builder4.create().show();
+                break;
+            case R.id.spokesperson_8:
+            AlertDialog.Builder builder5 = new AlertDialog.Builder(this);
+            builder5.setTitle("Spokesperson Information");
+            builder5.setMessage("Name: Na Eun\nBirthday :10/10/1993\nAge:27\nGender :female\nOccupation : singer\nCitizens : Taiwan\nGroup name : Apink\nFavorite fashion : soprt\nFavorite sport : tennis");
+            builder5.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+
+                }
+            });
+            builder5.create().show();
+            break;
             default:
                 //Nothings
         }
