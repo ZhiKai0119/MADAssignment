@@ -292,15 +292,23 @@ LACC looks forward to a progressive development in Asia in the days to come.</st
     <string name="return_subtitle">How do I return my order?</string>
     <string name="return_text">You can return via Postal Service.\n
 
-Postal Return\n
-You can return your online order within 30 days of receiving your order. Please kindly follow the following steps:
+    Postal Return\n
+    You can return your online order within 30 days of receiving your order. Please kindly follow the following steps:
 
-1.Contact our Customer Service team +603-12345678\n
-2.Provide our Customer Service team your order details and reason for returns.\n
-3.Print out your return form(s) that will be provided by our Customer Service team via email.\n
-4.Insert your return form into the return parcel, then seal the parcel.\n
-5.Proceed to the nearest post office to post back your returns.\n
-6.Take note of the tracking number stated on the shipping label provided by the postal service as reference.\n</string>
+    1.Contact our Customer Service team +603-12345678\n
+    2.Provide our Customer Service team your order details and reason for returns.\n
+    3.Print out your return form(s) that will be provided by our Customer Service team via email.\n
+    4.Insert your return form into the return parcel, then seal the parcel.\n
+    5.Proceed to the nearest post office to post back your returns.\n
+    6.Take note of the tracking number stated on the shipping label provided by the postal service as reference.\n</string>
+    <string name="return_text1">You also can drop off the product to our physical store.\n
+        Here is the address.\n
+        LACC Fashion\n
+        Mid Valley Megamall\n
+        F099, First Floor, Centre Court,\n
+        59200 Kuala Lumpur,\n
+            Malaysia\n
+        You can find out our store by this map.</string>
 
     <string name="return_subtitle2">When will I get my refund?</string>
     <string name="return_text2">Your refund will be processed as soon as the product you have returned is

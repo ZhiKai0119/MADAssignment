@@ -53,7 +53,15 @@
                 android:lineSpacingExtra="@dimen/line_spacing"
                 android:padding="@dimen/padding_regular"
                 android:text="@string/voucher_text" />
+            <TextView
 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autoLink="web"
+                android:lineSpacingExtra="@dimen/line_spacing"
+                android:textColor="#575757"
+                android:padding="@dimen/padding_regular"
+                android:text="@string/return_text1" />
             <TextView
 
                 android:layout_width="match_parent"

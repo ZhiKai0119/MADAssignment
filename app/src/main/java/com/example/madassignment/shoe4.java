@@ -54,7 +54,7 @@ public class shoe4 extends AppCompatActivity {
         setContentView(R.layout.activity_shoe4);
 
         spinner = (Spinner) findViewById(R.id.sizeSpinnerShoe4);
-        String[] sizes = {"XS", "S", "M", "L", "XL", "XXL"};
+        String[] sizes = {"UK5","UK6", "UK7", "UK8", "UK9", "UK10", "UK11", "UK12"};
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, sizes);
         spinner.setAdapter(adapter);
 
