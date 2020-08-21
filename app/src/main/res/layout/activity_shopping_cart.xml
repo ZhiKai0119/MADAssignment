@@ -4,11 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/Background"
     tools:context=".shopping_cart">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/shopcart_linear"
-        android:background="@color/Background2"
+        android:background="@color/colorAccent"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/checkout"/>

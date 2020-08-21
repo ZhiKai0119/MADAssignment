@@ -1,23 +1,20 @@
 package com.example.madassignment;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class shoppingcart_layout extends AppCompatActivity {
 
     private int mCount = 0;
     private TextView quantity;
     private ImageButton btnAdd, btnRemove;
-
-//    private ImageView mproductImage;
-//    private TextView mitemname, mitemprice;
+    private ImageView itemImage;
+    private TextView itemName, itemPrice;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +22,9 @@ public class shoppingcart_layout extends AppCompatActivity {
         setContentView(R.layout.activity_shoppingcart_layout);
 
         quantity = (TextView) findViewById(R.id.quantity);
+        itemImage = (ImageView) findViewById(R.id.image);
+        itemName = (TextView) findViewById(R.id.item_name);
+        itemPrice = (TextView) findViewById(R.id.item_price);
 
         btnAdd = (ImageButton) findViewById(R.id.btnAdd);
         btnAdd.setOnClickListener(new View.OnClickListener() {

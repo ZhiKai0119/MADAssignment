@@ -1,8 +1,5 @@
 package com.example.madassignment;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
@@ -12,6 +9,9 @@ import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -37,7 +37,7 @@ public class kids2 extends AppCompatActivity {
 
     private FloatingActionButton addCartBtn;
     private TextView productPriceWomen, productName, productDesc;
-    private ImageView imageWomen;
+    private ImageView imageKids;
     private Spinner spinner;
     private FirebaseAuth mAuth;
     private FirebaseUser mUser;
@@ -59,7 +59,7 @@ public class kids2 extends AppCompatActivity {
         productName = (TextView) findViewById(R.id.product_namekid2);
         productPriceWomen = (TextView) findViewById(R.id.product_pricekid2);
         productDesc = (TextView) findViewById(R.id.product_desckid2);
-        imageWomen = (ImageView) findViewById(R.id.productImagekid2);
+        imageKids = (ImageView) findViewById(R.id.productImagekid2);
 
         mAuth = FirebaseAuth.getInstance();
         mUser = mAuth.getCurrentUser();

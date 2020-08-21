@@ -1,22 +1,17 @@
 package com.example.madassignment;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-
-import android.content.Context;
-import android.content.DialogInterface;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -41,7 +36,7 @@ import java.util.HashMap;
 public class men1 extends AppCompatActivity {
     private FloatingActionButton addCartBtn;
     private TextView productPriceWomen, productName, productDesc;
-    private ImageView imageWomen;
+    private ImageView imageMen;
     private Spinner spinner;
     private FirebaseAuth mAuth;
     private FirebaseUser mUser;
@@ -63,7 +58,7 @@ public class men1 extends AppCompatActivity {
         productName = (TextView) findViewById(R.id.product_nameMen1);
         productPriceWomen = (TextView) findViewById(R.id.product_priceMen1);
         productDesc = (TextView) findViewById(R.id.product_descMen1);
-        imageWomen = (ImageView) findViewById(R.id.productImageMen1);
+        imageMen = (ImageView) findViewById(R.id.productImageMen1);
 
         mAuth = FirebaseAuth.getInstance();
         mUser = mAuth.getCurrentUser();
@@ -113,7 +108,6 @@ public class men1 extends AppCompatActivity {
 
             }
         });
-//
     }
 
     private void addingToCartList() {
@@ -137,8 +131,20 @@ public class men1 extends AppCompatActivity {
         cartMap.put("quantity", String.valueOf(quantity+1));
 
         mReference.child(mAuth.getCurrentUser().getUid()).child("Men1").setValue(cartMap);
-
         Toast.makeText(men1.this, "Product Already Added Into Shopping Cart", Toast.LENGTH_LONG).show();
+
+//        if (currentDate != cartMap.get("Time")){
+//            cartMap.put("Image", storageReference.toString());
+//            cartMap.put("Name",productName.getText().toString());
+//            cartMap.put("Price", productPriceWomen.getText().toString());
+//            cartMap.put("Desc", productDesc.getText().toString());
+//            cartMap.put("Size", spinner.getSelectedItem().toString());
+//            cartMap.put("Date", saveCurrentDate);
+//            cartMap.put("Time", saveCurrentTime);
+//            cartMap.put("quantity", String.valueOf(quantity+1));
+//
+//            mReference.child(mAuth.getCurrentUser().getUid()).child("Men1" + String.valueOf(maxId+1)).setValue(cartMap);
+//        }
     }
 
 }

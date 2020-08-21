@@ -1,93 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_margin="15dp"
     android:padding="5dp"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    app:cardBackgroundColor="@color/Background"
+    app:cardCornerRadius="12dp"
+    app:contentPadding="6dp">
 
-    <androidx.cardview.widget.CardView
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="12dp"
-        app:contentPadding="6dp"
-        android:layout_margin="15dp"
-        app:cardBackgroundColor="@color/Background">
+        android:padding="10dp">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:src="@drawable/fullname_icon"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:id="@+id/item_name"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="10dp">
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_toEndOf="@+id/image"
+            android:layout_toRightOf="@+id/image"
+            android:textColor="#131313"
+            android:text="Hello"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
-            <ImageView
-                android:id="@+id/image"
-                android:layout_width="90dp"
-                android:layout_height="90dp" />
+        <TextView
+            android:id="@+id/item_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_name"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="5dp"
+            android:text="RM100"
+            android:layout_toEndOf="@+id/image"
+            android:textColor="#131313"
+            android:textSize="20sp" />
 
+        <ImageButton
+            android:id="@+id/btnAdd"
+            android:layout_width="33dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/item_name"
+            android:layout_marginTop="20dp"
+            android:layout_toStartOf="@id/quantity"
+            android:background="@color/colorPrimaryDark"
+            android:src="@drawable/ic_add" />
 
-            <TextView
-                android:id="@+id/item_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_marginStart="15dp"
-                android:layout_marginLeft="15dp"
-                android:layout_toEndOf="@+id/image"
-                android:layout_toRightOf="@+id/image"
-                android:text="item"
-                android:textColor="#131313"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+        <TextView
+            android:id="@+id/quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/item_name"
+            android:layout_toStartOf="@+id/btnRemove"
+            android:layout_marginTop="20dp"
+            android:background="#77499E"
+            android:padding="8dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:text="0"
+            android:textColor="#000000"
+            android:textSize="25sp" />
 
-            <TextView
-                android:id="@+id/item_price"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/item_name"
-                android:layout_marginStart="15dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="5dp"
-                android:layout_toEndOf="@+id/image"
-                android:layout_toRightOf="@+id/image"
-                android:text="RM200"
-                android:textColor="#131313"
-                android:textSize="20sp" />
+        <ImageButton
+            android:id="@+id/btnRemove"
+            android:layout_width="33dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/item_name"
+            android:layout_alignParentEnd="true"
+            android:background="@color/colorPrimaryDark"
+            android:src="@drawable/ic_remove" />
 
-            <ImageButton
-                android:id="@+id/btnAdd"
-                android:layout_marginStart="50dp"
-                android:layout_width="33dp"
-                android:layout_height="50dp"
-                android:src="@drawable/ic_add"
-                android:background="@color/colorPrimaryDark"
-                android:layout_toEndOf="@id/item_price"
-                android:layout_below="@id/item_name"/>
-
-            <TextView
-                android:id="@+id/quantity"
-                android:text="0"
-                android:textSize="25sp"
-                android:textColor="#000000"
-                android:background="#77499E"
-                android:padding="8dp"
-                android:paddingStart="20dp"
-                android:paddingEnd="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toEndOf="@+id/btnAdd"
-                android:layout_below="@id/item_name" />
-
-            <ImageButton
-                android:id="@+id/btnRemove"
-                android:layout_width="33dp"
-                android:layout_height="50dp"
-                android:src="@drawable/ic_remove"
-                android:background="@color/colorPrimaryDark"
-                android:layout_toEndOf="@id/quantity"
-                android:layout_below="@id/item_name" />
-
-        </RelativeLayout>
-
-    </androidx.cardview.widget.CardView>
-
-</LinearLayout>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
