@@ -1,15 +1,20 @@
 package com.example.madassignment;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.content.Intent;
+import android.graphics.BitmapFactory;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -19,8 +24,6 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import java.util.Date;
-
 public class PaymentDetail extends AppCompatActivity {
     private EditText Card_Name,bank_text,card_number,expDate,ccv_text;
     private Button Btnconfirm;
@@ -29,6 +32,8 @@ public class PaymentDetail extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private FirebaseUser mUser;
     public long maxId = 0;
+    private final String CHANNEL_ID = "simple_notification";
+    private final int NOTIFICATION_ID = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,6 +67,18 @@ public class PaymentDetail extends AppCompatActivity {
         Btnconfirm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                createNotificationChannel();
+                NotificationCompat.Builder builder = new NotificationCompat.Builder(getApplicationContext(), CHANNEL_ID);
+                builder.setSmallIcon(R.drawable.lacclogo);
+                builder.setLargeIcon(BitmapFactory.decodeResource(getResources(), R.id.lacclogo));
+                builder.setContentTitle("LACC Fashion");
+                builder.setContentText("Thank You For Purchasing and Hope You Can Purchase Our Product Next Time.");
+                builder.setPriority(NotificationCompat.PRIORITY_DEFAULT);
+
+                NotificationManagerCompat notificationManagerCompat = NotificationManagerCompat.from(getApplicationContext());
+                notificationManagerCompat.notify(NOTIFICATION_ID, builder.build());
+
                 final String name = Card_Name.getText().toString().trim();
                 final String BankName = bank_text.getText().toString().trim();
                 int number= Integer.parseInt(card_number.getText().toString().trim());
@@ -87,5 +104,20 @@ public class PaymentDetail extends AppCompatActivity {
         });
 
 
+    }
+
+    private void createNotificationChannel() {
+        if (Build.VERSION.SDK_INT>=Build.VERSION_CODES.O){
+            CharSequence name = "LACC Fashion";
+            String description = "Thank You For Purchasing and Hope You Can Purchase Our Product Next Time.";
+            int importance = NotificationManager.IMPORTANCE_DEFAULT;
+
+            NotificationChannel notificationChannel = new NotificationChannel(CHANNEL_ID, name, importance);
+            notificationChannel.setDescription(description);
+
+            NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+            notificationManager.createNotificationChannel(notificationChannel);
+
+        }
     }
 }

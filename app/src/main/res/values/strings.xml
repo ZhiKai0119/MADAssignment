@@ -172,7 +172,6 @@ LACC looks forward to a progressive development in Asia in the days to come.</st
        </string>
 
 
-
     <!--    faq-->
     //delivery
     <string name="Delivery">Delivery</string>
@@ -337,4 +336,5 @@ Once the return has been approved, it takes 1-2 days for the refund to be made b
         <item>4</item>
         <item>5</item>
     </string-array>
+    <string name="title_activity_maps">Map</string>
 </resources>
