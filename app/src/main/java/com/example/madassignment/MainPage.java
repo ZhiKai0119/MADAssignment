@@ -1,15 +1,8 @@
 package com.example.madassignment;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
-
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -21,13 +14,14 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ViewFlipper;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.iid.FirebaseInstanceId;
-import com.google.firebase.iid.InstanceIdResult;
 
 public class MainPage extends AppCompatActivity implements View.OnClickListener {
 
@@ -171,8 +165,8 @@ public class MainPage extends AppCompatActivity implements View.OnClickListener 
             case R.id.search:
                 displayToast(getString(R.string.search_clicked));
                 return true;
-            case R.id.setting:
-                displayToast(getString(R.string.setting_clicked));
+            case R.id.profile:
+                startActivity(new Intent(MainPage.this, userProfile.class));
                 return true;
             case R.id.aboutUs:
                 startActivity(new Intent(MainPage.this, AboutUs.class));
@@ -182,6 +176,9 @@ public class MainPage extends AppCompatActivity implements View.OnClickListener 
                 return true;
             case R.id.FAQ:
                 startActivity(new Intent(MainPage.this, FAQ.class));
+                return true;
+            case R.id.shopping_cart:
+                startActivity(new Intent(MainPage.this, shopping_cart.class));
                 return true;
             case R.id.signOut:
                 mAuth.signOut();
