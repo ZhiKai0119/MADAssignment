@@ -39,10 +39,10 @@ public class shopping_cart extends AppCompatActivity {
         mStorage = FirebaseStorage.getInstance().getReference();
 
         recyclerView = (RecyclerView) findViewById(R.id.shopcart_linear);
-        recyclerView.setHasFixedSize(true);
+        recyclerView.setHasFixedSize(false);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        FirebaseRecyclerOptions<Cart> options = new FirebaseRecyclerOptions.Builder<Cart>().setQuery(mRef, Cart.class).build();
+        FirebaseRecyclerOptions<Cart> options = new FirebaseRecyclerOptions.Builder<Cart>().setQuery(mRef, Cart.class).setLifecycleOwner(this).build();
 
         adapter = new cartAdapter(options);
         recyclerView.setAdapter(adapter);
@@ -68,6 +68,6 @@ public class shopping_cart extends AppCompatActivity {
     @Override
     protected void onStop() {
         super.onStop();
-        adapter.startListening();
+        adapter.stopListening();
     }
 }

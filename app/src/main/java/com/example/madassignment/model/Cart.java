@@ -1,32 +1,32 @@
 package com.example.madassignment.model;
 
 public class Cart {
-    private String pname, pprice, quantity, pimage;
+    private String Name, Price, quantity, Image;
 
     public Cart() {
     }
 
-    public Cart(String pname, String pprice, String quantity, String pimage) {
-        this.pname = pname;
-        this.pprice = pprice;
+    public Cart(String name, String price, String quantity, String image) {
+        Name = name;
+        Price = price;
         this.quantity = quantity;
-        this.pimage = pimage;
+        Image = image;
     }
 
-    public String getPname() {
-        return pname;
+    public String getName() {
+        return Name;
     }
 
-    public void setPname(String pname) {
-        this.pname = pname;
+    public void setName(String name) {
+        Name = name;
     }
 
-    public String getPprice() {
-        return pprice;
+    public String getPrice() {
+        return Price;
     }
 
-    public void setPprice(String pprice) {
-        this.pprice = pprice;
+    public void setPrice(String price) {
+        Price = price;
     }
 
     public String getQuantity() {
@@ -37,11 +37,11 @@ public class Cart {
         this.quantity = quantity;
     }
 
-    public String getPimage() {
-        return pimage;
+    public String getImage() {
+        return Image;
     }
 
-    public void setPimage(String pimage) {
-        this.pimage = pimage;
+    public void setImage(String image) {
+        Image = image;
     }
 }
