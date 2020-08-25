@@ -9,16 +9,12 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.example.madassignment.R;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
-import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.StorageReference;
-import com.squareup.picasso.Picasso;
 
 public class cartAdapter extends FirebaseRecyclerAdapter<Cart, cartAdapter.viewHolder>{
-
-    StorageReference storageReference = FirebaseStorage.getInstance().getReference();
 
     public cartAdapter(@NonNull FirebaseRecyclerOptions<Cart> options) {
         super(options);
@@ -29,8 +25,8 @@ public class cartAdapter extends FirebaseRecyclerAdapter<Cart, cartAdapter.viewH
         holder.name.setText(model.getName());
         holder.price.setText(model.getPrice());
         holder.quantity.setText(model.getQuantity());
-        Picasso.get().load(model.getImage()).into(holder.img);
-//        Glide.with(holder.img.getContext()).load(model.getImage()).into(holder.img);
+//        Picasso.get().load(model.getImage()).into(holder.img);
+        Glide.with(holder.img.getContext()).load(model.getImage()).into(holder.img);
 //        Glide.with(holder.img.getContext()).using(new FirebaseImageLoader()).load(model.getImage()).into(holder.img);
 
     }
