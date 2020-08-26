@@ -1,7 +1,6 @@
 package com.example.madassignment;
 
 import android.os.Bundle;
-import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -26,22 +25,22 @@ public class shoppingcart_layout extends AppCompatActivity {
         itemName = (TextView) findViewById(R.id.item_name);
         itemPrice = (TextView) findViewById(R.id.item_price);
 
-        btnAdd = (ImageButton) findViewById(R.id.btnAdd);
-        btnAdd.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ++mCount;
-                quantity.setText(Integer.toString(mCount));
-            }
-        });
-
-        btnRemove = (ImageButton) findViewById(R.id.btnRemove);
-        btnRemove.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                --mCount;
-                quantity.setText(Integer.toString(mCount));
-            }
-        });
+//        btnAdd = (ImageButton) findViewById(R.id.btnAdd);
+//        btnAdd.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                ++mCount;
+//                quantity.setText(Integer.toString(mCount));
+//            }
+//        });
+//
+//        btnRemove = (ImageButton) findViewById(R.id.btnRemove);
+//        btnRemove.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                --mCount;
+//                quantity.setText(Integer.toString(mCount));
+//            }
+//        });
     }
 }

@@ -47,40 +47,44 @@
             android:textColor="#131313"
             android:textSize="20sp" />
 
-        <ImageButton
-            android:id="@+id/btnAdd"
-            android:layout_width="33dp"
-            android:layout_height="50dp"
-            android:layout_below="@id/item_name"
-            android:layout_marginTop="20dp"
-            android:layout_toStartOf="@id/quantity"
-            android:background="@color/colorPrimaryDark"
-            android:src="@drawable/ic_add" />
+<!--        <ImageButton-->
+<!--            android:id="@+id/btnAdd"-->
+<!--            android:layout_width="33dp"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:layout_below="@id/item_name"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:layout_toStartOf="@id/quantity"-->
+<!--            android:background="@color/colorPrimaryDark"-->
+<!--            android:src="@drawable/ic_add" />-->
+
+        <TextView
+            android:id="@+id/quantity_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/item_price"
+            android:layout_toEndOf="@id/image"
+            android:layout_marginStart="15dp"
+            android:textColor="#777777"
+            android:text="Quantity:" />
 
         <TextView
             android:id="@+id/quantity"
+            android:layout_marginStart="8dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/item_name"
-            android:layout_toStartOf="@+id/btnRemove"
-            android:layout_marginTop="20dp"
-            android:background="#77499E"
-            android:padding="8dp"
-            android:paddingStart="20dp"
-            android:paddingEnd="20dp"
-            android:text="0"
-            android:textColor="#000000"
-            android:textSize="25sp" />
+            android:layout_below="@id/item_price"
+            android:textColor="#777777"
+            android:layout_toEndOf="@id/quantity_text" />
 
-        <ImageButton
-            android:id="@+id/btnRemove"
-            android:layout_width="33dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="20dp"
-            android:layout_below="@id/item_name"
-            android:layout_alignParentEnd="true"
-            android:background="@color/colorPrimaryDark"
-            android:src="@drawable/ic_remove" />
+<!--        <ImageButton-->
+<!--            android:id="@+id/btnRemove"-->
+<!--            android:layout_width="33dp"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:layout_below="@id/item_name"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:background="@color/colorPrimaryDark"-->
+<!--            android:src="@drawable/ic_remove" />-->
 
     </RelativeLayout>
 </androidx.cardview.widget.CardView>

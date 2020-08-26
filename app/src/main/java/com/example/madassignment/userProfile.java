@@ -36,7 +36,7 @@ public class userProfile extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private FirebaseUser mUser;
     private StorageReference storageReference;
-    private TextView fullName, email, phone;
+    private TextView fullName, email;
     private Button changeProfileImage, resetPwd, logout;
     private CircleImageView profileImage;
 
@@ -60,14 +60,12 @@ public class userProfile extends AppCompatActivity {
 
         fullName = (TextView) findViewById(R.id.hint_name);
         email = (TextView) findViewById(R.id.hint_email);
-        phone = (TextView) findViewById(R.id.hint_phone);
 
         resetPwd = (Button) findViewById(R.id.reset_password);
         logout = (Button) findViewById(R.id.logout);
 
-
+        fullName.setText(mAuth.getCurrentUser().getUid());
         email.setText(mAuth.getCurrentUser().getEmail());
-        phone.setText(mAuth.getCurrentUser().getPhoneNumber());
 
         profileImage = (CircleImageView) findViewById(R.id.imageView);
 
