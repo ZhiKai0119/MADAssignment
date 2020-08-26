@@ -62,6 +62,14 @@
                 android:textColor="#575757"
                 android:padding="@dimen/padding_regular"
                 android:text="@string/return_text1" />
+
+            <ImageButton
+                android:id="@+id/map"
+                android:layout_margin="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                android:src="@drawable/map"/>
+
             <TextView
 
                 android:layout_width="match_parent"

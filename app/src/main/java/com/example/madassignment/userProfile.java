@@ -5,6 +5,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -135,13 +136,13 @@ public class userProfile extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent i = new Intent(userProfile.this, EditProfile.class);
-                i.putExtra("fullName", fullName.getText().toString());
-                i.putExtra("email", email.getText().toString());
-                i.putExtra("phone", phone.getText().toString());
-                startActivity(i);
-//                Intent openGallery = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-//                startActivityForResult(openGallery, 1000);
+//                Intent i = new Intent(userProfile.this, EditProfile.class);
+//                i.putExtra("fullName", fullName.getText().toString());
+//                i.putExtra("email", email.getText().toString());
+//                i.putExtra("phone", phone.getText().toString());
+//                startActivity(i);
+                Intent openGallery = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                startActivityForResult(openGallery, 1000);
             }
         });
     }

@@ -34,12 +34,14 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private static final LatLng Johor = new LatLng(2.0491758,102.9494771);
     private static final LatLng Singapore = new LatLng(1.3139961,103.704163);
     private static final LatLng PulauPinang = new LatLng(5.4058789,100.274326);
+    private static final LatLng KualaLumpur = new LatLng(3.1390,101.6869);
 
     //弄marker
     private Marker mIpoh;
     private Marker mJohor;
     private Marker mSingapore;
     private Marker mPulauPinang;
+    private Marker mKualaLumpur;
 
 
     @Override
@@ -103,6 +105,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .position(PulauPinang).title("Pulau Pinang").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ROSE)));
         mPulauPinang.setTag(0);
         markerList.add(mPulauPinang);
+
+        mKualaLumpur = mMap.addMarker(new MarkerOptions()
+                .position(KualaLumpur).title("Kuala Lumpur").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE)));
+        mKualaLumpur.setTag(0);
+        markerList.add(mKualaLumpur);
 
         //用for loop来加进去
         for (Marker m : markerList){

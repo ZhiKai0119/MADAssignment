@@ -22,7 +22,7 @@ public class EditProfile extends AppCompatActivity {
     private CircleImageView userImage;
     private Button save;
     private FirebaseAuth mAuth;
-    DatabaseReference mDatabase;
+    private DatabaseReference mDatabase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +35,7 @@ public class EditProfile extends AppCompatActivity {
         String phone = data.getStringExtra("phone");
 
         mAuth = FirebaseAuth.getInstance();
-        mDatabase = FirebaseDatabase.getInstance().getReference();
+        mDatabase = FirebaseDatabase.getInstance().getReference().child(mAuth.getCurrentUser().getUid());
 
         name = (EditText) findViewById(R.id.enter_username);
         userEmail = (EditText) findViewById(R.id.enter_email);
