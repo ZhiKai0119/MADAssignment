@@ -44,6 +44,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".SearchViewFromList"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan"
+            android:parentActivityName=".MainPage">
+
+        </activity>
+
         <activity android:name=".shopping_cart" />
 
         <meta-data

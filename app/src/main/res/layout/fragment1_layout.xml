@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
-    android:background="@color/Background"
+    android:background="@drawable/background2_bg"
     android:orientation="vertical">
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -210,7 +210,7 @@
                 android:layout_height="47dp"
                 android:layout_marginTop="4dp"
                 android:layout_marginEnd="36dp"
-                android:text="Crtstal Men's Fashion"
+                android:text="Crystal Men's Fashion"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/menpic6" />
 

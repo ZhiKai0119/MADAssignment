@@ -163,7 +163,7 @@ public class MainPage extends AppCompatActivity implements View.OnClickListener 
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case R.id.search:
-                displayToast(getString(R.string.search_clicked));
+                startActivity(new Intent(MainPage.this, SearchViewFromList.class));
                 return true;
             case R.id.profile:
                 startActivity(new Intent(MainPage.this, userProfile.class));

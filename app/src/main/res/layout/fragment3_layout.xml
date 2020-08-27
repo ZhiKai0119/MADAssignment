@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
-    android:background="@color/Background"
+    android:background="@drawable/background2_bg"
     android:orientation="vertical">
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton

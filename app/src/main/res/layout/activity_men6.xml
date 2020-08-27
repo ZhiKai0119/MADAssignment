@@ -32,7 +32,7 @@
             <!--name-->
             <TextView
                 android:id="@+id/product_nameMen6"
-                android:text="Crtstal Men's Fashion"
+                android:text="Crystal Men's Fashion"
                 android:layout_width="272dp"
                 android:layout_height="37dp"
                 android:layout_marginStart="16dp"
