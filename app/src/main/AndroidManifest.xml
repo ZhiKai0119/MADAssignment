@@ -18,6 +18,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".ContactUsRecords"></activity>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -32,8 +33,7 @@
 
         <activity
             android:name=".MapsActivity"
-            android:label="@string/title_activity_maps">
-        </activity>
+            android:label="@string/title_activity_maps"></activity>
         <activity android:name=".shoppingcart_layout" />
         <activity
             android:name=".SplashScreen"
@@ -44,14 +44,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".SearchViewFromList"
+        <activity
+            android:name=".SearchViewFromList"
+            android:parentActivityName=".MainPage"
             android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="adjustPan"
-            android:parentActivityName=".MainPage">
-
-        </activity>
-
+            android:windowSoftInputMode="adjustPan"></activity>
         <activity android:name=".shopping_cart" />
 
         <meta-data

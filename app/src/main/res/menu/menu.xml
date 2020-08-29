@@ -46,10 +46,15 @@
         app:showAsAction="ifRoom"
         android:orderInCategory="40" />
 
+    <item android:id="@+id/contactUsHistory"
+        android:title="Contact Us History"
+        app:showAsAction="never"
+        android:orderInCategory="90"/>
+
     <item android:id="@+id/signOut"
         android:title="Sign Out"
         app:showAsAction="never"
-        android:orderInCategory="50" />
+        android:orderInCategory="100" />
 
 
 </menu>

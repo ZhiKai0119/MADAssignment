@@ -1,11 +1,6 @@
 package com.example.madassignment;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-
 import android.Manifest;
-import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
@@ -18,6 +13,10 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -28,8 +27,6 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.HashMap;
-import java.util.Map;
 
 public class ContactUs extends AppCompatActivity {
     private EditText name_ali, email_ali_gmail_com, tel_ali;
@@ -139,7 +136,7 @@ public class ContactUs extends AppCompatActivity {
 
                 final String name = name_ali.getText().toString().trim();
                 final String email = email_ali_gmail_com.getText().toString().trim();
-                final Long tel= Long.parseLong(tel_ali.getText().toString().trim());
+                final String tel = tel_ali.getText().toString().trim();
                 String saveCurrentTime, saveCurrentDate;
 
                 Calendar calendar = Calendar.getInstance();
@@ -157,6 +154,8 @@ public class ContactUs extends AppCompatActivity {
                     member.setDate(saveCurrentDate);
 
                     reff.child("Member" + String.valueOf(maxId+1)).setValue(member);
+//                    reff.setValue(member);
+
 
                     Toast.makeText(ContactUs.this, "Data Inserted Successfully", Toast.LENGTH_LONG).show();
                 }
