@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/Background"
-    tools:context=".shoe2">
+    tools:context=".shoe2"
+    android:id="@+id/rootIdShoe2">
 
     <ScrollView
         android:id="@+id/list_scrollView"

@@ -3,6 +3,8 @@ package com.example.madassignment;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
@@ -16,6 +18,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -35,12 +38,12 @@ import java.util.HashMap;
 
 public class men3 extends AppCompatActivity {
     private FloatingActionButton addCartBtn;
-    private TextView productPriceWomen, productName, productDesc;
+    private TextView productPriceMen, productName, productDesc;
     private ImageView imageMen;
     private Spinner spinner;
     private FirebaseAuth mAuth;
     private FirebaseUser mUser;
-    private DatabaseReference mReference;
+    private DatabaseReference mReference, mReference2;
     private StorageReference storageReference;
     public long maxId = 0;
     public long quantity = 0;
@@ -56,13 +59,14 @@ public class men3 extends AppCompatActivity {
         spinner.setAdapter(adapter);
 
         productName = (TextView) findViewById(R.id.product_nameMen3);
-        productPriceWomen = (TextView) findViewById(R.id.product_priceMen3);
+        productPriceMen = (TextView) findViewById(R.id.product_priceMen3);
         productDesc = (TextView) findViewById(R.id.product_descMen3);
         imageMen = (ImageView) findViewById(R.id.productImageMen3);
 
         mAuth = FirebaseAuth.getInstance();
         mUser = mAuth.getCurrentUser();
         mReference = FirebaseDatabase.getInstance().getReference().child("Shopping Cart");
+        mReference2 = FirebaseDatabase.getInstance().getReference().child("Wish List");
         storageReference = FirebaseStorage.getInstance().getReference().child("ProductImages/men3.PNG");
 
         try {
@@ -109,6 +113,28 @@ public class men3 extends AppCompatActivity {
             }
         });
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu4) {
+        getMenuInflater().inflate(R.menu.menu4, menu4);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.addWishList:
+                final HashMap<String, Object> wishListMap = new HashMap<>();
+                wishListMap.put("product_Name", productName.getText().toString());
+                wishListMap.put("product_Price", productPriceMen.getText().toString());
+
+                mReference2.child(mAuth.getCurrentUser().getUid()).child("Men3").setValue(wishListMap);
+                Snackbar.make(findViewById(R.id.rootIdMen3), "Added To WishList", Snackbar.LENGTH_SHORT).show();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
     private void addingToCartList() {
         String saveCurrentTime, saveCurrentDate;
 
@@ -122,7 +148,7 @@ public class men3 extends AppCompatActivity {
         final HashMap<String,Object> cartMap=new HashMap<>();
         cartMap.put("Image", storageReference.toString());
         cartMap.put("Name",productName.getText().toString());
-        cartMap.put("Price", productPriceWomen.getText().toString());
+        cartMap.put("Price", productPriceMen.getText().toString());
         cartMap.put("Desc", productDesc.getText().toString());
         cartMap.put("Size", spinner.getSelectedItem().toString());
         cartMap.put("Date", saveCurrentDate);

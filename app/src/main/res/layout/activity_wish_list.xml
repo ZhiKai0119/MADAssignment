@@ -3,12 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/Background"
-    tools:context=".shopping_cart"
-    android:id="@+id/rootId">
+    android:background="@drawable/background_bg"
+    tools:context=".wishList">
 
     <TextView
-        android:id="@+id/title_contactUs"
+        android:id="@+id/title_wishList"
         style="@style/TextAppearance.AppCompat.Headline"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -16,7 +15,7 @@
         android:shadowDx="10"
         android:shadowDy="10"
         android:shadowRadius="6"
-        android:text="Contact Us History"
+        android:text="WishList"
         android:textAlignment="center"
         android:textAllCaps="true"
         android:textColor="#FFFFFF"
@@ -24,23 +23,23 @@
         android:textStyle="bold" />
 
     <View
-        android:id="@+id/view"
+        android:id="@+id/view2"
         android:layout_width="match_parent"
         android:layout_height="2dp"
         android:background="#000000"
-        android:layout_below="@+id/title_contactUs"/>
+        android:layout_below="@+id/title_wishList"/>
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/view">
+        android:layout_below="@+id/view2">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/contact_us_linear"
+            android:id="@+id/wishList_linear"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/Background"
-            tools:listitem="@layout/activity_contact_us_layout" />
+            tools:listitem="@layout/wishlist_layout" />
 
     </ScrollView>
 

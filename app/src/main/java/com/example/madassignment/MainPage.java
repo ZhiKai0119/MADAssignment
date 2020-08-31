@@ -171,6 +171,9 @@ public class MainPage extends AppCompatActivity implements View.OnClickListener 
             case R.id.aboutUs:
                 startActivity(new Intent(MainPage.this, AboutUs.class));
                 return true;
+            case R.id.wish_list:
+                startActivity(new Intent(MainPage.this, wishList.class));
+                return true;
             case R.id.contactUs:
                 startActivity(new Intent(MainPage.this, ContactUs.class));
                 return true;

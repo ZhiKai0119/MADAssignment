@@ -40,6 +40,23 @@ public class ContactUsRecords extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
     }
 
+//    @Override
+//    public boolean onContextItemSelected(@NonNull MenuItem item) {
+//        super.onContextItemSelected(item);
+//
+//        switch (item.getItemId()){
+//            case 101:
+//                Snackbar.make(findViewById(R.id.rootId), "The record was deleted.", Snackbar.LENGTH_SHORT).show();
+//                mRef.child("Member").removeValue();
+//                adapter.RemoveItem(item.getGroupId());
+//                return true;
+//            case 20:
+//                Snackbar.make(findViewById(R.id.rootId), "No Changes", Snackbar.LENGTH_SHORT).show();
+//                return true;
+//        }
+//        return true;
+//    }
+
     @Override
     protected void onStart() {
         super.onStart();
