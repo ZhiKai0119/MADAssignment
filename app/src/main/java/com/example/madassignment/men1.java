@@ -32,8 +32,6 @@ import com.google.firebase.storage.StorageReference;
 
 import java.io.File;
 import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.HashMap;
 
 public class men1 extends AppCompatActivity {
@@ -136,14 +134,14 @@ public class men1 extends AppCompatActivity {
     }
 
     private void addingToCartList() {
-        String saveCurrentTime, saveCurrentDate;
-
-        Calendar calendar = Calendar.getInstance();
-        SimpleDateFormat currentDate = new SimpleDateFormat("MMM dd, yyyy");
-        saveCurrentDate = currentDate.format(calendar.getTime());
-
-        SimpleDateFormat currentTime = new SimpleDateFormat("HH:mm:ss a");
-        saveCurrentTime = currentTime.format(calendar.getTime());
+//        String saveCurrentTime, saveCurrentDate;
+//
+//        Calendar calendar = Calendar.getInstance();
+//        SimpleDateFormat currentDate = new SimpleDateFormat("MMM dd, yyyy");
+//        saveCurrentDate = currentDate.format(calendar.getTime());
+//
+//        SimpleDateFormat currentTime = new SimpleDateFormat("HH:mm:ss a");
+//        saveCurrentTime = currentTime.format(calendar.getTime());
 
         final HashMap<String,Object> cartMap=new HashMap<>();
         cartMap.put("Image", storageReference.toString());
@@ -151,8 +149,8 @@ public class men1 extends AppCompatActivity {
         cartMap.put("Price", productPriceMen.getText().toString());
         cartMap.put("Desc", productDesc.getText().toString());
         cartMap.put("Size", spinner.getSelectedItem().toString());
-        cartMap.put("Date", saveCurrentDate);
-        cartMap.put("Time", saveCurrentTime);
+//        cartMap.put("Date", saveCurrentDate);
+//        cartMap.put("Time", saveCurrentTime);
         cartMap.put("quantity", String.valueOf(quantity+1));
 
         mReference.child(mAuth.getCurrentUser().getUid()).child("Men1").setValue(cartMap);
