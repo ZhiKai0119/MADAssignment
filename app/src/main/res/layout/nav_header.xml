@@ -5,23 +5,30 @@
     android:background="@color/colorAccent"
     android:orientation="vertical">
 
-    <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@drawable/spokesperson_4"/>
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_margin="10dp"
+        android:id="@+id/profile_image"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/lacclogo"/>
 
     <TextView
+        android:id="@+id/user_id"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/cardview_light_background"
-        android:textSize="30sp"
-        android:text="Chong Zhi Kai" />
+        android:textSize="23sp"
+        android:text="LACC Fashion SDN BHD" />
 
     <TextView
+        android:id="@+id/user_email"
+        android:padding="8dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/cardview_light_background"
         android:textSize="20sp"
-        android:text="zhikaichong@icloud.com" />
+        android:text="lacc@gmail.com" />
 
 </androidx.appcompat.widget.LinearLayoutCompat>
