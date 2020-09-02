@@ -20,8 +20,9 @@ public class WishListAdapter extends FirebaseRecyclerAdapter<WishList, WishListA
 
     @Override
     protected void onBindViewHolder(@NonNull WishListAdapter.viewHolder holder, int position, @NonNull WishList model) {
-        holder.name.setText(model.getProduct_Name());
-        holder.price.setText(model.getProduct_Price());
+        holder.id.setText("Product ID: " + model.getProduct_id());
+        holder.name.setText("Product Name: " + model.getProduct_Name());
+        holder.price.setText("Product Price: RM" + model.getProduct_Price());
     }
 
     @NonNull
@@ -32,11 +33,12 @@ public class WishListAdapter extends FirebaseRecyclerAdapter<WishList, WishListA
     }
 
     public static class viewHolder extends RecyclerView.ViewHolder {
-        TextView name, price;
+        TextView id, name, price;
 
         public viewHolder(View itemView) {
             super(itemView);
 
+            id = itemView.findViewById(R.id.product_id);
             name = itemView.findViewById(R.id.product_name);
             price = itemView.findViewById(R.id.product_price);
         }

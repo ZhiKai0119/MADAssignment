@@ -22,13 +22,12 @@ public class cartAdapter extends FirebaseRecyclerAdapter<Cart, cartAdapter.viewH
 
     @Override
     protected void onBindViewHolder(@NonNull viewHolder holder, int position, @NonNull Cart model) {
-        holder.name.setText(model.getName());
-        holder.price.setText(model.getPrice());
+        holder.name.setText("Product Name:" + model.getName());
+        holder.price.setText("Product Price: RM" + model.getPrice());
         holder.quantity.setText(model.getQuantity());
 //        Picasso.get().load(model.getImage()).into(holder.img);
         Glide.with(holder.img.getContext()).load(model.getImage()).into(holder.img);
 //        Glide.with(holder.img.getContext()).using(new FirebaseImageLoader()).load(model.getImage()).into(holder.img);
-
     }
 
     @NonNull

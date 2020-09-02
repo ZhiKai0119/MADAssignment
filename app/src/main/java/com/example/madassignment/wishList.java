@@ -1,6 +1,8 @@
 package com.example.madassignment;
 
 import android.os.Bundle;
+import android.util.Log;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,10 +14,11 @@ import com.example.madassignment.model.WishList;
 import com.example.madassignment.model.WishListAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-
-import java.util.ArrayList;
+import com.google.firebase.database.ValueEventListener;
 
 public class wishList extends AppCompatActivity {
 
@@ -23,7 +26,6 @@ public class wishList extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private DatabaseReference mRef;
     private WishListAdapter adapter;
-    private ArrayList<WishList> List;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +45,7 @@ public class wishList extends AppCompatActivity {
         adapter = new WishListAdapter(options);
         recyclerView.setAdapter(adapter);
 
+
         new ItemTouchHelper(new ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT) {
             @Override
             public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder target) {
@@ -53,8 +56,27 @@ public class wishList extends AppCompatActivity {
             public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
 
                 WishListAdapter.viewHolder wishListViewHolder = (WishListAdapter.viewHolder) viewHolder;
-                wishListViewHolder.getAdapterPosition();
-                mRef.removeValue();
+                int a = wishListViewHolder.getAdapterPosition();
+//                recyclerView.findViewHolderForAdapterPosition();
+//                Toast.makeText(getApplicationContext(), "Testing " + a, Toast.LENGTH_LONG).show();
+
+                mRef.child("Men1").addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        for(DataSnapshot snapshot1 : snapshot.getChildren()) {
+                            String value = String.valueOf(snapshot1.child("product_id").getValue());
+                            Log.v("OUR VALUE", value);
+                            Toast.makeText(getApplicationContext(), "Testing " + value, Toast.LENGTH_LONG).show();
+                            mRef.child(String.valueOf(snapshot1)).child(value).removeValue();
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
+
 //                adapter.getSnapshots().remove(direction);
                 adapter.notifyDataSetChanged();
             }

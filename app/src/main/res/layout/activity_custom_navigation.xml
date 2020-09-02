@@ -1,42 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/drawer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_bg"
-    tools:context=".MainPage"
-    tools:openDrawer="start">
+    android:orientation="vertical"
+    tools:context=".CustomNavigation">
 
-    <com.google.android.material.navigation.NavigationView
-        android:id="@+id/navMenu"
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_gravity="start"
-        app:headerLayout="@layout/nav_header"
-        app:menu="@menu/iconmenu" />
+        tools:openDrawer="start">
 
-<!--    <LinearLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:orientation="vertical">-->
 
-<!--        <TextView-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginStart="8dp"-->
-<!--            android:layout_marginEnd="8dp"-->
-<!--            android:fontFamily="serif"-->
-<!--            android:shadowColor="#282330"-->
-<!--            android:shadowDx="7"-->
-<!--            android:shadowDy="7"-->
-<!--            android:shadowRadius="5"-->
-<!--            android:text="LACC Spokesperson"-->
-<!--            android:textAlignment="center"-->
-<!--            android:textColor="#E2DEEA"-->
-<!--            android:textSize="30sp"-->
-<!--            android:textStyle="bold|italic" />-->
-<!--                -->
-<!--    </LinearLayout>-->
-</androidx.drawerlayout.widget.DrawerLayout>
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:headerLayout="@layout/nav_header"
+            app:menu="@menu/iconmenu">
+
+        </com.google.android.material.navigation.NavigationView>
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="serif"
+            android:shadowColor="#282330"
+            android:shadowDx="7"
+            android:shadowDy="7"
+            android:shadowRadius="5"
+            android:text="LACC Spokesperson"
+            android:textAlignment="center"
+            android:textColor="#E2DEEA"
+            android:textSize="30sp"
+            android:textStyle="bold|italic" />
+
+        <!--        <ImageView-->
+        <!--            android:id="@+id/spokesperson"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="400dp"-->
+        <!--            android:layout_marginStart="8dp"-->
+        <!--            android:src="@drawable/basketball" />-->
+
+    </LinearLayout>
+
+
+</LinearLayout>
