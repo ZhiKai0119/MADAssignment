@@ -1,9 +1,5 @@
 package com.example.madassignment;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -15,8 +11,9 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
-import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -26,11 +23,6 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.FirebaseFirestore;
-
-import java.util.HashMap;
-import java.util.Map;
 
 public class signUp extends AppCompatActivity {
 
@@ -62,7 +54,7 @@ public class signUp extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
         mDatabase  =FirebaseDatabase.getInstance();
-        mDatabaseReference = mDatabase.getReference().child("Users");
+        mDatabaseReference = mDatabase.getReference("Users");
 
 //        mStore = FirebaseFirestore.getInstance();
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
@@ -86,9 +78,12 @@ public class signUp extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String email = memail.getText().toString().trim();
-                String password = mpassword.getText().toString().trim();
+                final String password = mpassword.getText().toString().trim();
                 String confirmPwd = mconfirmPwd.getText().toString().trim();
                 String Name = mname.getText().toString().trim();
+
+//                userSignUp signUp = new userSignUp(Name, email, password);
+//                mDatabaseReference.child(Name).setValue(signUp);
 
                 if(TextUtils.isEmpty(Name)) {
                     mname.setError("Name is Required!");
@@ -142,6 +137,11 @@ public class signUp extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
+
+//                            DatabaseReference database = FirebaseDatabase.getInstance().getReference().child("Users").child(mAuth.getCurrentUser().getUid());
+//                            database.child("userName").setValue(mname);
+//                            database.child("userEmail").setValue(memail);
+//                            database.child("userPassword").setValue(mpassword);
 
                             FirebaseUser laccUser = mAuth.getCurrentUser();
                             laccUser.sendEmailVerification().addOnSuccessListener(new OnSuccessListener<Void>() {

@@ -3,11 +3,11 @@ package com.example.madassignment;
 public class Member {
     private String name;
     private String email;
-    private Long tel;
+    private String tel;
     private String date;
     private String time;
 
-    public Member(){
+    public Member() {
     }
 
     public String getDate() {
@@ -42,11 +42,11 @@ public class Member {
         this.email = email;
     }
 
-    public Long getTel() {
+    public String getTel() {
         return tel;
     }
 
-    public void setTel(Long tel) {
+    public void setTel(String tel) {
         this.tel = tel;
     }
 }

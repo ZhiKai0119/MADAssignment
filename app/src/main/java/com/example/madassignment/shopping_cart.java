@@ -1,10 +1,16 @@
 package com.example.madassignment;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -24,6 +30,8 @@ public class shopping_cart extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private DatabaseReference mRef;
     private cartAdapter adapter;
+
+    private int overTotalPrice = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +61,36 @@ public class shopping_cart extends AppCompatActivity {
 //            }
 //        });
 //        mTotalPrice = (TextView)findViewById(R.id.cartprice);
+
+        new ItemTouchHelper(new ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT) {
+            @Override
+            public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder target) {
+                return false;
+            }
+
+            @Override
+            public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
+                viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        CharSequence options[] = new CharSequence[]{
+                                "Edit",
+                                "Remove"
+                        };
+                        AlertDialog.Builder builder = new AlertDialog.Builder(shopping_cart.this);
+                        builder.setTitle("Cart Options");
+                        builder.setItems(options, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                if (i == 0){
+                                    Intent intent = new Intent(shopping_cart.this, MainPage.class);
+                                }
+                            }
+                        });
+                    }
+                });
+            }
+        });
     }
 
     @Override

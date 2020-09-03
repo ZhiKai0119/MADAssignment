@@ -171,6 +171,9 @@ public class MainPage extends AppCompatActivity implements View.OnClickListener 
             case R.id.aboutUs:
                 startActivity(new Intent(MainPage.this, AboutUs.class));
                 return true;
+            case R.id.wish_list:
+                startActivity(new Intent(MainPage.this, wishList.class));
+                return true;
             case R.id.contactUs:
                 startActivity(new Intent(MainPage.this, ContactUs.class));
                 return true;
@@ -179,6 +182,9 @@ public class MainPage extends AppCompatActivity implements View.OnClickListener 
                 return true;
             case R.id.shopping_cart:
                 startActivity(new Intent(MainPage.this, shopping_cart.class));
+                return true;
+            case R.id.contactUsHistory:
+                startActivity(new Intent(MainPage.this, ContactUsRecords.class));
                 return true;
             case R.id.signOut:
                 mAuth.signOut();

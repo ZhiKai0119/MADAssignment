@@ -1,29 +1,25 @@
 package com.example.madassignment;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
-import android.provider.MediaStore;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnCompleteListener;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -34,7 +30,6 @@ import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FileDownloadTask;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
-import com.google.firebase.storage.UploadTask;
 
 import java.io.File;
 import java.io.IOException;
@@ -46,12 +41,12 @@ public class women1 extends AppCompatActivity {
 
     //add to card
     private FloatingActionButton addtocartbutton;
-    private TextView productpriceWomen1, productName, productDesc;
+    private TextView productPriceWomen1, productName, productDesc;
     private ImageView imageWomen1;
     private Spinner spinner;
     private FirebaseAuth mAuth;
     private FirebaseUser mUser;
-    private DatabaseReference mReference;
+    private DatabaseReference mReference, mReference2;
     public long maxId = 0;
     public long quantity = 0;
 
@@ -69,13 +64,14 @@ public class women1 extends AppCompatActivity {
         spinner.setAdapter(adapter);
 
         productName = (TextView) findViewById(R.id.product_nameWomen1);
-        productpriceWomen1 = (TextView) findViewById(R.id.product_priceWomen1);
+        productPriceWomen1 = (TextView) findViewById(R.id.product_priceWomen1);
         productDesc = (TextView) findViewById(R.id.product_descWomen1);
         imageWomen1 = (ImageView) findViewById(R.id.productImageWomen1);
 
         mAuth = FirebaseAuth.getInstance();
         mUser = mAuth.getCurrentUser();
         mReference = FirebaseDatabase.getInstance().getReference().child("Shopping Cart");
+        mReference2 = FirebaseDatabase.getInstance().getReference().child("Wish List");
         storageReference = FirebaseStorage.getInstance().getReference().child("ProductImages/women1_0.jpg");
 
         try {
@@ -124,6 +120,27 @@ public class women1 extends AppCompatActivity {
 
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu4) {
+        getMenuInflater().inflate(R.menu.menu4, menu4);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.addWishList:
+                final HashMap<String, Object> wishListMap = new HashMap<>();
+                wishListMap.put("product_Name", productName.getText().toString());
+                wishListMap.put("product_Price", productPriceWomen1.getText().toString());
+
+                mReference2.child(mAuth.getCurrentUser().getUid()).child("Women1").setValue(wishListMap);
+                Snackbar.make(findViewById(R.id.rootIdWomen1), "Added To WishList", Snackbar.LENGTH_SHORT).show();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
     private void addingToCartList() {
         String saveCurrentTime, saveCurrentDate;
 
@@ -137,7 +154,7 @@ public class women1 extends AppCompatActivity {
         final HashMap<String,Object> cartMap=new HashMap<>();
         cartMap.put("Image", storageReference.toString());
         cartMap.put("Name",productName.getText().toString());
-        cartMap.put("Price", productpriceWomen1.getText().toString());
+        cartMap.put("Price", productPriceWomen1.getText().toString());
         cartMap.put("Desc", productDesc.getText().toString());
         cartMap.put("Size", spinner.getSelectedItem().toString());
         cartMap.put("Date", saveCurrentDate);

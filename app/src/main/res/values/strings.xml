@@ -331,6 +331,9 @@ Once the return has been approved, it takes 1-2 days for the refund to be made b
     <string name="email_address">Email Address</string>
     <string name="phone_number">Phone Number</string>
 
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+
     <!--    product-->
     <string-array name="choice_items">
         <item>1</item>
@@ -340,4 +343,5 @@ Once the return has been approved, it takes 1-2 days for the refund to be made b
         <item>5</item>
     </string-array>
     <string name="title_activity_maps">Map</string>
+    <string name="title_activity_navigation_drawer">NavigationDrawer</string>
 </resources>
