@@ -127,6 +127,7 @@ public class women2 extends AppCompatActivity {
         switch (item.getItemId()){
             case R.id.addWishList:
                 final HashMap<String, Object> wishListMap = new HashMap<>();
+                wishListMap.put("product_id", "Women2");
                 wishListMap.put("product_Name", productName.getText().toString());
                 wishListMap.put("product_Price", productPriceWomen.getText().toString());
 
