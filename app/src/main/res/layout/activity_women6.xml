@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:background="@color/Background"
     tools:context=".women6"
     android:id="@+id/rootIdWomen6">
@@ -21,8 +21,8 @@
 
             <ImageView
                 android:id="@+id/productImageWomen6"
-                android:layout_width="400dp"
-                android:layout_height="400dp"
+                android:layout_width="402dp"
+                android:layout_height="406dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginTop="8dp"
@@ -49,7 +49,7 @@
                 android:fontFamily="sans-serif-condensed-medium"
                 android:text="Nerdunit Dash"
                 android:textColor="#4A1868"
-                android:textSize="34sp"
+                android:textSize="26sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -59,8 +59,8 @@
             <!--price-->
             <TextView
                 android:id="@+id/product_priceWomen6"
-                android:layout_width="272dp"
-                android:layout_height="37dp"
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="16dp"
@@ -68,9 +68,9 @@
                 android:layout_marginRight="8dp"
                 android:layout_marginBottom="8dp"
                 android:fontFamily="sans-serif-condensed-medium"
-                android:text="RM70"
+                android:text="RM"
                 android:textColor="#4A1868"
-                android:textSize="28sp"
+                android:textSize="24sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -101,7 +101,7 @@
                 android:fontFamily="sans-serif-condensed-medium"
                 android:text="Description"
                 android:textColor="#6A4D7C"
-                android:textSize="26sp"
+                android:textSize="30sp"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
@@ -109,14 +109,14 @@
             <!--Description-->
             <TextView
                 android:id="@+id/product_descWomen6"
-                android:layout_width="377dp"
-                android:layout_height="143dp"
+                android:layout_width="392dp"
+                android:layout_height="224dp"
                 android:layout_margin="10dp"
                 android:text="@string/women6description"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintHorizontal_bias="0.789"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/product_textWomen6"
                 app:layout_constraintVertical_bias="1.0" />
@@ -147,8 +147,8 @@
 
             <ImageView
                 android:id="@+id/productImage3Women6"
-                android:layout_width="400dp"
-                android:layout_height="590dp"
+                android:layout_width="398dp"
+                android:layout_height="400dp"
                 android:layout_margin="8dp"
                 android:src="@drawable/women6_2"
                 app:layout_constraintLeft_toLeftOf="parent"
@@ -157,7 +157,7 @@
 
             <ImageView
                 android:id="@+id/productImage4Women6"
-                android:layout_width="400dp"
+                android:layout_width="398dp"
                 android:layout_height="400dp"
                 android:layout_margin="8dp"
                 android:src="@drawable/women6_0"

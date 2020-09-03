@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:background="@color/Background"
     tools:context=".shoe7"
     android:id="@+id/rootIdShoe7">
@@ -21,8 +21,8 @@
 
             <ImageView
                 android:id="@+id/productImageShoe7"
-                android:layout_width="400dp"
-                android:layout_height="400dp"
+                android:layout_width="402dp"
+                android:layout_height="406dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginTop="8dp"
@@ -49,7 +49,7 @@
                 android:fontFamily="sans-serif-condensed-medium"
                 android:text="Nike React Element"
                 android:textColor="#4A1868"
-                android:textSize="28sp"
+                android:textSize="26sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -60,8 +60,8 @@
 
             <TextView
                 android:id="@+id/product_priceShoe7"
-                android:layout_width="272dp"
-                android:layout_height="37dp"
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="16dp"
@@ -69,7 +69,7 @@
                 android:layout_marginRight="8dp"
                 android:layout_marginBottom="8dp"
                 android:fontFamily="sans-serif-condensed-medium"
-                android:text="RM535"
+                android:text="RM"
                 android:textColor="#4A1868"
                 android:textSize="24sp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -104,25 +104,25 @@
                 android:fontFamily="sans-serif-condensed-medium"
                 android:text="Description"
                 android:textColor="#6A4D7C"
-                android:textSize="24sp"
-                app:layout_constraintHorizontal_bias="0.019"
+                android:textSize="30sp"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/product_priceShoe7" />
             <!--Description-->
             <TextView
                 android:id="@+id/product_descShoe7"
-                android:layout_width="401dp"
-                android:layout_height="170dp"
+                android:layout_width="392dp"
+                android:layout_height="224dp"
                 android:layout_margin="10dp"
                 android:text="@string/shoe7description"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.558"
+                app:layout_constraintHorizontal_bias="0.789"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/product_textShoe7"
-                app:layout_constraintVertical_bias="1.0" />
+                app:layout_constraintVertical_bias="0.0" />
             <!--other image-->
             <TextView
                 android:id="@+id/product_other_imageShoe7"
@@ -150,7 +150,7 @@
 
             <ImageView
                 android:id="@+id/productImage3Shoe7"
-                android:layout_width="400dp"
+                android:layout_width="398dp"
                 android:layout_height="400dp"
                 android:layout_margin="8dp"
                 android:src="@drawable/shoe7_2"
@@ -162,7 +162,7 @@
 
             <ImageView
                 android:id="@+id/productImage4Shoe7"
-                android:layout_width="400dp"
+                android:layout_width="398dp"
                 android:layout_height="400dp"
                 android:layout_margin="8dp"
                 android:src="@drawable/shoe7_0"
