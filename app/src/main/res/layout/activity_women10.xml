@@ -4,18 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/Background"
+    android:background="@drawable/background2_bg"
     tools:context=".women10"
     android:id="@+id/rootIdWomen10">
 
     <ScrollView
         android:id="@+id/list_scrollView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="-160dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent">
             <!--product image-->
 
 
@@ -107,20 +111,22 @@
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/product_priceWomen10" />
             <!--Description-->
+            <!--other image-->
+
             <TextView
                 android:id="@+id/product_descWomen10"
                 android:layout_width="392dp"
-                android:layout_height="224dp"
+                android:layout_height="150dp"
                 android:layout_margin="10dp"
                 android:text="@string/women10description"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.789"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/product_textWomen10"
-                app:layout_constraintVertical_bias="1.0" />
-            <!--other image-->
+                app:layout_constraintVertical_bias="0.0" />
+
             <TextView
                 android:id="@+id/product_other_imageWomen10"
                 android:layout_width="wrap_content"

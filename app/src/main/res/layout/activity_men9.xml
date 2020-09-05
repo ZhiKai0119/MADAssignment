@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/Background"
+    android:background="@drawable/background2_bg"
     tools:context=".men9"
     android:id="@+id/rootIdMen9">
 
@@ -19,7 +19,7 @@
             <!--product image-->
             <ImageView
                 android:id="@+id/productImageMen9"
-                android:layout_width="555dp"
+                android:layout_width="399dp"
                 android:layout_height="411dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
@@ -117,20 +117,21 @@
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/product_priceMen9" />
             <!--Description-->
+            <!--other image-->
             <TextView
                 android:id="@+id/product_descMen9"
-                android:layout_width="385dp"
-                android:layout_height="341dp"
+                android:layout_width="392dp"
+                android:layout_height="342dp"
                 android:layout_margin="10dp"
                 android:text="Item Type:Outerwear Coats\nOuterwear Type:Jacket\nType:REGULAR\nSleeve Style:REGULAR\nColour Shown: White\nM Clothes Length 71CM Bust 112CM Shoulder 49CM Sleeve 63CM\nL Clothes Length 73CM Bust 116CM Shoulder 51CM Sleeve 65CM\nXL Clothes Length 75CM Bust 120CM Shoulder 53CM Sleeve 67CM\n2XL Clothes Length 77CM Bust 124CM Shoulder 55CM Sleeve 69CM"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.558"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/product_textMen9"
-                app:layout_constraintVertical_bias="1.0" />
-            <!--other image-->
+                app:layout_constraintVertical_bias="0.0" />
+
             <TextView
                 android:id="@+id/product_other_imageMen9"
                 android:layout_width="wrap_content"
@@ -147,8 +148,8 @@
             <!--Images-->
             <ImageView
                 android:id="@+id/productImage2Men9"
-                android:layout_width="700dp"
-                android:layout_height="384dp"
+                android:layout_width="388dp"
+                android:layout_height="381dp"
                 android:layout_margin="8dp"
                 android:src="@drawable/men9_1"
                 app:layout_constraintLeft_toLeftOf="parent"
@@ -158,8 +159,8 @@
 
             <ImageView
                 android:id="@+id/productImage3Men9"
-                android:layout_width="890dp"
-                android:layout_height="447dp"
+                android:layout_width="383dp"
+                android:layout_height="431dp"
                 android:layout_margin="8dp"
                 android:src="@drawable/men9_2"
                 app:layout_constraintLeft_toLeftOf="parent"

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/Background"
+    android:background="@drawable/background2_bg"
     tools:context=".kids1"
     android:id="@+id/rootIdKids1">
 
@@ -120,6 +120,7 @@
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/product_pricekid1" />
             <!--Description-->
+            <!--other image-->
             <TextView
                 android:id="@+id/product_desckid1"
                 android:layout_width="395dp"
@@ -129,11 +130,10 @@
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.558"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/product_textkid1"
-                app:layout_constraintVertical_bias="1.0" />
-            <!--other image-->
+                app:layout_constraintVertical_bias="0.0" />
+
             <TextView
                 android:id="@+id/product_other_imagekid1"
                 android:layout_width="wrap_content"

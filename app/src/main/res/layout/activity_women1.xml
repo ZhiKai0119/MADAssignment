@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/Background"
+    android:background="@drawable/background2_bg"
     tools:context=".women1"
     android:id="@+id/rootIdWomen1">
 
@@ -108,21 +108,22 @@
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/product_priceWomen1" />
             <!--Description-->
+            <!--other image-->
             <TextView
                 android:id="@+id/product_descWomen1"
-                android:layout_width="401dp"
-                android:layout_height="220dp"
+                android:layout_width="381dp"
+                android:layout_height="215dp"
                 android:layout_margin="10dp"
                 android:text="@string/women1description"
-                android:textSize="20sp"
                 android:textColor="#FFFFFF"
+                android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.558"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/product_textWomen1"
-                app:layout_constraintVertical_bias="1.0" />
-            <!--other image-->
+                app:layout_constraintVertical_bias="0.0" />
+
             <TextView
                 android:id="@+id/product_other_imageWomen1"
                 android:layout_width="wrap_content"

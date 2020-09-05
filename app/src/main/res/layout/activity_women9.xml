@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/Background"
+    android:background="@drawable/background2_bg"
     tools:context=".women9"
     android:id="@+id/rootIdWomen9">
 
