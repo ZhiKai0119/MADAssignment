@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Background"
+    tools:context=".PurchaseHistory">
+
+    <TextView
+        android:id="@+id/title_purchase"
+        style="@style/TextAppearance.AppCompat.Headline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:shadowColor="#000000"
+        android:shadowDx="10"
+        android:shadowDy="10"
+        android:shadowRadius="6"
+        android:text="Purchase History"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#000000"
+        android:layout_below="@+id/title_purchase"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view3">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/purchase_linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/Background"
+            tools:listitem="@layout/activity_purchase_history_layout" />
+
+    </ScrollView>
+
+</RelativeLayout>

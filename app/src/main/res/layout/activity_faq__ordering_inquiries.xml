@@ -13,6 +13,7 @@
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
         android:padding="@dimen/padding_regular"
+
         android:text="@string/ordering_inquiries"
         android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
         android:textColor="@android:color/white"
@@ -21,6 +22,7 @@
     <ScrollView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="8dp"
         android:layout_below="@id/article_heading2">
 
         <LinearLayout

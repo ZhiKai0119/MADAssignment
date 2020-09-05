@@ -1,16 +1,15 @@
 package com.example.madassignment.model;
 
 public class Cart {
-    private String Name, Price, quantity, Image;
+    private String Name, Price, quantity;
 
     public Cart() {
     }
 
-    public Cart(String name, String price, String quantity, String image) {
+    public Cart(String name, String price, String quantity) {
         Name = name;
         Price = price;
         this.quantity = quantity;
-        Image = image;
     }
 
     public String getName() {
@@ -35,13 +34,5 @@ public class Cart {
 
     public void setQuantity(String quantity) {
         this.quantity = quantity;
-    }
-
-    public String getImage() {
-        return Image;
-    }
-
-    public void setImage(String image) {
-        Image = image;
     }
 }

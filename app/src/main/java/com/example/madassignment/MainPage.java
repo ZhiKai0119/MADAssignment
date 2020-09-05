@@ -186,6 +186,9 @@ public class MainPage extends AppCompatActivity implements View.OnClickListener 
             case R.id.contactUsHistory:
                 startActivity(new Intent(MainPage.this, ContactUsRecords.class));
                 return true;
+            case R.id.purchaseHistory:
+                startActivity(new Intent(MainPage.this, PurchaseHistory.class));
+                return true;
             case R.id.signOut:
                 mAuth.signOut();
                 Toast.makeText(MainPage.this, "You Signed Out!", Toast.LENGTH_LONG).show();
