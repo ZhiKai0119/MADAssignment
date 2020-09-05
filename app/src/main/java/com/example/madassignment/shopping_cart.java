@@ -35,7 +35,6 @@ public class shopping_cart extends AppCompatActivity {
     private TextView mTotalPrice;
     private FirebaseAuth mAuth;
     private DatabaseReference mRef;
-//    private cartAdapter adapter;
 
     private int overTotalPrice = 0;
 
@@ -52,10 +51,6 @@ public class shopping_cart extends AppCompatActivity {
         recyclerView = (RecyclerView) findViewById(R.id.shopcart_linear);
         recyclerView.setHasFixedSize(false);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
-//        FirebaseRecyclerOptions<Cart> options = new FirebaseRecyclerOptions.Builder<Cart>().setQuery(mRef, Cart.class).setLifecycleOwner(this).build();
-//        adapter = new cartAdapter(options);
-//        recyclerView.setAdapter(adapter);
 
         mTotalPrice = (TextView) findViewById(R.id.cartprice);
         mTotalPrice.setText("RM " + overTotalPrice);
@@ -78,13 +73,14 @@ public class shopping_cart extends AppCompatActivity {
 
         FirebaseRecyclerOptions<Cart> options = new FirebaseRecyclerOptions.Builder<Cart>().setQuery(mRef, Cart.class).setLifecycleOwner(this).build();
         FirebaseRecyclerAdapter<Cart, CartViewHolder> adapter = new FirebaseRecyclerAdapter<Cart, CartViewHolder>(options) {
+            @SuppressLint("SetTextI18n")
             @Override
             protected void onBindViewHolder(@NonNull CartViewHolder holder, int position, @NonNull final Cart model) {
                 holder.cartName.setText("Product Name: " + model.getName());
                 holder.cartPrice.setText("Product Price: RM" + model.getPrice());
                 holder.cartQuantity.setText(model.getQuantity());
 
-                int oneTypeProductPrice = ((Integer.parseInt(model.getPrice()))) * Integer.parseInt(model.getQuantity());
+                int oneTypeProductPrice = (Integer.parseInt(model.getPrice())) * Integer.parseInt(model.getQuantity());
                 overTotalPrice = overTotalPrice + oneTypeProductPrice;
 
                 holder.itemView.setOnClickListener(new View.OnClickListener() {
@@ -127,6 +123,5 @@ public class shopping_cart extends AppCompatActivity {
     @Override
     protected void onStop() {
         super.onStop();
-//        adapter.stopListening();
     }
 }

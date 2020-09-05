@@ -50,7 +50,7 @@
 
             <TextView
                 android:id="@+id/totaltext"
-                android:layout_width="74dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentLeft="true"
@@ -64,9 +64,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginBottom="16dp"
                 android:layout_toEndOf="@+id/totaltext"
-                android:text=""
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
