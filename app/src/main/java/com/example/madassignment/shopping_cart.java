@@ -1,5 +1,6 @@
 package com.example.madassignment;
 
+import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -38,6 +39,7 @@ public class shopping_cart extends AppCompatActivity {
 
     private int overTotalPrice = 0;
 
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,7 +58,7 @@ public class shopping_cart extends AppCompatActivity {
 //        recyclerView.setAdapter(adapter);
 
         mTotalPrice = (TextView) findViewById(R.id.cartprice);
-        mTotalPrice.setText("RM " + String.valueOf(overTotalPrice));
+        mTotalPrice.setText("RM " + overTotalPrice);
         mCheckout = (Button)findViewById(R.id.checkout);
         mCheckout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -82,7 +84,7 @@ public class shopping_cart extends AppCompatActivity {
                 holder.cartPrice.setText("Product Price: RM" + model.getPrice());
                 holder.cartQuantity.setText(model.getQuantity());
 
-                int oneTypeProductPrice = ((Integer.valueOf(model.getPrice()))) * Integer.valueOf(model.getQuantity());
+                int oneTypeProductPrice = ((Integer.parseInt(model.getPrice()))) * Integer.parseInt(model.getQuantity());
                 overTotalPrice = overTotalPrice + oneTypeProductPrice;
 
                 holder.itemView.setOnClickListener(new View.OnClickListener() {

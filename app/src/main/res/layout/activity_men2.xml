@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/Background"
+    android:background="@drawable/background2_bg"
     tools:context=".men2"
     android:id="@+id/rootIdMen2">
 
@@ -62,12 +62,8 @@
                 android:text="RM"
                 android:textColor="#4A1868"
                 android:textSize="24sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toEndOf="@id/product_Men2"
-                app:layout_constraintTop_toBottomOf="@+id/product_nameMen2"
-                app:layout_constraintVertical_bias="0.0"  />
+                app:layout_constraintTop_toBottomOf="@id/product_nameMen2"
+                app:layout_constraintLeft_toLeftOf="parent"/>
             <TextView
                 android:id="@+id/product_priceMen2"
                 android:layout_width="wrap_content"
@@ -81,12 +77,8 @@
                 android:text="100"
                 android:textColor="#4A1868"
                 android:textSize="24sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/product_nameMen2"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintLeft_toRightOf="@id/product_Men2"
+                app:layout_constraintTop_toBottomOf="@id/product_nameMen2"/>
             <!--Size-->
             <Spinner
                 android:id="@+id/sizeSpinnerMen2"
@@ -130,7 +122,7 @@
                 app:layout_constraintHorizontal_bias="0.558"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/product_textMen2"
-                app:layout_constraintVertical_bias="1.0" />
+                app:layout_constraintVertical_bias="0.0" />
             <!--other image-->
             <TextView
                 android:id="@+id/product_other_imageMen2"
