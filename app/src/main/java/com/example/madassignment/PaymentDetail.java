@@ -100,6 +100,7 @@ public class PaymentDetail extends AppCompatActivity {
                 ccv_text.setText("");
 
                 startActivity(new Intent(PaymentDetail.this, MainPage.class));
+                finish();
             }
         });
 

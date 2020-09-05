@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="15dp"
+    android:padding="1dp"
+    android:id="@+id/cardView"
+    app:cardBackgroundColor="@color/colorAccent"
+    app:cardCornerRadius="12dp"
+    app:contentPadding="6dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/purchase_name_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="15dp"
+            android:textColor="#333333"
+            android:text="NAME:"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/purchase_name"
+            android:layout_marginStart="8dp"
+            android:layout_alignParentTop="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#555555"
+            android:layout_toEndOf="@id/purchase_name_text" />
+
+        <TextView
+            android:id="@+id/purchase_email_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/purchase_name_text"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="5dp"
+            android:text="EMAIL:"
+            android:textColor="#333333"
+            android:textSize="15sp" />
+        <TextView
+            android:id="@+id/purchase_email"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/purchase_name_text"
+            android:textColor="#555555"
+            android:layout_toEndOf="@id/purchase_email_text" />
+
+        <TextView
+        android:id="@+id/purchase_phone_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/purchase_email_text"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp"
+        android:textColor="#333333"
+        android:text="PHONE NO:"
+        android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/purchase_phone"
+            android:layout_marginStart="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/purchase_email_text"
+            android:textColor="#555555"
+            android:layout_toEndOf="@id/purchase_phone_text" />
+
+        <TextView
+            android:id="@+id/purchase_delivery_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/purchase_phone_text"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="5dp"
+            android:textColor="#333333"
+            android:text="DELIVERY METHOD:"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/purchase_delivery"
+            android:layout_marginStart="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/purchase_phone_text"
+            android:textColor="#555555"
+            android:layout_toEndOf="@id/purchase_delivery_text" />
+
+        <TextView
+        android:id="@+id/purchase_address_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/purchase_delivery_text"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp"
+        android:textColor="#333333"
+        android:text="ADDRESS:"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/purchase_address"
+            android:layout_marginStart="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/purchase_delivery_text"
+            android:textColor="#555555"
+            android:layout_toEndOf="@id/purchase_address_text" />
+
+        <TextView
+            android:id="@+id/purchase_city_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/purchase_address_text"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="5dp"
+            android:textColor="#333333"
+            android:text="CITY: "
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/purchase_city"
+            android:layout_marginStart="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/purchase_address_text"
+            android:textColor="#555555"
+            android:layout_toEndOf="@id/purchase_city_text" />
+
+        <TextView
+        android:id="@+id/purchase_state_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/purchase_city_text"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp"
+        android:textColor="#333333"
+        android:text="STATE: "
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/purchase_state"
+            android:layout_marginStart="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/purchase_city_text"
+            android:textColor="#555555"
+            android:layout_toEndOf="@id/purchase_state_text" />
+
+        <TextView
+            android:id="@+id/purchase_postcode_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/purchase_state_text"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="5dp"
+            android:textColor="#333333"
+            android:text="POSTCODE  : "
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/purchase_postcode"
+            android:layout_marginStart="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/purchase_state_text"
+            android:textColor="#555555"
+            android:layout_toEndOf="@id/purchase_postcode_text" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

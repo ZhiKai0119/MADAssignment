@@ -10,59 +10,74 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <TextView
+            android:id="@+id/title_cart"
+            style="@style/TextAppearance.AppCompat.Headline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:shadowColor="#000000"
+            android:shadowDx="10"
+            android:shadowDy="10"
+            android:shadowRadius="6"
+            android:text="Shopping Cart"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/view4"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#000000"
+            android:layout_below="@+id/title_cart"/>
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/shopcart_linear"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorAccent"
-            tools:listitem="@layout/activity_shoppingcart_layout"/>
+            tools:listitem="@layout/activity_shoppingcart_layout"
+            android:layout_below="@id/view4"/>
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/shopcart_linear"
             android:layout_alignParentBottom="true"
-            android:padding="10dp"
-            android:orientation="vertical">
+            android:padding="10dp">
 
-<!--            <TextView-->
-<!--                android:id="@+id/totaltext"-->
-<!--                android:layout_width="74dp"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_alignParentStart="true"-->
-<!--                android:layout_alignParentLeft="true"-->
-<!--                android:layout_alignParentBottom="true"-->
-<!--                android:layout_marginStart="10dp"-->
-<!--                android:layout_marginLeft="0dp"-->
-<!--                android:layout_marginBottom="16dp"-->
-<!--                android:text="Total:"-->
-<!--                android:textSize="20dp"-->
-<!--                android:textStyle="bold" />-->
+            <TextView
+                android:id="@+id/totaltext"
+                android:layout_width="74dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="10dp"
+                android:text="Total:"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
-<!--            <TextView-->
-<!--                android:id="@+id/cartprice"-->
-<!--                android:layout_width="118dp"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_alignParentBottom="true"-->
-<!--                android:layout_marginStart="0dp"-->
-<!--                android:layout_marginLeft="0dp"-->
-<!--                android:layout_marginBottom="16dp"-->
-<!--                android:layout_toEndOf="@+id/totaltext"-->
-<!--                android:layout_toRightOf="@+id/totaltext"-->
-<!--                android:text=""-->
-<!--                android:textSize="20dp"-->
-<!--                android:textStyle="bold" />-->
+            <TextView
+                android:id="@+id/cartprice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="16dp"
+                android:layout_toEndOf="@+id/totaltext"
+                android:text=""
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/checkout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginEnd="5dp"
-                android:layout_marginRight="5dp"
-                android:layout_marginBottom="1dp"
+                android:layout_below="@id/totaltext"
+                android:layout_margin="8dp"
                 android:backgroundTint="@color/colorPrimary"
                 android:text="Check Out"
                 android:textColor="#FFFFFF">
