@@ -151,6 +151,7 @@ public class shoe2 extends AppCompatActivity {
         saveCurrentTime = currentTime.format(calendar.getTime());
 
         final HashMap<String,Object> cartMap=new HashMap<>();
+        cartMap.put("Product_ID", "Shoe2");
         cartMap.put("Image", storageReference.toString());
         cartMap.put("Name",productName.getText().toString());
         cartMap.put("Price", productPrice.getText().toString());

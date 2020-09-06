@@ -1,31 +1,33 @@
 package com.example.madassignment;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
-import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.madassignment.model.WishList;
-import com.example.madassignment.model.WishListAdapter;
+import com.example.madassignment.model.WishListViewHolder;
+import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
 public class wishList extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private FirebaseAuth mAuth;
     private DatabaseReference mRef;
-    private WishListAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,59 +41,58 @@ public class wishList extends AppCompatActivity {
         recyclerView = (RecyclerView) findViewById(R.id.wishList_linear);
         recyclerView.setHasFixedSize(false);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
-        final FirebaseRecyclerOptions<WishList> options = new FirebaseRecyclerOptions.Builder<WishList>().setQuery(mRef, WishList.class).setLifecycleOwner(this).build();
-
-        adapter = new WishListAdapter(options);
-        recyclerView.setAdapter(adapter);
-
-
-        new ItemTouchHelper(new ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT) {
-            @Override
-            public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder target) {
-                return false;
-            }
-
-            @Override
-            public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
-
-                WishListAdapter.viewHolder wishListViewHolder = (WishListAdapter.viewHolder) viewHolder;
-                int a = wishListViewHolder.getAdapterPosition();
-//                recyclerView.findViewHolderForAdapterPosition();
-//                Toast.makeText(getApplicationContext(), "Testing " + a, Toast.LENGTH_LONG).show();
-
-                mRef.child("Men1").addValueEventListener(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot snapshot) {
-                        for(DataSnapshot snapshot1 : snapshot.getChildren()) {
-                            String value = String.valueOf(snapshot1.child("product_id").getValue());
-                            Log.v("OUR VALUE", value);
-                            Toast.makeText(getApplicationContext(), "Testing " + value, Toast.LENGTH_LONG).show();
-                            mRef.child(String.valueOf(snapshot1)).child(value).removeValue();
-                        }
-                    }
-
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError error) {
-
-                    }
-                });
-
-//                adapter.getSnapshots().remove(direction);
-                adapter.notifyDataSetChanged();
-            }
-        }).attachToRecyclerView(recyclerView);
     }
 
     @Override
     protected void onStart() {
         super.onStart();
+        FirebaseRecyclerOptions<WishList> options = new FirebaseRecyclerOptions.Builder<WishList>().setQuery(mRef, WishList.class).setLifecycleOwner(this).build();
+        FirebaseRecyclerAdapter<WishList, WishListViewHolder> adapter = new FirebaseRecyclerAdapter<WishList, WishListViewHolder>(options) {
+            @Override
+            protected void onBindViewHolder(@NonNull WishListViewHolder holder, int position, @NonNull final WishList model) {
+                holder.wishId.setText("Product ID: " + model.getProduct_id());
+                holder.wishName.setText("Product Name: " + model.getProduct_Name());
+                holder.wishPrice.setText("Product Price: RM" + model.getProduct_Price());
+
+                holder.itemView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        CharSequence options[] = new CharSequence[]{"Remove"};
+                        AlertDialog.Builder builder = new AlertDialog.Builder(wishList.this);
+                        builder.setItems(options, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                if(i == 0){
+                                    mRef.child(model.getProduct_id()).removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
+                                        @Override
+                                        public void onComplete(@NonNull Task<Void> task) {
+                                            if (task.isSuccessful()) {
+                                                Toast.makeText(wishList.this, "Items removed successfully.", Toast.LENGTH_SHORT).show();
+                                            }
+                                        }
+                                    });
+                                }
+                            }
+                        });
+                        builder.show();
+                    }
+                });
+            }
+
+            @NonNull
+            @Override
+            public WishListViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.wishlist_layout, parent, false);
+                WishListViewHolder holder = new WishListViewHolder(view);
+                return holder;
+            }
+        };
+        recyclerView.setAdapter(adapter);
         adapter.startListening();
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        adapter.stopListening();
     }
 }

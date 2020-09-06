@@ -76,6 +76,7 @@ public class shopping_cart extends AppCompatActivity {
             @SuppressLint("SetTextI18n")
             @Override
             protected void onBindViewHolder(@NonNull CartViewHolder holder, int position, @NonNull final Cart model) {
+                holder.cartProductID.setText("Product ID: " + model.getProduct_ID());
                 holder.cartName.setText("Product Name: " + model.getName());
                 holder.cartPrice.setText("Product Price: RM" + model.getPrice());
                 holder.cartQuantity.setText(model.getQuantity());
@@ -92,7 +93,7 @@ public class shopping_cart extends AppCompatActivity {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
                                 if(i == 0){
-                                    mRef.child(model.getName()).removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
+                                    mRef.child(model.getProduct_ID()).removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
                                         @Override
                                         public void onComplete(@NonNull Task<Void> task) {
                                             if (task.isSuccessful()) {

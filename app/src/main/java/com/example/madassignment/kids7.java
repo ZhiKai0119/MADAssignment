@@ -147,6 +147,7 @@ public class kids7 extends AppCompatActivity {
         saveCurrentTime = currentTime.format(calendar.getTime());
 
         final HashMap<String,Object> cartMap=new HashMap<>();
+        cartMap.put("Product_ID", "Kids7");
         cartMap.put("Image", storageReference.toString());
         cartMap.put("Name",productName.getText().toString());
         cartMap.put("Price", productPrice.getText().toString());

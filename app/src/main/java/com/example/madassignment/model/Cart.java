@@ -1,7 +1,7 @@
 package com.example.madassignment.model;
 
 public class Cart {
-    private String Name, Price, quantity;
+    private String Product_ID,  Name, Price, quantity;
 
     public Cart() {
     }
@@ -10,6 +10,14 @@ public class Cart {
         Name = name;
         Price = price;
         this.quantity = quantity;
+    }
+
+    public String getProduct_ID() {
+        return Product_ID;
+    }
+
+    public void setProduct_ID(String product_ID) {
+        Product_ID = product_ID;
     }
 
     public String getName() {
