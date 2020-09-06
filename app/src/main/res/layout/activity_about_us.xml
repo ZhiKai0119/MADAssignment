@@ -39,7 +39,7 @@
 <!--            <VideoView-->
 <!--                android:id="@+id/videoView"-->
 <!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_height="250dp"-->
 <!--                android:layout_alignParentTop="true"-->
 <!--                android:layout_centerHorizontal="true" />-->
 
@@ -47,6 +47,7 @@
                 android:id="@+id/image_shop"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_below="@id/videoView"
                 android:src="@drawable/shop" />
 
             <TextView

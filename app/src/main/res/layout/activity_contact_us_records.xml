@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/Background"
+    android:background="@drawable/background3_bg"
     tools:context=".shopping_cart"
     android:id="@+id/rootId">
 
@@ -39,7 +39,7 @@
             android:id="@+id/contact_us_linear"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/Background"
+            android:background="@drawable/background_bg"
             tools:listitem="@layout/activity_contact_us_layout" />
 
     </ScrollView>

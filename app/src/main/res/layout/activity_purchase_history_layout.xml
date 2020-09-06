@@ -3,12 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="15dp"
+    android:layout_margin="10dp"
     android:padding="1dp"
     android:id="@+id/cardView"
     app:cardBackgroundColor="@color/colorAccent"
     app:cardCornerRadius="12dp"
-    app:contentPadding="6dp">
+    app:contentPadding="5dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -32,6 +32,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#555555"
+            android:textSize="15sp"
             android:layout_toEndOf="@id/purchase_name_text" />
 
         <TextView
@@ -52,6 +53,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/purchase_name_text"
             android:textColor="#555555"
+            android:textSize="15sp"
             android:layout_toEndOf="@id/purchase_email_text" />
 
         <TextView
@@ -73,6 +75,7 @@
             android:layout_marginTop="5dp"
             android:layout_below="@id/purchase_email_text"
             android:textColor="#555555"
+            android:textSize="15sp"
             android:layout_toEndOf="@id/purchase_phone_text" />
 
         <TextView
@@ -94,6 +97,7 @@
             android:layout_marginTop="5dp"
             android:layout_below="@id/purchase_phone_text"
             android:textColor="#555555"
+            android:textSize="15sp"
             android:layout_toEndOf="@id/purchase_delivery_text" />
 
         <TextView
@@ -115,6 +119,7 @@
             android:layout_marginTop="5dp"
             android:layout_below="@id/purchase_delivery_text"
             android:textColor="#555555"
+            android:textSize="15sp"
             android:layout_toEndOf="@id/purchase_address_text" />
 
         <TextView
@@ -136,6 +141,7 @@
             android:layout_marginTop="5dp"
             android:layout_below="@id/purchase_address_text"
             android:textColor="#555555"
+            android:textSize="15sp"
             android:layout_toEndOf="@id/purchase_city_text" />
 
         <TextView
@@ -157,6 +163,7 @@
             android:layout_marginTop="5dp"
             android:layout_below="@id/purchase_city_text"
             android:textColor="#555555"
+            android:textSize="15sp"
             android:layout_toEndOf="@id/purchase_state_text" />
 
         <TextView
@@ -178,6 +185,7 @@
             android:layout_marginTop="5dp"
             android:layout_below="@id/purchase_state_text"
             android:textColor="#555555"
+            android:textSize="15sp"
             android:layout_toEndOf="@id/purchase_postcode_text" />
     </RelativeLayout>
 </androidx.cardview.widget.CardView>

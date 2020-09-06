@@ -38,7 +38,7 @@
             <!--name-->
             <TextView
                 android:id="@+id/product_nameShoe7"
-                android:layout_width="272dp"
+                android:layout_width="wrap_content"
                 android:layout_height="37dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginLeft="16dp"
@@ -102,11 +102,10 @@
             <!--Size-->
             <Spinner
                 android:id="@+id/sizeSpinnerShoe7"
-                android:layout_width="97dp"
-                android:layout_height="51dp"
+                android:layout_width="140dp"
+                android:layout_height="52dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
-                android:layout_marginRight="16dp"
                 android:theme="@style/AppTheme2"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

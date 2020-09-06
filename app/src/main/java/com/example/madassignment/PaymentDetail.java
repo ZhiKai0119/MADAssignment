@@ -81,7 +81,7 @@ public class PaymentDetail extends AppCompatActivity {
 
                 final String name = Card_Name.getText().toString().trim();
                 final String BankName = bank_text.getText().toString().trim();
-                int number= Integer.parseInt(card_number.getText().toString().trim());
+                final String number= card_number.getText().toString().trim();
                 final String date = expDate.getText().toString().trim();
                 int ccvNum= Integer.parseInt(ccv_text.getText().toString().trim());
 

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/Background"
+    android:background="@drawable/background2_bg"
     android:theme="@style/AppTheme2"
     tools:context=".userProfile">
 
@@ -45,7 +45,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
                 android:hint="User ID"
-                android:textColor="#777777"
+                android:textColor="#CFCFCF"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/full_name" />
 
@@ -65,31 +65,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
-                android:textColor="#777777"
+                android:textColor="#CFCFCF"
                 android:hint="User Email"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/email" />
-
-<!--            <TextView-->
-<!--                android:id="@+id/phone"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginStart="16dp"-->
-<!--                android:layout_marginTop="24dp"-->
-<!--                android:drawableStart="@drawable/ic_phone"-->
-<!--                android:text="@string/phone_number"-->
-<!--                app:layout_constraintLeft_toLeftOf="parent"-->
-<!--                app:layout_constraintTop_toBottomOf="@id/hint_email" />-->
-
-<!--            <TextView-->
-<!--                android:id="@+id/hint_phone"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_margin="16dp"-->
-<!--                android:textColor="#777777"-->
-<!--                android:hint="Enter your phone number"-->
-<!--                app:layout_constraintLeft_toLeftOf="parent"-->
-<!--                app:layout_constraintTop_toBottomOf="@id/phone" />-->
 
             <Button
                 android:id="@+id/change_profile"

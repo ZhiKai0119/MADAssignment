@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/Background"
+    android:background="@drawable/background3_bg"
     tools:context=".PurchaseHistory">
 
     <TextView
@@ -38,7 +38,7 @@
             android:id="@+id/purchase_linear"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/Background"
+            android:background="@drawable/background_bg"
             tools:listitem="@layout/activity_purchase_history_layout" />
 
     </ScrollView>

@@ -18,12 +18,27 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".PurchaseHistory"></activity>
+        <activity android:name=".PurchaseHistory"
+            android:parentActivityName=".MainPage">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainPage" />
+        </activity>
         <activity android:name=".CustomNavigation"></activity>
-        <activity android:name=".wishList" />
+        <activity android:name=".wishList"
+            android:parentActivityName=".MainPage">
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".MainPage" />
+        </activity>
         <activity
             android:name=".ContactUsRecords"
-            android:theme="@style/AppTheme2" />
+            android:theme="@style/AppTheme2"
+            android:parentActivityName=".MainPage">
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".MainPage" />
+        </activity>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -52,7 +67,11 @@
             android:name=".SearchViewFromList"
             android:parentActivityName=".MainPage"
             android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="adjustPan" />
+            android:windowSoftInputMode="adjustPan">
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".MainPage" />
+        </activity>
         <activity android:name=".shopping_cart" />
 
         <meta-data

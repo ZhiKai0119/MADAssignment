@@ -3,7 +3,7 @@ package com.example.madassignment;
 public class Member1 {
     private String Name;
     private String BankName;
-    private Integer Number;
+    private String Number;
     private String Date;
     private Integer ccvNum;
 
@@ -27,11 +27,11 @@ public class Member1 {
         BankName = bankName;
     }
 
-    public Integer getNumber() {
+    public String getNumber() {
         return Number;
     }
 
-    public void setNumber(Integer number) {
+    public void setNumber(String number) {
         Number = number;
     }
 
