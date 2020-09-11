@@ -138,11 +138,6 @@ public class signUp extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
 
-//                            DatabaseReference database = FirebaseDatabase.getInstance().getReference().child("Users").child(mAuth.getCurrentUser().getUid());
-//                            database.child("userName").setValue(mname);
-//                            database.child("userEmail").setValue(memail);
-//                            database.child("userPassword").setValue(mpassword);
-
                             FirebaseUser laccUser = mAuth.getCurrentUser();
                             laccUser.sendEmailVerification().addOnSuccessListener(new OnSuccessListener<Void>() {
                                 @Override
@@ -161,25 +156,6 @@ public class signUp extends AppCompatActivity {
                                 }
                             });
 
-
-//                            Toast.makeText(signUp.this, "User Created.", Toast.LENGTH_LONG).show();
-//                            userId = mAuth.getCurrentUser().getUid();
-//                            DocumentReference documentReference = mStore.collection("users").document(userId);
-//                            Map<String, Object> user = new HashMap<>();
-//                            user.put("Name", mname);
-//                            user.put("email", memail);
-//                            documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
-//                                @Override
-//                                public void onSuccess(Void aVoid) {
-//                                    Log.d(TAG, "onSuccess: user profile is created for " + userId);
-//                                }
-//                            }).addOnFailureListener(new OnFailureListener() {
-//                                @Override
-//                                public void onFailure(@NonNull Exception e) {
-//                                    Log.d(TAG, "onFailure: " + e.toString());
-//                                }
-//                            });
-//                            startActivity(new Intent(signUp.this, MainPage.class));
                         }else {
                             Toast.makeText(signUp.this, "Error!!!" + task.getException().getMessage(), Toast.LENGTH_LONG).show();
                             progressBar.setVisibility(View.GONE);

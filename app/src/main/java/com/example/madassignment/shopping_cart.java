@@ -53,7 +53,7 @@ public class shopping_cart extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         mTotalPrice = (TextView) findViewById(R.id.cartprice);
-        mTotalPrice.setText("RM " + overTotalPrice);
+
         mCheckout = (Button)findViewById(R.id.checkout);
         mCheckout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -83,6 +83,7 @@ public class shopping_cart extends AppCompatActivity {
 
                 int oneTypeProductPrice = (Integer.parseInt(model.getPrice())) * Integer.parseInt(model.getQuantity());
                 overTotalPrice = overTotalPrice + oneTypeProductPrice;
+                mTotalPrice.setText("RM " + overTotalPrice);
 
                 holder.itemView.setOnClickListener(new View.OnClickListener() {
                     @Override
